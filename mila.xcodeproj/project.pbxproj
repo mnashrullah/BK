@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7165B8B25441E13002CB21D /* ProfileAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B8A25441E13002CB21D /* ProfileAddView.swift */; };
+		D7165B8D254456D2002CB21D /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B8C254456D2002CB21D /* SummaryView.swift */; };
+		D7165B8F254456EA002CB21D /* ScreeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B8E254456EA002CB21D /* ScreeningView.swift */; };
+		D7165B9125445E24002CB21D /* MilestoneChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B9025445E24002CB21D /* MilestoneChecklistView.swift */; };
 		D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CA2536FA5B00FF926C /* AppDelegate.swift */; };
 		D7B151CD2536FA5B00FF926C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */; };
 		D7B151D02536FA5B00FF926C /* BK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CE2536FA5B00FF926C /* BK.xcdatamodeld */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7165B8A25441E13002CB21D /* ProfileAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddView.swift; sourceTree = "<group>"; };
+		D7165B8C254456D2002CB21D /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		D7165B8E254456EA002CB21D /* ScreeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreeningView.swift; sourceTree = "<group>"; };
+		D7165B9025445E24002CB21D /* MilestoneChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneChecklistView.swift; sourceTree = "<group>"; };
 		D7B151C72536FA5B00FF926C /* Mila.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mila.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B151CA2536FA5B00FF926C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +127,10 @@
 				D7B151D12536FA5B00FF926C /* ContentView.swift */,
 				D7B151EB253CC0B500FF926C /* HomeView.swift */,
 				D7B151ED253CC0E800FF926C /* MilestoneView.swift */,
+				D7165B9025445E24002CB21D /* MilestoneChecklistView.swift */,
+				D7165B8C254456D2002CB21D /* SummaryView.swift */,
+				D7165B8E254456EA002CB21D /* ScreeningView.swift */,
+				D7165B8A25441E13002CB21D /* ProfileAddView.swift */,
 				D7B151EF253CC0F100FF926C /* HelpView.swift */,
 				D7B151F1253CC5A900FF926C /* PageView.swift */,
 				D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */,
@@ -210,17 +222,21 @@
 				D7B151F4253CC5BC00FF926C /* PageViewContainer.swift in Sources */,
 				D7B151F8253CC5EF00FF926C /* Page.swift in Sources */,
 				D7B151F6253CC5C600FF926C /* PageViewController.swift in Sources */,
+				D7165B8B25441E13002CB21D /* ProfileAddView.swift in Sources */,
+				D7165B8F254456EA002CB21D /* ScreeningView.swift in Sources */,
 				D7B151FA253CC65300FF926C /* PageIndicator.swift in Sources */,
 				D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */,
 				D7B151FC253DDD4D00FF926C /* Milestone.swift in Sources */,
 				D7B151EA253CC04600FF926C /* Constant.swift in Sources */,
 				D7B151EC253CC0B500FF926C /* HomeView.swift in Sources */,
 				D7B151D22536FA5B00FF926C /* ContentView.swift in Sources */,
+				D7165B8D254456D2002CB21D /* SummaryView.swift in Sources */,
 				D7B151F0253CC0F100FF926C /* HelpView.swift in Sources */,
 				D7B15200253EC51900FF926C /* Tips.swift in Sources */,
 				D7B151EE253CC0E800FF926C /* MilestoneView.swift in Sources */,
 				D7B151F2253CC5A900FF926C /* PageView.swift in Sources */,
 				D7B151CD2536FA5B00FF926C /* SceneDelegate.swift in Sources */,
+				D7165B9125445E24002CB21D /* MilestoneChecklistView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
