@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BK.xcodeproj">
+      location = "self:/Users/muhammadnashrullah/Documents/swift_example/BK/mila.xcodeproj">
    </FileRef>
 </Workspace>

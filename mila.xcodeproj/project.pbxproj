@@ -14,10 +14,21 @@
 		D7B151D42536FA5C00FF926C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B151D32536FA5C00FF926C /* Assets.xcassets */; };
 		D7B151D72536FA5C00FF926C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B151D62536FA5C00FF926C /* Preview Assets.xcassets */; };
 		D7B151DA2536FA5C00FF926C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B151D82536FA5C00FF926C /* LaunchScreen.storyboard */; };
+		D7B151EA253CC04600FF926C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151E9253CC04600FF926C /* Constant.swift */; };
+		D7B151EC253CC0B500FF926C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151EB253CC0B500FF926C /* HomeView.swift */; };
+		D7B151EE253CC0E800FF926C /* MilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151ED253CC0E800FF926C /* MilestoneView.swift */; };
+		D7B151F0253CC0F100FF926C /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151EF253CC0F100FF926C /* HelpView.swift */; };
+		D7B151F2253CC5A900FF926C /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151F1253CC5A900FF926C /* PageView.swift */; };
+		D7B151F4253CC5BC00FF926C /* PageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */; };
+		D7B151F6253CC5C600FF926C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151F5253CC5C600FF926C /* PageViewController.swift */; };
+		D7B151F8253CC5EF00FF926C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151F7253CC5EF00FF926C /* Page.swift */; };
+		D7B151FA253CC65300FF926C /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151F9253CC65300FF926C /* PageIndicator.swift */; };
+		D7B151FC253DDD4D00FF926C /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151FB253DDD4D00FF926C /* Milestone.swift */; };
+		D7B15200253EC51900FF926C /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151FF253EC51900FF926C /* Tips.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D7B151C72536FA5B00FF926C /* BK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B151C72536FA5B00FF926C /* Mila.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mila.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B151CA2536FA5B00FF926C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D7B151CF2536FA5B00FF926C /* BK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BK.xcdatamodel; sourceTree = "<group>"; };
@@ -26,6 +37,17 @@
 		D7B151D62536FA5C00FF926C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7B151D92536FA5C00FF926C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7B151DB2536FA5C00FF926C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7B151E9253CC04600FF926C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D7B151EB253CC0B500FF926C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D7B151ED253CC0E800FF926C /* MilestoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneView.swift; sourceTree = "<group>"; };
+		D7B151EF253CC0F100FF926C /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		D7B151F1253CC5A900FF926C /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewContainer.swift; sourceTree = "<group>"; };
+		D7B151F5253CC5C600FF926C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		D7B151F7253CC5EF00FF926C /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		D7B151F9253CC65300FF926C /* PageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicator.swift; sourceTree = "<group>"; };
+		D7B151FB253DDD4D00FF926C /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		D7B151FF253EC51900FF926C /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +72,7 @@
 		D7B151C82536FA5B00FF926C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7B151C72536FA5B00FF926C /* BK.app */,
+				D7B151C72536FA5B00FF926C /* Mila.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,9 +80,11 @@
 		D7B151C92536FA5B00FF926C /* BK */ = {
 			isa = PBXGroup;
 			children = (
+				D7B151E6253CC00E00FF926C /* Extensions */,
+				D7B151E4253CBFD000FF926C /* Models */,
+				D7B151E5253CBFE800FF926C /* Views */,
 				D7B151CA2536FA5B00FF926C /* AppDelegate.swift */,
 				D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */,
-				D7B151D12536FA5B00FF926C /* ContentView.swift */,
 				D7B151D32536FA5C00FF926C /* Assets.xcassets */,
 				D7B151D82536FA5C00FF926C /* LaunchScreen.storyboard */,
 				D7B151DB2536FA5C00FF926C /* Info.plist */,
@@ -78,12 +102,45 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D7B151E4253CBFD000FF926C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7B151E9253CC04600FF926C /* Constant.swift */,
+				D7B151F7253CC5EF00FF926C /* Page.swift */,
+				D7B151FB253DDD4D00FF926C /* Milestone.swift */,
+				D7B151FF253EC51900FF926C /* Tips.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7B151E5253CBFE800FF926C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7B151D12536FA5B00FF926C /* ContentView.swift */,
+				D7B151EB253CC0B500FF926C /* HomeView.swift */,
+				D7B151ED253CC0E800FF926C /* MilestoneView.swift */,
+				D7B151EF253CC0F100FF926C /* HelpView.swift */,
+				D7B151F1253CC5A900FF926C /* PageView.swift */,
+				D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */,
+				D7B151F5253CC5C600FF926C /* PageViewController.swift */,
+				D7B151F9253CC65300FF926C /* PageIndicator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7B151E6253CC00E00FF926C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7B151C62536FA5B00FF926C /* BK */ = {
+		D7B151C62536FA5B00FF926C /* mila */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7B151DE2536FA5C00FF926C /* Build configuration list for PBXNativeTarget "BK" */;
+			buildConfigurationList = D7B151DE2536FA5C00FF926C /* Build configuration list for PBXNativeTarget "mila" */;
 			buildPhases = (
 				D7B151C32536FA5B00FF926C /* Sources */,
 				D7B151C42536FA5B00FF926C /* Frameworks */,
@@ -93,9 +150,9 @@
 			);
 			dependencies = (
 			);
-			name = BK;
+			name = mila;
 			productName = BK;
-			productReference = D7B151C72536FA5B00FF926C /* BK.app */;
+			productReference = D7B151C72536FA5B00FF926C /* Mila.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D7B151C22536FA5B00FF926C /* Build configuration list for PBXProject "BK" */;
+			buildConfigurationList = D7B151C22536FA5B00FF926C /* Build configuration list for PBXProject "mila" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7B151C62536FA5B00FF926C /* BK */,
+				D7B151C62536FA5B00FF926C /* mila */,
 			);
 		};
 /* End PBXProject section */
@@ -150,8 +207,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B151D02536FA5B00FF926C /* BK.xcdatamodeld in Sources */,
+				D7B151F4253CC5BC00FF926C /* PageViewContainer.swift in Sources */,
+				D7B151F8253CC5EF00FF926C /* Page.swift in Sources */,
+				D7B151F6253CC5C600FF926C /* PageViewController.swift in Sources */,
+				D7B151FA253CC65300FF926C /* PageIndicator.swift in Sources */,
 				D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */,
+				D7B151FC253DDD4D00FF926C /* Milestone.swift in Sources */,
+				D7B151EA253CC04600FF926C /* Constant.swift in Sources */,
+				D7B151EC253CC0B500FF926C /* HomeView.swift in Sources */,
 				D7B151D22536FA5B00FF926C /* ContentView.swift in Sources */,
+				D7B151F0253CC0F100FF926C /* HelpView.swift in Sources */,
+				D7B15200253EC51900FF926C /* Tips.swift in Sources */,
+				D7B151EE253CC0E800FF926C /* MilestoneView.swift in Sources */,
+				D7B151F2253CC5A900FF926C /* PageView.swift in Sources */,
 				D7B151CD2536FA5B00FF926C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,47 +355,51 @@
 		D7B151DF2536FA5C00FF926C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
 				DEVELOPMENT_TEAM = TTWVZH63FB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilb.BK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilb.mila;
+				PRODUCT_NAME = Mila;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D7B151E02536FA5C00FF926C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
 				DEVELOPMENT_TEAM = TTWVZH63FB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilb.BK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilb.mila;
+				PRODUCT_NAME = Mila;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7B151C22536FA5B00FF926C /* Build configuration list for PBXProject "BK" */ = {
+		D7B151C22536FA5B00FF926C /* Build configuration list for PBXProject "mila" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7B151DC2536FA5C00FF926C /* Debug */,
@@ -336,7 +408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7B151DE2536FA5C00FF926C /* Build configuration list for PBXNativeTarget "BK" */ = {
+		D7B151DE2536FA5C00FF926C /* Build configuration list for PBXNativeTarget "mila" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7B151DF2536FA5C00FF926C /* Debug */,
