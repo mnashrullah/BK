@@ -13,9 +13,9 @@ struct HomeView: View {
     private let initialLaunchKey = "isInitialLaunch"
     @State var selected = 0
     init(){
-           UITableView.appearance().tableFooterView = UIView()
-           UITableView.appearance().separatorStyle = .none
-       }
+        UITableView.appearance().tableFooterView = UIView()
+        UITableView.appearance().separatorStyle = .none
+    }
     
     
     var body: some View {
@@ -24,17 +24,23 @@ struct HomeView: View {
             if show || UserDefaults.standard.bool(forKey: initialLaunchKey){
                 // MARK: TabView show
                 TabView (selection: $selected) {
-                        MilestoneView().tabItem({
-                            Image(systemName: Constants.TabBarImageName.tabBar0)
-                                .font(.body)
-                            Text("\(Constants.TabBarText.tabBar0)")
-                        }).tag(0)
-                        
-                    HelpView().tabItem({
-                            Image(systemName: Constants.TabBarImageName.tabBar1)
-                                .font(.body)
-                            Text("\(Constants.TabBarText.tabBar1)")
-                        }).tag(1)
+                    MilestoneView().tabItem({
+                        Image(systemName: Constants.TabBarImageName.tabBar0)
+                            .font(.body)
+                        Text("\(Constants.TabBarText.tabBar0)")
+                    }).tag(0)
+                    
+                    TipsView().tabItem({
+                        Image(systemName: Constants.TabBarImageName.tabBar1)
+                            .font(.body)
+                        Text("\(Constants.TabBarText.tabBar1)")
+                    }).tag(1)
+                    
+                    QuickView().tabItem({
+                        Image(systemName: Constants.TabBarImageName.tabBar2)
+                            .font(.body)
+                        Text("\(Constants.TabBarText.tabBar2)")
+                    }).tag(2)
                 }
             }
             else{
