@@ -29,4 +29,8 @@ struct Constants {
             LinearGradient(gradient: Gradient(colors: [Color("Color1"), Color("Color2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
         static let gray4 = LinearGradient(gradient: Gradient(colors: [Color("Gray"), Color("Gray")]), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
+    struct mSize{
+        static let width = UIScreen.main.bounds.width
+        static let height = UIScreen.main.bounds.height
+    }
 }

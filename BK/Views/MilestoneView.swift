@@ -26,22 +26,7 @@ struct MilestoneView: View {
                     ZStack(alignment: .topLeading) {
                         HStack(){
                             Spacer()
-                            //                            NavigationLink(destination: ProfileAddView(isNavigationBarHidden: $isNavigationBarHidden), isActive: $isAddChild) {
-                            //
-                            //                                           Button(action:{
-                            //                                            self.isAddChild = true
-                            //
-                            //                                           }){
-                            //                                               Image(systemName: "plus")
-                            //                                                   .frame(width: 24, height: 24)
-                            //
-                            //                                               Text("Anak")
-                            //
-                            //                                           }
-                            //                                           .foregroundColor(.white)
-                            //                                           .padding()
-                            //
-                            //                            }
+                            
                             NavigationLink(destination: ProfileAddView(isNavigationBarHidden: $isNavigationBarHidden), isActive: $isAddChild) {
                                 
                                 Button(action:{
@@ -95,7 +80,7 @@ struct MilestoneView: View {
                                 title: "Skrining disleksia",
                                 description: "Gangguan belajar spesifik biasanya tidak terdeteksi sampai usia sekolah")
                         }
-                        NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
+                        NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, percent: .constant(50))){
                             cardView(
                                 image: "menu3",
                                 title: "Hasil",
@@ -109,11 +94,11 @@ struct MilestoneView: View {
                     
                 }
                     
-                //MARK : NAVIGATION BAR TITLE
-                .navigationBarTitle("")
-                .navigationBarHidden(self.isNavigationBarHidden)
-                .onAppear {
-                    self.isNavigationBarHidden = true
+                    //MARK : NAVIGATION BAR TITLE
+                    .navigationBarTitle("")
+                    .navigationBarHidden(self.isNavigationBarHidden)
+                    .onAppear {
+                        self.isNavigationBarHidden = true
                 }
                 .edgesIgnoringSafeArea(.top)
                 .actionSheet(isPresented: $showingSheet) {
@@ -132,14 +117,14 @@ struct MilestoneView: View {
     //MARK: END BODY
     
     //MARK: FUNCTION LOAD ARRAY
-
+    
     func loadArray(){
         let buttonAdd: ActionSheet.Button = .default(Text("Tambah Profil Anak"), action: {
             self.isAddChild = true
             self.selectedMonths = 0
         })
         self.buttonsArray[0] =  buttonAdd
-          for i in 0..<self.child.count{
+        for i in 0..<self.child.count{
             let button: ActionSheet.Button = .default(Text(self.self.child[i]), action: {
                 Text("\(self.child[i])")
                 self.selectedMonths = i+1
@@ -169,6 +154,8 @@ struct cardView: View{
     var body: some View{
         VStack(alignment: .leading) {
             
+            
+            
             Image(image).padding([.top,.horizontal])
             
             
@@ -187,6 +174,7 @@ struct cardView: View{
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
+                    
                 .layoutPriority(100)
                 
                 Spacer()
@@ -194,11 +182,25 @@ struct cardView: View{
             .padding()
         }
         .cornerRadius(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 1)
+            //        MARK: ICON SEBAGAI BACKGROUND CARD
+            //        .background(
+            //            Image(image)
+            //                .resizable()
+            //                .opacity(0.2)
+            //                .frame(width: 60, height: 60, alignment: .top)
+            //                .scaledToFill()
+            //                .offset(x:100, y:25)
+            //
+            //        )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 1)
         )
-            .padding([.horizontal])
+            .padding([.top,.horizontal])
+        
+        
+        
+        
     }
 }
 
