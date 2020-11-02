@@ -16,6 +16,7 @@
 		D7165B9725486C95002CB21D /* RingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B9625486C95002CB21D /* RingShape.swift */; };
 		D7165B9A25486E28002CB21D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B9925486E28002CB21D /* Colors.swift */; };
 		D7165BDF254B861E002CB21D /* TipsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165BDE254B861E002CB21D /* TipsDetailView.swift */; };
+		D7165BE1254DC00B002CB21D /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165BE0254DC00B002CB21D /* Child.swift */; };
 		D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CA2536FA5B00FF926C /* AppDelegate.swift */; };
 		D7B151CD2536FA5B00FF926C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */; };
 		D7B151D02536FA5B00FF926C /* BK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CE2536FA5B00FF926C /* BK.xcdatamodeld */; };
@@ -46,6 +47,7 @@
 		D7165B9625486C95002CB21D /* RingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingShape.swift; sourceTree = "<group>"; };
 		D7165B9925486E28002CB21D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7165BDE254B861E002CB21D /* TipsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsDetailView.swift; sourceTree = "<group>"; };
+		D7165BE0254DC00B002CB21D /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		D7B151C72536FA5B00FF926C /* Mila.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mila.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B151CA2536FA5B00FF926C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				D7B151F7253CC5EF00FF926C /* Page.swift */,
 				D7B151FB253DDD4D00FF926C /* Milestone.swift */,
 				D7B151FF253EC51900FF926C /* Tips.swift */,
+				D7165BE0254DC00B002CB21D /* Child.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				D7B151EA253CC04600FF926C /* Constant.swift in Sources */,
 				D7B151EC253CC0B500FF926C /* HomeView.swift in Sources */,
 				D7B151D22536FA5B00FF926C /* ContentView.swift in Sources */,
+				D7165BE1254DC00B002CB21D /* Child.swift in Sources */,
 				D7165B8D254456D2002CB21D /* SummaryView.swift in Sources */,
 				D7165B9A25486E28002CB21D /* Colors.swift in Sources */,
 				D7B151F0253CC0F100FF926C /* HelpView.swift in Sources */,
@@ -401,7 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
 				DEVELOPMENT_TEAM = TTWVZH63FB;
 				ENABLE_PREVIEWS = YES;
@@ -423,7 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
 				DEVELOPMENT_TEAM = TTWVZH63FB;
 				ENABLE_PREVIEWS = YES;

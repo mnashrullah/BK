@@ -156,7 +156,7 @@ struct cardView: View{
             
             
             
-            Image(image).padding([.top,.horizontal])
+            Image(image).foregroundColor(Color("primary")).padding([.top,.horizontal])
             
             
             

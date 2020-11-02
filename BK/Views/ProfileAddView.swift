@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ProfileAddView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
     @Binding var isNavigationBarHidden: Bool
     @State private var name: String = ""
     @State private var gender: String = ""
