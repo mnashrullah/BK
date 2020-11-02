@@ -38,10 +38,8 @@ struct HelpView: View {
                         self.quickview = true
                     }){
                         VStack{
-                            
                             Text("Quick View")
                         }
-                        
                         .padding()
                         .background(self.quickview ? Constants.mColor.gradient : Constants.mColor.gray4)
                         .cornerRadius(10)

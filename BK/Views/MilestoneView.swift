@@ -9,25 +9,89 @@
 import SwiftUI
 
 struct MilestoneView: View {
-    var colors = ["Red", "Green", "Blue", "Tartan"]
-    @State private var selectedColor = 0
-
+    
+    var names = "Budi"
+    var ages = "3 Tahun 4 Bulan"
+    var mileTracks = MilestoneTrack.getAll
+    
+    @State var mileCheck: Bool = false
+    
+    init(){
+        UIScrollView.appearance().backgroundColor = UIColor(named: "Color3")
+    }
     var body: some View {
-        VStack{
-            Text("Hallo")
+        
+        VStack {
+            NavigationView{
+                 ScrollView(showsIndicators: false){
+                    VStack(alignment: .center){
+                        Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu. Kamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
+                            .padding()
+                            .background(Color("Color4"))
+                            .cornerRadius(10)
+
+                    }
+                    .padding()
+                    .multilineTextAlignment(.center)
+                    
+                    HStack {
+                        NavigationLink(destination: HelpView()){
+                            Text("Progress Terpenuhi")
+                            Spacer()
+                            Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
+                        }
+                        .padding()
+                        .background(Color("Color4"))
+                        .foregroundColor(Color("Color5"))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 0)
+                                .stroke(Color("Color5"), lineWidth: 0.5)
+                        )
+                    }
+                    
+                    .padding([.top,.bottom], 20)
+                    
+                
+                
+                    ForEach(mileTracks){ mileTrack in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(mileTrack.title)
+                                    .font(.body)
+                                    .foregroundColor(.primary)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                HStack {
+                                    Image(mileTrack.category)
+                                    Text(mileTrack.category.capitalized)
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                    Spacer()
+                                    Button(action: {(
+                                        mileTrack.isComplete
+                                    )},
+                                           label: {
+                                            Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                                    })
+                                }
+                            }
+                            .padding()
+                            .background(Color("Color4"))
+                            .cornerRadius(10)
+                        }
+                        .background(Color("Color3"))
+                        .cornerRadius(10)
+                    }
+                    .padding([.trailing,.leading])
+                }
+                .navigationBarTitle(Text(names), displayMode: .large)
+                 .navigationBarItems(trailing: Text(ages).foregroundColor(Color("Color5")))
+                
+            }
         }
-//        VStack {
-//            Form{
-//           Picker(selection: $selectedColor, label: Text("Please choose a color")) {
-//              ForEach(0 ..< colors.count) {
-//                 Text(self.colors[$0])
-//              }
-//           }
-//        }
-//        }
         
     }
 }
+
 
 struct MilestoneView_Previews: PreviewProvider {
     static var previews: some View {

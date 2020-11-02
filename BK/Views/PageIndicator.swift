@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PageIndicator: View {
     var currentIndex: Int = 0
-    var pagesCount: Int = 2
+    var pagesCount: Int = 3
     var onColor: Color = Color.accentColor
     var offColor: Color = Color.white
     var diameter: CGFloat = 10

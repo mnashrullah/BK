@@ -24,11 +24,9 @@ struct PageView: View {
 //            Image("orange")
 //            .resizable()
             
-            ZStack(alignment: .topTrailing) {
+                ZStack(alignment: .leading) {
                 VStack{
-                    
-                    
-                     HStack{
+                    HStack{
                         Text(NSLocalizedString(page.heading, comment: "heading"))
                             .font(.title)
                             .fontWeight(.bold)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A841B63254D1EBA005940B0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B62254D1EBA005940B0 /* SettingView.swift */; };
+		0A841B65254E8E99005940B0 /* MilestoneTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B64254E8E99005940B0 /* MilestoneTrack.swift */; };
 		D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CA2536FA5B00FF926C /* AppDelegate.swift */; };
 		D7B151CD2536FA5B00FF926C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */; };
 		D7B151D02536FA5B00FF926C /* BK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CE2536FA5B00FF926C /* BK.xcdatamodeld */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A841B62254D1EBA005940B0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0A841B64254E8E99005940B0 /* MilestoneTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrack.swift; sourceTree = "<group>"; };
 		D7B151C72536FA5B00FF926C /* Mila.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mila.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B151CA2536FA5B00FF926C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B151CC2536FA5B00FF926C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				D7B151F7253CC5EF00FF926C /* Page.swift */,
 				D7B151FB253DDD4D00FF926C /* Milestone.swift */,
 				D7B151FF253EC51900FF926C /* Tips.swift */,
+				0A841B64254E8E99005940B0 /* MilestoneTrack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 				D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */,
 				D7B151F5253CC5C600FF926C /* PageViewController.swift */,
 				D7B151F9253CC65300FF926C /* PageIndicator.swift */,
+				0A841B62254D1EBA005940B0 /* SettingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +167,9 @@
 		D7B151BF2536FA5B00FF926C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					com.apple.gamecenter.Leaderboard,
+				);
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = BK;
@@ -211,6 +220,8 @@
 				D7B151F8253CC5EF00FF926C /* Page.swift in Sources */,
 				D7B151F6253CC5C600FF926C /* PageViewController.swift in Sources */,
 				D7B151FA253CC65300FF926C /* PageIndicator.swift in Sources */,
+				0A841B65254E8E99005940B0 /* MilestoneTrack.swift in Sources */,
+				0A841B63254D1EBA005940B0 /* SettingView.swift in Sources */,
 				D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */,
 				D7B151FC253DDD4D00FF926C /* Milestone.swift in Sources */,
 				D7B151EA253CC04600FF926C /* Constant.swift in Sources */,
