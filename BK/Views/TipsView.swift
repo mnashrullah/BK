@@ -93,7 +93,12 @@ struct cardTipsView: View{
     var isActive: Int
     var index: Int
     @Binding var showingDetail: Bool
+    let defaults = UserDefaults.standard
     
+//    segmented
+    @State private var favoriteColor = 0
+    var colors = ["Red", "Green", "Blue"]
+
     
     var body: some View{
         VStack(alignment: .leading) {
@@ -111,67 +116,69 @@ struct cardTipsView: View{
                 
             }
             else{
-//                Button(action:{
-//                    self.showingDetail.toggle()
-//                }){
-//
-//                    HStack {
-//                        VStack(alignment: .leading) {
-//
-//                            Text(description.monthName)
-//                                .font(.body)
-//                                .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
-//                                .padding(10)
-//                        }
-//                        .background(self.isActive == self.index ? activeColor.frame(width:500): notActiveColor.frame(width:500))
-//                        .offset(y:35)
-//
-//                        .layoutPriority(100)
-//                        Spacer()
-//                    }
-//                    .background(image.resizable().scaledToFill())
-//
-//                    .frame(height:Constants.mSize.height/8)
-//
-//                    .cornerRadius(10)
-//                    .overlay(RoundedRectangle(cornerRadius: 10)
-//                    .stroke(self.isActive == self.index ? activeColor : Color(.sRGB, red: 255/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 2)
-//                    )
-//                        .padding([.top,.horizontal])
-//                }
-//                .buttonStyle(PlainButtonStyle())
-//
-//                .sheet(isPresented: $showingDetail) {
-//                    VStack(){
-//                        Text(self.description.monthName)
-//                    }
-//                }
-                                NavigationLink(destination: TipsDetailView(item: description)){
-                                    HStack {
-                                        VStack(alignment: .leading) {
+                //                MARK: -BUTTON modal
+                Button(action:{
+                    self.showingDetail.toggle()
+                    UserDefaults.standard.set(self.index, forKey: "month")
+                }){
+                    HStack {
+                        VStack(alignment: .leading) {
+                            
+                            Text(description.monthName)
+                                .font(.body)
+                                .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
+                                .padding(10)
+                        }
+                        .background(self.isActive == self.index ? activeColor.frame(width:500): notActiveColor.frame(width:500))
+                        .offset(y:35)
+                            
+                        .layoutPriority(100)
+                        Spacer()
+                    }
+                    .background(image.resizable().scaledToFill())
+                        
+                    .frame(height:Constants.mSize.height/8)
+                        
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(self.isActive == self.index ? activeColor : Color(.sRGB, red: 255/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 2)
+                    )
+                        .padding([.top,.horizontal])
+                }
+                .buttonStyle(PlainButtonStyle())
+                    
+                .sheet(isPresented: $showingDetail) {
+                    //                    MARK: -modal/sheet tips
+                    TipsDetailView()
+                }
                 
-                                            Text(description.monthName)
-                                                .font(.body)
-                                                .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
-                                                .padding(10)
-                                        }
-                                        .background(self.isActive == self.index ? activeColor.frame(width:500): notActiveColor.frame(width:500))
-                                        .offset(y:35)
-                
-                                        .layoutPriority(100)
-                                        Spacer()
-                                    }
-                                    .background(image.resizable().scaledToFill())
-                
-                                    .frame(height:Constants.mSize.height/8)
-                
-                                    .cornerRadius(10)
-                                    .overlay(RoundedRectangle(cornerRadius: 10)
-                                    .stroke(self.isActive == self.index ? activeColor : Color(.sRGB, red: 255/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 2)
-                                    )
-                                        .padding([.top,.horizontal])
-                                }
-                                .buttonStyle(PlainButtonStyle())
+                //                MARK: -navigation
+                //                                NavigationLink(destination: TipsDetailView(item: description)){
+                //                                    HStack {
+                //                                        VStack(alignment: .leading) {
+                //
+                //                                            Text(description.monthName)
+                //                                                .font(.body)
+                //                                                .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
+                //                                                .padding(10)
+                //                                        }
+                //                                        .background(self.isActive == self.index ? activeColor.frame(width:500): notActiveColor.frame(width:500))
+                //                                        .offset(y:35)
+                //
+                //                                        .layoutPriority(100)
+                //                                        Spacer()
+                //                                    }
+                //                                    .background(image.resizable().scaledToFill())
+                //
+                //                                    .frame(height:Constants.mSize.height/8)
+                //
+                //                                    .cornerRadius(10)
+                //                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                //                                    .stroke(self.isActive == self.index ? activeColor : Color(.sRGB, red: 255/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 2)
+                //                                    )
+                //                                        .padding([.top,.horizontal])
+                //                                }
+                //                                .buttonStyle(PlainButtonStyle())
                 
             }
         }

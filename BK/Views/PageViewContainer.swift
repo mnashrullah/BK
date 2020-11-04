@@ -47,7 +47,8 @@ struct PageViewContainer<Page: View>  : View {
                 }
             }.padding(.vertical)
         }
-        .background(Constants.mColor.gradient)
+//        .background(Constants.mColor.gradient)
+        .background(Color("primary"))
         .edgesIgnoringSafeArea(.all)
     }
 }
