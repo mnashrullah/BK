@@ -24,7 +24,7 @@ struct HomeView: View {
             if show || UserDefaults.standard.bool(forKey: initialLaunchKey){
                 // MARK: TabView show
                 TabView (selection: $selected) {
-                        MilestoneView().tabItem({
+                        PageHomeView().tabItem({
                             Image(systemName: Constants.TabBarImageName.tabBar0)
                                 .font(.body)
                             Text("\(Constants.TabBarText.tabBar0)")
@@ -36,6 +36,7 @@ struct HomeView: View {
                             Text("\(Constants.TabBarText.tabBar1)")
                         }).tag(1)
                 }
+            
             }
             else{
                 // MARK: Onboarding process

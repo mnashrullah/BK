@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1F8B852551905500E8D774 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F8B842551905500E8D774 /* ResultView.swift */; };
+		0A1F8B872551B18D00E8D774 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F8B862551B18D00E8D774 /* BarView.swift */; };
+		0A6D62692556F8DF00AAF170 /* PageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62682556F8DF00AAF170 /* PageHomeView.swift */; };
 		0A841B63254D1EBA005940B0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B62254D1EBA005940B0 /* SettingView.swift */; };
 		0A841B65254E8E99005940B0 /* MilestoneTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B64254E8E99005940B0 /* MilestoneTrack.swift */; };
 		D7B151CB2536FA5B00FF926C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151CA2536FA5B00FF926C /* AppDelegate.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1F8B842551905500E8D774 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		0A1F8B862551B18D00E8D774 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		0A6D62682556F8DF00AAF170 /* PageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHomeView.swift; sourceTree = "<group>"; };
 		0A841B62254D1EBA005940B0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		0A841B64254E8E99005940B0 /* MilestoneTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrack.swift; sourceTree = "<group>"; };
 		D7B151C72536FA5B00FF926C /* Mila.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mila.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,7 @@
 			children = (
 				D7B151D12536FA5B00FF926C /* ContentView.swift */,
 				D7B151EB253CC0B500FF926C /* HomeView.swift */,
+				0A6D62682556F8DF00AAF170 /* PageHomeView.swift */,
 				D7B151ED253CC0E800FF926C /* MilestoneView.swift */,
 				D7B151EF253CC0F100FF926C /* HelpView.swift */,
 				D7B151F1253CC5A900FF926C /* PageView.swift */,
@@ -130,6 +137,8 @@
 				D7B151F5253CC5C600FF926C /* PageViewController.swift */,
 				D7B151F9253CC65300FF926C /* PageIndicator.swift */,
 				0A841B62254D1EBA005940B0 /* SettingView.swift */,
+				0A1F8B842551905500E8D774 /* ResultView.swift */,
+				0A1F8B862551B18D00E8D774 /* BarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 			files = (
 				D7B151D02536FA5B00FF926C /* BK.xcdatamodeld in Sources */,
 				D7B151F4253CC5BC00FF926C /* PageViewContainer.swift in Sources */,
+				0A1F8B872551B18D00E8D774 /* BarView.swift in Sources */,
 				D7B151F8253CC5EF00FF926C /* Page.swift in Sources */,
 				D7B151F6253CC5C600FF926C /* PageViewController.swift in Sources */,
 				D7B151FA253CC65300FF926C /* PageIndicator.swift in Sources */,
@@ -226,7 +236,9 @@
 				D7B151FC253DDD4D00FF926C /* Milestone.swift in Sources */,
 				D7B151EA253CC04600FF926C /* Constant.swift in Sources */,
 				D7B151EC253CC0B500FF926C /* HomeView.swift in Sources */,
+				0A1F8B852551905500E8D774 /* ResultView.swift in Sources */,
 				D7B151D22536FA5B00FF926C /* ContentView.swift in Sources */,
+				0A6D62692556F8DF00AAF170 /* PageHomeView.swift in Sources */,
 				D7B151F0253CC0F100FF926C /* HelpView.swift in Sources */,
 				D7B15200253EC51900FF926C /* Tips.swift in Sources */,
 				D7B151EE253CC0E800FF926C /* MilestoneView.swift in Sources */,
