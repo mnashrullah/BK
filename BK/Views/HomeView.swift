@@ -15,6 +15,8 @@ struct HomeView: View {
     init(){
         UITableView.appearance().tableFooterView = UIView()
         UITableView.appearance().separatorStyle = .none
+        UITabBar.appearance().backgroundColor = UIColor(named: "Color4")
+
     }
     
     
@@ -24,7 +26,7 @@ struct HomeView: View {
             if show || UserDefaults.standard.bool(forKey: initialLaunchKey){
                 // MARK: TabView show
                 TabView (selection: $selected) {
-                    MilestoneView().tabItem({
+                    PageHomeView().tabItem({
                         Image(systemName: Constants.TabBarImageName.tabBar0)
                             .font(.body)
                         Text("\(Constants.TabBarText.tabBar0)")
@@ -34,13 +36,7 @@ struct HomeView: View {
                         Image(systemName: Constants.TabBarImageName.tabBar1)
                             .font(.body)
                         Text("\(Constants.TabBarText.tabBar1)")
-                    }).tag(1)
-                    PageHomeView().tabItem({
-                        Image(systemName: Constants.TabBarImageName.tabBar0)
-                            .font(.body)
-                        Text("\(Constants.TabBarText.tabBar0)")
-                    }).tag(3)
-                    
+                    }).tag(1)                    
                 }
             .accentColor(Color("text"))
                         

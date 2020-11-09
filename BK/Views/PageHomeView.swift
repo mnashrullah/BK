@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct PageHomeView: View {
+    @State var isNavigationBarHidden: Bool = true
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -60,7 +62,7 @@ struct PageHomeView: View {
                 
                 VStack{
                     HStack{
-                        NavigationLink(destination: MilestoneView()){
+                        NavigationLink(destination: MilestoneView(isNavigationBarHidden: $isNavigationBarHidden)){
                             VStack{
                                 Image(systemName: "checkmark.square.fill")
                                     .font(.title)
@@ -94,23 +96,25 @@ struct PageHomeView: View {
                     }
                     .padding([.trailing, .leading], 25)
                     
-                    Button(action:{
-                        print("test")
-                    }){
-                        VStack{
-                            Image("home3")
-                                .padding()
-                            Text("Hasil")
-                                .fontWeight(.semibold)
-                                .padding([.leading, .trailing], 20)
-                        }
-                         .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
-                        .background(Color("Color3"))
-                        .foregroundColor(Color("Color5"))
-                        .cornerRadius(15)
-                        .padding([.top, .leading] ,25)
-                        Spacer()
+                    
+                    NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
+                        
+                            VStack{
+                                Image("home3")
+                                    .padding()
+                                Text("Hasil")
+                                    .fontWeight(.semibold)
+                                    .padding([.leading, .trailing], 20)
+                            }
+                             .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
+                            .background(Color("Color3"))
+                            .foregroundColor(Color("Color5"))
+                            .cornerRadius(15)
+                            .padding([.top, .leading] ,25)
+                            Spacer()
+                        
                     }
+                    
                 }
                 
                 Spacer()
