@@ -38,10 +38,8 @@ struct HelpView: View {
                         self.quickview = true
                     }){
                         VStack{
-                            
                             Text("Quick View")
                         }
-                        
                         .padding()
                         .background(self.quickview ? Constants.mColor.gradient : Constants.mColor.gray4)
                         .cornerRadius(10)
@@ -60,7 +58,9 @@ struct HelpView: View {
                         .shadow(radius: 4)
                         .foregroundColor(Color.white)
                     }
-                    
+                    NavigationLink(destination: ResultView()) {
+                        Text("Result")
+                    }
                     Button(action:{
                         self.showingSheet = true
                     }){
@@ -105,13 +105,14 @@ struct HelpView: View {
                    ActionSheet(title: Text("Ganti bulan"), message: Text("Pilih bulan untuk dapatkan tips yang sesuai"),
                                buttons: self.buttonsArray as! [ActionSheet.Button])
                }
-            .navigationBarTitle("Help")
+           
         }.onAppear{
             self.loadArray()
 //            print(self.milestone)
 //            self.milestone =
             print(self.milestone)
         }
+         .navigationBarTitle("Help")
     }
     func loadArray(){
         // MARK : setup button action sheet

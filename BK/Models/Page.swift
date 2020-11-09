@@ -19,13 +19,16 @@ struct Page: Identifiable {
         [
             Page(id: UUID(),
                  image: "onboarding1",
-                 heading: "Lacak Tumbuh dan Kembang Anak",
-                 subSubheading: "Dapatkan informasi mengenai tumbuh kembang anak"),
-//            Page(id: UUID(),
-//                 image: "onboarding1",
-//                 heading: "Screening Disleksia",
-//                 subSubheading: "Lakukan screening awal disleksia melalui smartphone anda")
-            
+                 heading: "Milestone",
+                 subSubheading: "Memantau tumbuh kembang anak anda bersama Mila"),
+            Page(id: UUID(),
+                 image: "onboarding2",
+                 heading: "Skrining",
+                 subSubheading: "Pastikan si buah hati selalu aman dengan uji skrining yang terpercaya"),
+            Page(id: UUID(),
+                image: "onboarding3",
+                heading: "Mila",
+                subSubheading: "Kenali aktivitas anak anda bersama Mila")
         ]
     }
 }
