@@ -36,13 +36,13 @@ struct HomeView: View {
                         Text("\(Constants.TabBarText.tabBar1)")
                     }).tag(1)
                     
-                    QuickView().tabItem({
-                        Image(systemName: Constants.TabBarImageName.tabBar2)
-                            .font(.body)
-                        Text("\(Constants.TabBarText.tabBar2)")
-                    }).tag(2)
+//                    QuickView().tabItem({
+//                        Image(systemName: Constants.TabBarImageName.tabBar2)
+//                            .font(.body)
+//                        Text("\(Constants.TabBarText.tabBar2)")
+//                    }).tag(2)
                 }
-            .accentColor(Color("primary"))
+            .accentColor(Color("text"))
             }
             else{
                 // MARK: Onboarding process

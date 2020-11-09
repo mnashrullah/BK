@@ -23,7 +23,7 @@ struct PageViewContainer<Page: View>  : View {
 
             PageViewController(controllers: viewControllers, currentPage: self.$currentPage)
             
-            PageIndicator(currentIndex: self.currentPage)
+//            PageIndicator(currentIndex: self.currentPage)
 
             VStack {
                 
@@ -40,8 +40,8 @@ struct PageViewContainer<Page: View>  : View {
                             .bold()
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
-                            .accentColor(Color.black)
-                            .background(Color.white)
+                            .accentColor(Color("text"))
+                            .background(Color("secondary"))
                             .cornerRadius(5)
                     }.padding()
                 }

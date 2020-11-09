@@ -21,10 +21,10 @@ struct Page: Identifiable {
                  image: "onboarding1",
                  heading: "Lacak Tumbuh dan Kembang Anak",
                  subSubheading: "Dapatkan informasi mengenai tumbuh kembang anak"),
-            Page(id: UUID(),
-                 image: "onboarding1",
-                 heading: "Screening Disleksia",
-                 subSubheading: "Lakukan screening awal disleksia melalui smartphone anda")
+//            Page(id: UUID(),
+//                 image: "onboarding1",
+//                 heading: "Screening Disleksia",
+//                 subSubheading: "Lakukan screening awal disleksia melalui smartphone anda")
             
         ]
     }

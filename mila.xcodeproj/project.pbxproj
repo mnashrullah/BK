@@ -89,6 +89,46 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D792E93C2552A53200CE0C92 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D7B151F1253CC5A900FF926C /* PageView.swift */,
+				D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */,
+				D7B151F5253CC5C600FF926C /* PageViewController.swift */,
+				D7B151F9253CC65300FF926C /* PageIndicator.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D792E93D2552A56900CE0C92 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		D792E93E2552A57A00CE0C92 /* Tab2 */ = {
+			isa = PBXGroup;
+			children = (
+				D7165B942544680D002CB21D /* TipsView.swift */,
+				D7165BDE254B861E002CB21D /* TipsDetailView.swift */,
+			);
+			path = Tab2;
+			sourceTree = "<group>";
+		};
+		D792E93F2552A59600CE0C92 /* Tab1 */ = {
+			isa = PBXGroup;
+			children = (
+				D7B151ED253CC0E800FF926C /* MilestoneView.swift */,
+				D7165B8C254456D2002CB21D /* SummaryView.swift */,
+				D7165B8E254456EA002CB21D /* ScreeningView.swift */,
+				D7165B8A25441E13002CB21D /* ProfileAddView.swift */,
+				D7165B92254467FB002CB21D /* QuickView.swift */,
+				D7B151EF253CC0F100FF926C /* HelpView.swift */,
+			);
+			path = Tab1;
+			sourceTree = "<group>";
+		};
 		D7B151BE2536FA5B00FF926C = {
 			isa = PBXGroup;
 			children = (
@@ -148,19 +188,11 @@
 			children = (
 				D7B151D12536FA5B00FF926C /* ContentView.swift */,
 				D7B151EB253CC0B500FF926C /* HomeView.swift */,
-				D7B151ED253CC0E800FF926C /* MilestoneView.swift */,
+				D792E93C2552A53200CE0C92 /* Onboarding */,
+				D792E93D2552A56900CE0C92 /* CommonView */,
 				D7165B9025445E24002CB21D /* MilestoneChecklistView.swift */,
-				D7165B8C254456D2002CB21D /* SummaryView.swift */,
-				D7165B8E254456EA002CB21D /* ScreeningView.swift */,
-				D7165B8A25441E13002CB21D /* ProfileAddView.swift */,
-				D7165B92254467FB002CB21D /* QuickView.swift */,
-				D7165B942544680D002CB21D /* TipsView.swift */,
-				D7165BDE254B861E002CB21D /* TipsDetailView.swift */,
-				D7B151EF253CC0F100FF926C /* HelpView.swift */,
-				D7B151F1253CC5A900FF926C /* PageView.swift */,
-				D7B151F3253CC5BC00FF926C /* PageViewContainer.swift */,
-				D7B151F5253CC5C600FF926C /* PageViewController.swift */,
-				D7B151F9253CC65300FF926C /* PageIndicator.swift */,
+				D792E93F2552A59600CE0C92 /* Tab1 */,
+				D792E93E2552A57A00CE0C92 /* Tab2 */,
 			);
 			path = Views;
 			sourceTree = "<group>";
