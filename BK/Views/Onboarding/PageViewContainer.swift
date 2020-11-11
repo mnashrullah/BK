@@ -41,14 +41,14 @@ struct PageViewContainer<Page: View>  : View {
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .accentColor(Color("text"))
-                            .background(Color("secondary"))
+                            .background(Color("primary"))
                             .cornerRadius(5)
                     }.padding()
                 }
             }.padding(.vertical)
         }
 //        .background(Constants.mColor.gradient)
-        .background(Color("primary"))
+        .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
     }
 }

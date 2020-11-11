@@ -15,7 +15,7 @@ struct HomeView: View {
     init(){
         UITableView.appearance().tableFooterView = UIView()
         UITableView.appearance().separatorStyle = .none
-        UITabBar.appearance().backgroundColor = UIColor(named: "Color4")
+        UITabBar.appearance().backgroundColor = UIColor(named: "primary")
 
     }
     

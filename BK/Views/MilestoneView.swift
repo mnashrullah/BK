@@ -22,6 +22,7 @@ struct MilestoneView: View {
     //        UIScrollView.appearance().backgroundColor = UIColor(named: "Color4")
     //    }
     var body: some View {
+        
         ScrollView(showsIndicators: false){
             ZStack(alignment: .center){
                 Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu. Kamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
@@ -29,7 +30,7 @@ struct MilestoneView: View {
                     .background(Color.white)
                     .foregroundColor(Color("Color5"))
                     .cornerRadius(10)
-                
+
                 Button(action:{
                     print("test")
                 }){
@@ -42,7 +43,7 @@ struct MilestoneView: View {
             }
             .padding([.leading, .trailing])
             .multilineTextAlignment(.center)
-            
+
             HStack {
                 NavigationLink(destination: HelpView()){
                     Text("Progress Terpenuhi")
@@ -52,12 +53,12 @@ struct MilestoneView: View {
                 .padding()
                 .background(Color.white)
                 .foregroundColor(Color("Color5"))
-                
+
             }
             .cornerRadius(10)
             .padding([.leading, .trailing])
             //                    .padding([.bottom], 20)
-            
+
             VStack(alignment: .leading){
                 ZStack (alignment: .leading) {
                     RoundedRectangle(cornerRadius: 10)
@@ -80,7 +81,7 @@ struct MilestoneView: View {
                         .fontWeight(.semibold)
                 }
             }
-            
+
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(){
                     Button(action: {
@@ -96,8 +97,8 @@ struct MilestoneView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("Color5"))
                         }
-                        
-                        
+
+
                     }
                     Button(action:{
                         print("motorik")
@@ -155,8 +156,8 @@ struct MilestoneView: View {
                 .padding()
                 .background(Color("Color4"))
             }
-            
-            
+
+
             ForEach(mileTracks){ mileTrack in
                 HStack {
                     VStack(alignment: .leading) {
@@ -189,6 +190,10 @@ struct MilestoneView: View {
         }
         .navigationBarTitle(Text(names).foregroundColor(Color("Color3")), displayMode: .large)
         .navigationBarItems(trailing: Text(ages).foregroundColor(Color("Color5")))
+        .background(Color("bg"))
+        .navigationBarColor(UIColor(named: "bg"))
+
+        
         
         
     }

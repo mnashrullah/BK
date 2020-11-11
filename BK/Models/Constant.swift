@@ -10,16 +10,14 @@ import SwiftUI
 
 struct Constants {
     struct TabBarImageName {
-        static let tabBar0 = "rectangle.badge.checkmark"
-        static let tabBar1 = "lightbulb"
-        static let tabBar2 = "doc.text.magnifyingglass"
+        static let tabBar0 = "heart.fill"
+        static let tabBar1 = "book.fill"
         
         
     }
     struct TabBarText {
-        static let tabBar0 = "Milestone"
-        static let tabBar1 = "Tips"
-        static let tabBar2 = "Sekilas"
+        static let tabBar0 = "Anak"
+        static let tabBar1 = "Ringkasan"
     }
     struct str {
         static let lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"

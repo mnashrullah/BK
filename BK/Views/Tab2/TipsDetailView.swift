@@ -29,14 +29,15 @@ struct TipsDetailView: View {
 
     
     var body: some View {
+       
         ScrollView(.vertical){
             Image("baby")
                 .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/4 )
                 .padding(.bottom)
-            
+
             VStack(alignment:.leading){
                 Text("Milestone")
-                
+
                 Text("Anak usia \(tips[index].monthName)")
                     .font(.title)
                     .bold()
@@ -46,13 +47,13 @@ struct TipsDetailView: View {
                         Text(self.segmentedValue[index]).tag(index)
                     }
                 }.pickerStyle(SegmentedPickerStyle())
-                
+
 //                MARK: Filter content based on segmented
 
                 ForEach(tipsItem.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
                     cardSimple(description: item.item)
                 }
-                
+
             }.padding()
          Spacer()
         }

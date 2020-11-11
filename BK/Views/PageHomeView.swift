@@ -15,38 +15,40 @@ struct PageHomeView: View {
         NavigationView{
             VStack{
                 HStack{
-                    Button(action:{
-                        print("Test")
-                    }){
-                        VStack{
-                            Text("Budi")
-                                .frame(minWidth: 100, maxWidth: 100, minHeight: 100, maxHeight: 100)
-                                .background(Color("Color5"))
-                                .foregroundColor(Color("Color3"))
-                                .cornerRadius(15)
-                        }
+//                    MARK: example button anak
+//                    Button(action:{
+//                        print("Test")
+//                    }){
+//                        VStack{
+//                            Text("Budi")
+//                                .frame(minWidth: 100, maxWidth: 100, minHeight: 100, maxHeight: 100)
+//                                .background(Color("Color5"))
+//                                .foregroundColor(Color("Color3"))
+//                                .cornerRadius(50)
+//                        }
+//                    }
+                    
+                    //MARK: tambah data anak
+                    VStack(){
+                        Image("boy")
+                            .resizable().frame(width:50, height: 50)
+                            .scaledToFit()
+                            .padding(15)
+                            .background(Color("Color5")
+                            .opacity(0.2))
+                            .cornerRadius(50)
+                        Text("Budi").foregroundColor(Color("Color5"))
                     }
-                    Button(action:{
-                        print("test")
-                    }){
+                    VStack(){
                         VStack{
-                            Text("Budi")
-                                .frame(minWidth: 100, maxWidth: 100, minHeight: 100, maxHeight: 100)
-                                .background(Color("Color5").opacity(0.2))
-                                .foregroundColor(Color("Color5").opacity(0.6))
-                                .cornerRadius(15)
+                            Image(systemName: "plus").foregroundColor(Color("Color5").opacity(0.6))
                         }
-                    }
-                    Button(action:{
-                        print("test")
-                    }){
-                        VStack{
-                            Image(systemName: "plus")
-                                .frame(minWidth: 100, maxWidth: 100, minHeight: 100, maxHeight: 100)
-                                .background(Color("Color5").opacity(0.2))
-                                .foregroundColor(Color("Color5").opacity(0.6))
-                                .cornerRadius(15)
-                        }
+                        .frame(width:50, height: 50)
+                        .padding(15)
+                        .background(Color("Color5").opacity(0.2))
+                        .cornerRadius(50)
+                        
+                        Text("Data Anak").foregroundColor(Color("Color5"))
                     }
                     Spacer()
                 }
