@@ -73,7 +73,7 @@ struct TipsView: View {
     }
     
     @State private var selectedSegmented = 0
-    var segmentedValue = ["Milestone", "Tips"]
+    var segmentedValue = ["Ringkasan", "Tips"]
     
     var body: some View {
 //        ZStack{
@@ -143,6 +143,10 @@ struct TipsView: View {
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                         .padding(.horizontal)
+                    Text("Tips adalah informasi berisi saran yang dilakukan orang tua untuk merangsang tumbuh kembang yang ideal terpenuhi pada anak anda.")
+                        .padding(.horizontal)
+                        .font(Font.custom("SFPD-reg", size: 13))
+                    //font sf pro display
                     ForEach(0..<rows) { row in
                         HStack(alignment: .firstTextBaseline) {
                             ForEach(0..<self.columns) { column -> cardTipsView in
@@ -160,7 +164,7 @@ struct TipsView: View {
                     }
                 }
                     
-                .navigationBarTitle(Text("Tips"))
+                .navigationBarTitle(Text("Informasi"))
 
                 .background(Color("Color4"))
                 .navigationBarColor(UIColor(named: "Color4"))
@@ -178,9 +182,9 @@ struct TipsView_Previews: PreviewProvider {
 
 
 struct cardTipsView: View{
-    var activeColor = Color("tealDark")
-    var notActiveColor = Color("teal")
-    var activeText = Color.white
+    var activeColor = Color("Color7")
+    var notActiveColor = Color("Color7")
+    var activeText = Color.black
     var notActiveText = Color.black
     var activeOpacity = 1
     var notActiveOpacity = 0.2

@@ -12,6 +12,7 @@
 		0A6D62692556F8DF00AAF170 /* PageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62682556F8DF00AAF170 /* PageHomeView.swift */; };
 		0A841B63254D1EBA005940B0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B62254D1EBA005940B0 /* SettingView.swift */; };
 		0A841B65254E8E99005940B0 /* MilestoneTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B64254E8E99005940B0 /* MilestoneTrack.swift */; };
+		1935A2992561743300DD4218 /* SFPD-reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1935A2982561743300DD4218 /* SFPD-reg.ttf */; };
 		D7165B8B25441E13002CB21D /* ProfileAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B8A25441E13002CB21D /* ProfileAddView.swift */; };
 		D7165B8D254456D2002CB21D /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B8C254456D2002CB21D /* SummaryView.swift */; };
 		D7165B8F254456EA002CB21D /* ScreeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7165B8E254456EA002CB21D /* ScreeningView.swift */; };
@@ -47,6 +48,7 @@
 		0A6D62682556F8DF00AAF170 /* PageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHomeView.swift; sourceTree = "<group>"; };
 		0A841B62254D1EBA005940B0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		0A841B64254E8E99005940B0 /* MilestoneTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrack.swift; sourceTree = "<group>"; };
+		1935A2982561743300DD4218 /* SFPD-reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFPD-reg.ttf"; sourceTree = "<group>"; };
 		D7165B8A25441E13002CB21D /* ProfileAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddView.swift; sourceTree = "<group>"; };
 		D7165B8C254456D2002CB21D /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		D7165B8E254456EA002CB21D /* ScreeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreeningView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		D7165B9825486E19002CB21D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1935A2982561743300DD4218 /* SFPD-reg.ttf */,
 				D7165B9925486E28002CB21D /* Colors.swift */,
 			);
 			path = Utils;
@@ -264,6 +267,7 @@
 			files = (
 				D7B151DA2536FA5C00FF926C /* LaunchScreen.storyboard in Resources */,
 				D7B151D72536FA5C00FF926C /* Preview Assets.xcassets in Resources */,
+				1935A2992561743300DD4218 /* SFPD-reg.ttf in Resources */,
 				D7B151D42536FA5C00FF926C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
-				DEVELOPMENT_TEAM = TTWVZH63FB;
+				DEVELOPMENT_TEAM = Q2TX2PWBTJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -464,7 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
-				DEVELOPMENT_TEAM = TTWVZH63FB;
+				DEVELOPMENT_TEAM = Q2TX2PWBTJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
