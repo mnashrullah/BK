@@ -70,6 +70,12 @@ struct TipsView: View {
         
         //Use this if NavigationBarTitle is with displayMode = .inline
 //        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
+//            .background(Color("Color4"))
+//            .navigationBarColor(UIColor(named: "Color4"))
+        UISegmentedControl.appearance().backgroundColor = UIColor(named: "Color7")
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "Color8")
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
     }
     
     @State private var selectedSegmented = 0

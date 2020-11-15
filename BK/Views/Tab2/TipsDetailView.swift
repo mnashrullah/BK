@@ -19,6 +19,10 @@ struct TipsDetailView: View {
         index = UserDefaults.standard.integer(forKey:"month")
         tipsItem = TipsItem.getAll
         
+        UISegmentedControl.appearance().backgroundColor = UIColor(named: "Color7")
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "Color8")
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
     }
     @State private var selectedSegmented = 0
     @State private var selectedSegmentedText = 0
@@ -36,7 +40,7 @@ struct TipsDetailView: View {
                 .padding(.bottom)
 
             VStack(alignment:.leading){
-                Text("Milestone")
+                Text("Ringkasan")
 
                 Text("Anak usia \(tips[index].monthName)")
                     .font(.title)
@@ -57,6 +61,7 @@ struct TipsDetailView: View {
             }.padding()
          Spacer()
         }
+        .background(Color("bg"))
     }
 }
 
@@ -89,8 +94,8 @@ struct cardSimple: View{
         .cornerRadius(10)
             
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 1)
+            RoundedRectangle(cornerRadius: 25)
+                .stroke(Color("Color7"), lineWidth: 1)
         )
             .padding([.top,.horizontal])
     }
