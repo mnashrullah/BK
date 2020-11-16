@@ -35,8 +35,15 @@ struct TipsDetailView: View {
     var body: some View {
        
         ScrollView(.vertical){
+//                MARK: Segmented control
+        Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
+            ForEach(0..<segmentedValue.count) { index in
+                Text(self.segmentedValue[index]).tag(index)
+            }
+        }.pickerStyle(SegmentedPickerStyle())
+            
             Image("baby")
-                .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/4 )
+                .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/2 )
                 .padding(.bottom)
 
             VStack(alignment:.leading){
@@ -45,18 +52,13 @@ struct TipsDetailView: View {
                 Text("Anak usia \(tips[index].monthName)")
                     .font(.title)
                     .bold()
-//                MARK: Segmented control
-                Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
-                    ForEach(0..<segmentedValue.count) { index in
-                        Text(self.segmentedValue[index]).tag(index)
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
 
 //                MARK: Filter content based on segmented
 
                 ForEach(tipsItem.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
                     cardSimple(description: item.item)
                 }
+//                .background(Color("Color7"))
 
             }.padding()
          Spacer()
@@ -84,7 +86,6 @@ struct cardSimple: View{
                 VStack(alignment: .leading) {
                     Text(description)
                 }
-                    
                 .layoutPriority(100)
                 
                 Spacer()
@@ -97,7 +98,7 @@ struct cardSimple: View{
             RoundedRectangle(cornerRadius: 25)
                 .stroke(Color("Color7"), lineWidth: 1)
         )
-            .padding([.top,.horizontal])
+        .padding([.top,.horizontal])
     }
 }
 
