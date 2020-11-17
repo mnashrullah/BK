@@ -244,8 +244,7 @@ struct PageHomeView: View {
                         NavigationLink(destination: MilestoneView(isNavigationBarHidden: $isNavigationBarHidden)){
                             VStack{
                                 Image("menu1")
-                                    .font(.title)
-                                    .padding().foregroundColor(.red)
+                                    .padding()
                                 Text("Checklist Milestone")
                                     .fontWeight(.semibold)
                                     .padding([.leading, .trailing], 20)

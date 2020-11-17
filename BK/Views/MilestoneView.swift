@@ -182,7 +182,7 @@ struct MilestoneView: View {
     //                    }
                         .background(Color("Color3"))
                         .cornerRadius(10)
-                    }
+                    }.buttonStyle(PlainButtonStyle())
                 }
                 .padding([.trailing,.leading])
             } else{

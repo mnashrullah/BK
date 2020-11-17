@@ -287,7 +287,6 @@
 			files = (
 				D7B151DA2536FA5C00FF926C /* LaunchScreen.storyboard in Resources */,
 				D7B151D72536FA5C00FF926C /* Preview Assets.xcassets in Resources */,
-				1935A2992561743300DD4218 /* SFPD-reg.ttf in Resources */,
 				D7818DE42562489700EBC5E3 /* mileData.json in Resources */,
 				D7B151D42536FA5C00FF926C /* Assets.xcassets in Resources */,
 			);
@@ -469,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-5";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
 				DEVELOPMENT_TEAM = TTWVZH63FB;
 				ENABLE_PREVIEWS = YES;
@@ -491,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-5";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
 				DEVELOPMENT_TEAM = TTWVZH63FB;
 				ENABLE_PREVIEWS = YES;

@@ -70,29 +70,31 @@ struct SummaryView: View {
     //    }
     
     @Binding var isNavigationBarHidden: Bool
-    var percent: Double = 50
-    var thickness: CGFloat = 20
-    var fontSize:CGFloat = 15
-    var gradientColors =  [Color.blue, Color.red]
+//    var percent: Double = 50
+//    var thickness: CGFloat = 20
+//    var fontSize:CGFloat = 15
+//    var gradientColors =  [Color.blue, Color.red]
     @State private var selectedSegmented = 0
     var segmentedValue = ["Milestone", "Skrining"]
-    @State var progressValue: Float = 0.28
-    @State private var selectorIndex = 0
+    @State private var selectedMonth = 0
+
+//    @State var progressValue: Float = 0.28
+//    @State private var selectorIndex = 0
+//
+//    @State private var numbers = ["Milestone", "Skrining"]
+//    var months = ["2 Bulan", "4 Bulan", "9 Bulan", "12 Bulan", "18 Bulan", "24 Bulan", "36 Bulan", "48 Bulan", "60 Bulan" ]
+//    @State private var selectedMonths = 0
     
-    @State private var numbers = ["Milestone", "Skrining"]
-    var months = ["2 Bulan", "4 Bulan", "9 Bulan", "12 Bulan", "18 Bulan", "24 Bulan", "36 Bulan", "48 Bulan", "60 Bulan" ]
-    @State private var selectedMonths = 0
-    
-    var names = "Budi"
-    
-    @State var pickerSelection = 0
-    @State var barValues : [[CGFloat]] =
-        [
-            [123,110,30,170],
-            [80,140,90,60],
-            [150,70,70,10],
-        ]
-    
+//    var names = "Budi"
+//
+//    @State var pickerSelection = 0
+//    @State var barValues : [[CGFloat]] =
+//        [
+//            [123,110,30,170],
+//            [80,140,90,60],
+//            [150,70,70,10],
+//        ]
+//    
     
     @ObservedObject var observableContent = ObservableContent()
     @EnvironmentObject var userData: UserData
@@ -102,21 +104,22 @@ struct SummaryView: View {
             ScrollView(showsIndicators: false){
                 //                MARK: pilih segmented
                 VStack() {
-                    Picker("Numbers", selection: $selectorIndex) {
-                        ForEach(0 ..< numbers.count) { index in
-                            Text(self.numbers[index]).tag(index)
+                    Picker("Numbers", selection: $selectedSegmented) {
+                        ForEach(0 ..< segmentedValue.count) { index in
+                            Text(self.segmentedValue[index]).tag(index)
                         }
                     }
                     .cornerRadius(5)
                     .padding()
                     .pickerStyle(SegmentedPickerStyle())
                     
-                    //                    MARK: pilih tahun
+//                    MARK: pilih tahun
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(){
                             ForEach(userData.miles){mileTrack in
                                 Button(action: {
-                                    
+                                    selectedMonth = mileTrack.month
+                                    print(selectedMonth)
                                 }){
                                     VStack{
                                         Text("\(String(mileTrack.month))")
