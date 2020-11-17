@@ -151,39 +151,45 @@ struct MilestoneView: View {
             //                print(observableContent.data)
             //            }
             //            self.mile =  miles.filter { $0.month == month }
+            
+            
             if (self.mCategory[self.categorySelected] == self.mCategory[0] ){
                 ForEach(observableContent.data){ mileTrack in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(mileTrack.name)
-                                .font(.body)
-                                .foregroundColor(.primary)
-                                .fixedSize(horizontal: false, vertical: true)
-                            HStack {
-                                Image(mileTrack.category)
-                                Text(mileTrack.category)
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                                Spacer()
-                                Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                    Button(action:{
+                        observableContent.updateComplete(id: mileTrack.idMilestone, isComplete: !mileTrack.isComplete)
+                    }){
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(mileTrack.name)
+                                    .font(.body)
+                                    .foregroundColor(.primary)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                HStack {
+                                    Image(mileTrack.category)
+                                    Text(mileTrack.category)
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                                }
                             }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
                         }
-                        .padding()
-                        .background(Color.white)
+    //                    .onTapGesture(){
+    //                        print(mileTrack.idMilestone)
+    //                    }
+                        .background(Color("Color3"))
                         .cornerRadius(10)
                     }
-                    .onTapGesture(){
-                        print(mileTrack.idMilestone)
-                    }
-                    .background(Color("Color3"))
-                    .cornerRadius(10)
                 }
                 .padding([.trailing,.leading])
             } else{
                 ForEach(observableContent.data){ mileTrack in
                     if (mileTrack.category == self.mCategory[self.categorySelected]){
                         Button(action:{
-                            print(mileTrack.id)
+                            observableContent.updateComplete(id: mileTrack.idMilestone, isComplete: !mileTrack.isComplete)
                         }){
                             HStack {
                                 VStack(alignment: .leading) {

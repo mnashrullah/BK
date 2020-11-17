@@ -24,8 +24,10 @@ struct ContentView: View {
     @EnvironmentObject var userData: UserData
     var body: some View {
         HomeView().onAppear(){
-            if (userData.isFirstTime){
+            if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
                 loadContent()
+                UserDefaults.standard.set(true, forKey: "isFirstTime")
+                print("load first time")
             }
         }
 //        NavigationView{
@@ -129,6 +131,13 @@ class ObservableContent : ObservableObject{
         let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.persistentContainer.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
+        let sort = NSSortDescriptor(key: "category", ascending: true)
+        req.sortDescriptors = [sort]
+
+//        @FetchRequest(entity: Book.entity(), sortDescriptors: [
+//            NSSortDescriptor(keyPath: \Book.title, ascending: true),
+//            NSSortDescriptor(keyPath: \Book.author, ascending: true)
+//        ]) var books: FetchedResults<Book>
         //        MARK: Coredata load data milestone done
         do{
             let res = try context.fetch(req)
@@ -214,19 +223,20 @@ class ObservableContent : ObservableObject{
     }
     
    
-    func updateComplete(){
+    func updateComplete(id: Int, isComplete: Bool){
 //        MARK: Coredata add data milestone done
         let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.persistentContainer.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
-        req.predicate = NSPredicate(format: "idMilestone = 5001")
+        req.predicate = NSPredicate(format: "idMilestone = \(id)")
         do{
             let res = try context.fetch(req)
                 if res.count == 1 {
                     let objectUpdate = res[0] as! NSManagedObject
-                    objectUpdate.setValue(true, forKey: "isComplete")
+                    objectUpdate.setValue(isComplete, forKey: "isComplete")
                     try context.save()
                     loadData()
+                    countAll()
                 }else{
                     print("data not found")
                 }
@@ -271,7 +281,7 @@ class ObservableContent : ObservableObject{
             numberItemBahasaCompleted = res.count
             req.predicate = NSPredicate(format: "category = '\(mCategory[2])'")
             res = try context.fetch(req)
-            numberItemBahasaCompleted = res.count
+            numberItemBahasa = res.count
             
             req.predicate = NSPredicate(format: "category = '\(mCategory[3])' && isComplete = true")
             res = try context.fetch(req)

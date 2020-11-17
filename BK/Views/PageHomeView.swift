@@ -54,6 +54,7 @@ struct PageHomeView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("Color5"))
                         Text("Berikut pilihan untuk membantu perkembangan anak anda.").font(.subheadline)
+                            .foregroundColor(Color("Color5"))
                     }
                     Spacer()
                 }

@@ -42,10 +42,12 @@ struct TipsDetailView: View {
 
             VStack(alignment:.leading){
                 Text("\(type)")
+                    .foregroundColor(Color("text"))
 
                 Text("Anak usia \(String(mile.month))")
                     .font(.title)
                     .bold()
+                    .foregroundColor(Color("text"))
 //                MARK: Segmented control
                 Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
                     ForEach(0..<segmentedValue.count) { index in
@@ -101,6 +103,7 @@ struct cardSimple: View{
             HStack {
                 VStack(alignment: .leading) {
                     Text(description)
+                        .foregroundColor(Color("text"))
                 }
                     
                 .layoutPriority(100)

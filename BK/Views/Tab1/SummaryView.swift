@@ -162,28 +162,28 @@ struct SummaryView: View {
                             ProgressBar(progress: observableContent.numberItemMotorikCompleted, max: observableContent.numberItemMotorik, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
-                            Text("Social")
+                            Text("Motorik")
                                 .foregroundColor(Color("text"))
                         }
                         VStack{
                             ProgressBar(progress: observableContent.numberItemSosialCompleted, max: observableContent.numberItemSosial, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
-                            Text("Social")
+                            Text("Sosial")
                                 .foregroundColor(Color("text"))
                         }
                         VStack{
                             ProgressBar(progress: observableContent.numberItemBahasaCompleted, max: observableContent.numberItemBahasa, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
-                            Text("Social")
+                            Text("Bahasa")
                                 .foregroundColor(Color("text"))
                         }
                         VStack{
                             ProgressBar(progress: observableContent.numberItemKognitifCompleted, max: observableContent.numberItemKognitif, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
-                            Text("Social")
+                            Text("Kognitif")
                                 .foregroundColor(Color("text"))
                         }
                         .padding(.bottom,10)
@@ -195,7 +195,11 @@ struct SummaryView: View {
         .navigationBarColor(UIColor(named: "bg"))
         
         .navigationBarTitle(Text("Hasil"), displayMode: .inline)
-        .onAppear {self.isNavigationBarHidden = false}
+        .onAppear {
+            self.isNavigationBarHidden = false
+            observableContent.countAll()
+            
+        }
     }
     
 }

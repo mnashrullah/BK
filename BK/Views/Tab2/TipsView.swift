@@ -165,9 +165,9 @@ struct TipsView: View {
                 }
                     
                 .navigationBarTitle(Text("Tips"))
-
-                .background(Color("Color4"))
-                .navigationBarColor(UIColor(named: "Color4"))
+                .background(Color("bg"))
+                .navigationBarColor(UIColor(named: "bg"))
+                
                 .onAppear(){
 //                    print("conten all \(observableContent.data)")
 //                    print("conten \(observableContent.data[0])")
@@ -189,10 +189,10 @@ struct TipsView_Previews: PreviewProvider {
 
 struct cardTipsView: View{
     var mile: Mile
-    var activeColor = Color("tealDark")
-    var notActiveColor = Color("teal")
-    var activeText = Color.white
-    var notActiveText = Color.black
+    var activeColor = Color("Color3")
+    var notActiveColor = Color("Color3")
+    var activeText = Color("text")
+    var notActiveText = Color("text")
     var activeOpacity = 1
     var notActiveOpacity = 0.2
 //    var monthName: String
@@ -233,6 +233,7 @@ struct cardTipsView: View{
                         VStack(alignment: .leading) {
                             Text("\(String(mile.month)) Bulan")
                                 .font(.body)
+                                .fontWeight(self.isActive == self.index ? .semibold : .none)
                                 .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
                                 .padding(10)
                         }
@@ -253,6 +254,7 @@ struct cardTipsView: View{
                         .padding([.top,.horizontal])
                 }
                 .buttonStyle(PlainButtonStyle())
+                .opacity(self.isActive == self.index ? 1 : 0.8)
                     
                 .sheet(isPresented: $showingDetail) {
                     //                    MARK: -modal/sheet tips
