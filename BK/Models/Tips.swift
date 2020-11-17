@@ -16,19 +16,26 @@ struct TipsItem: Identifiable{
     static var getAll:[TipsItem]{
         
         [
-            TipsItem(id: UUID(), month: 2, category: "Bahasa", item: "Mengulangi ucapan dari orang sekitar"),
+            TipsItem(id: UUID(), month: 2, category: "Bahasa", item: "Mengulangi ucapan dari orang/anak sekitarnya"),
             TipsItem(id: UUID(), month: 2, category: "Bahasa", item: "Menyuarakan suara"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
-            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Menirukan orang dewasa ketika bersama teman temannya"),
+            TipsItem(id: UUID(), month: 2, category: "Bahasa", item: "Mulai mengoceh"),
+            TipsItem(id: UUID(), month: 2, category: "Bahasa", item: "Mengoceh sambil menunjukkan ekspresi dan meniru suara yang ia dengar"),
+            TipsItem(id: UUID(), month: 2, category: "Bahasa", item: "Menangis untuk memberitahu ia lapar, sakit atau lelah"),
+            TipsItem(id: UUID(), month: 2, category: "Sosial", item: "Tersenyum, terutama ketika berhadapan dengan orang/anak lain"),
+            TipsItem(id: UUID(), month: 2, category: "Sosial", item: "Senang bermain dengan orang/anak lain dan bisa menangis jika berhenti bermain"),
+            TipsItem(id: UUID(), month: 2, category: "Sosial", item: "Meniru gerakan dan mimik wajah, ketika tersenyum ataupun cemberut"),
+            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Tidak perlu bantuan lagi untuk menegakkan kepalanya"),
+            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Mampu berguling kesamping"),
+            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Bisa memegang mainan dan mengguncangnya lalu memutar-mutarnya"),
+            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Memasukkan tangan kemulut"),
+            TipsItem(id: UUID(), month: 2, category: "Motorik", item: "Ketika berbaring telungkup, mengangkat badan dengan sikunya"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Menunjukkan perasaan senang ataupun sedih ke orang lain"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Merespon kasih sayang"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Meraih mainan dengan satu tangan"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Menggunakan mata dan tangan secara bersamaan, seperti melihat mainan dan meraihnya"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Mengikuti benda bergerak dengan matanya dari ujung ke ujung"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Memperhatikan wajah orang lain dengan cukup dekat"),
+            TipsItem(id: UUID(), month: 2, category: "kognitif", item: "Mengenali orang/anak atau benda yang familiar"),
             
         ]
     }

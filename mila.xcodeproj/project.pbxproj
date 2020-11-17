@@ -287,6 +287,7 @@
 			files = (
 				D7B151DA2536FA5C00FF926C /* LaunchScreen.storyboard in Resources */,
 				D7B151D72536FA5C00FF926C /* Preview Assets.xcassets in Resources */,
+				1935A2992561743300DD4218 /* SFPD-reg.ttf in Resources */,
 				D7818DE42562489700EBC5E3 /* mileData.json in Resources */,
 				D7B151D42536FA5C00FF926C /* Assets.xcassets in Resources */,
 			);
