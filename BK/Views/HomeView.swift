@@ -51,6 +51,8 @@ struct HomeView: View {
                     UserDefaults.standard.set(true, forKey: self.initialLaunchKey)
                 }).transition(.scale)
             }
+        }.onAppear(){
+            UserDefaults.standard.setValue(2, forKey: "month")
         }
     }
 }

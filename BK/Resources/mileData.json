@@ -1,0 +1,72 @@
+[
+    {
+        "id": 11,
+        "month": 2,
+        "monthName": "0-2 Bulan",
+        "tips":[
+            {
+                "id": 101,
+                "month": 2,
+                "category": "Motorik",
+                "name": "orang tua memainkan mainan didepan anak"
+            },
+            {
+                "id": 102,
+                "month": 2,
+                "category": "Sosial",
+                "name": "orang tua mencoba ajak berbicara"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5001,
+                "month": 2,
+                "name": "mile1",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5002,
+                "month": 2,
+                "name": "mile2",
+                "category": "Sosial",
+                "isComplete": true
+            }
+        ],
+    },
+    {
+        "id": 12,
+        "month": 4,
+        "monthName": "2-4 Bulan",
+        "tips":[
+            {
+                "id": 103,
+                "month": 4,
+                "category": "Bahasa",
+                "name": "orang tua memainkan mainan didepan anak"
+            },
+            {
+                "id": 104,
+                "month": 4,
+                "category": "Kognitif",
+                "name": "orang tua mencoba ajak berbicara"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5003,
+                "month": 4,
+                "name": "berbicara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5004,
+                "month": 4,
+                "name": "merangkak",
+                "category": "Kognitif",
+                "isComplete": true
+            }
+        ],
+    }
+]

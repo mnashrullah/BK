@@ -52,28 +52,35 @@ struct NavigationBarModifier: ViewModifier {
 }
 
 struct TipsView: View {
-    var months = ["2 Bulan", "4 Bulan", "9 Bulan", "12 Bulan", "18 Bulan", "2 Tahun", "3 Tahun", "4 Tahun", "5 Tahun" ]
-    @State var isActive: Int = 1
+//
+//    var miles: [Mile] = mileData
+//    var mile: Mile?
+//    var months = ["2 Bulan", "4 Bulan", "9 Bulan", "12 Bulan", "18 Bulan", "2 Tahun", "3 Tahun", "4 Tahun", "5 Tahun" ]
+    @State var isActive: Int = 0
     @State private var selectedMonths = 0
     private let columns = 2
     @State var showingDetail = false
-    let results = [Result(score: 8), Result(score: 5), Result(score: 10)]
-    var tips: [Tips]
+//    let results = [Result(score: 8), Result(score: 5), Result(score: 10)]
+//    var tips: [Tips]
     //    init(){
     //
     //    }
     
-    init() {
-        tips = Tips.getAll
+//    init() {
+//        tips = Tips.getAll
         //Use this if NavigationBarTitle is with Large Font
 //        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.red]
         
         //Use this if NavigationBarTitle is with displayMode = .inline
 //        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
-    }
+//    }
     
     @State private var selectedSegmented = 0
     var segmentedValue = ["Milestone", "Tips"]
+    
+    @ObservedObject var observableContent = ObservableContent()
+    @ObservedObject var observableTips = ObservableTips()
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
 //        ZStack{
@@ -81,7 +88,7 @@ struct TipsView: View {
 //            //
 //            //        }.background(Color.red)
 //            Color("bg").edgesIgnoringSafeArea(.all)
-            makeGrid()
+        makeGrid()
 //        ZStack {
 //            Color.red.edgesIgnoringSafeArea(.all)
 //            NavigationView {
@@ -127,7 +134,7 @@ struct TipsView: View {
     }
     
     private func makeGrid() -> some View {
-        let count = tips.count
+        let count = userData.miles.count
         let rows = count / columns + (count % columns == 0 ? 0 : 1)
         return
             NavigationView{
@@ -148,13 +155,10 @@ struct TipsView: View {
                             ForEach(0..<self.columns) { column -> cardTipsView in
                                 let index = row * self.columns + column
                                 if index < count {
-                                    return cardTipsView(description: self.tips[index], isActive: self.isActive, index: index, showingDetail: self.$showingDetail)
+                                    return cardTipsView(mile: userData.miles[index], isActive: self.isActive, index: index, showingDetail: self.$showingDetail, typeContent: segmentedValue[selectedSegmented])
                                 } else {
-                                    return cardTipsView(description: self.tips[0], isActive: self.isActive, index:99 , showingDetail: self.$showingDetail)
-                                    
+                                    return cardTipsView(mile: userData.miles[0], isActive: self.isActive, index:99 , showingDetail: self.$showingDetail, typeContent: segmentedValue[selectedSegmented])
                                 }
-                                
-                                
                             }
                         }
                     }
@@ -164,7 +168,13 @@ struct TipsView: View {
 
                 .background(Color("Color4"))
                 .navigationBarColor(UIColor(named: "Color4"))
+                .onAppear(){
+//                    print("conten all \(observableContent.data)")
+//                    print("conten \(observableContent.data[0])")
+//                    print("userdata \(userData.miles)")
+                }
                 Spacer()
+                    
                 
         }
     }
@@ -178,13 +188,14 @@ struct TipsView_Previews: PreviewProvider {
 
 
 struct cardTipsView: View{
+    var mile: Mile
     var activeColor = Color("tealDark")
     var notActiveColor = Color("teal")
     var activeText = Color.white
     var notActiveText = Color.black
     var activeOpacity = 1
     var notActiveOpacity = 0.2
-    var description: Tips
+//    var monthName: String
     var image = Image("baby")
     var isActive: Int
     var index: Int
@@ -194,6 +205,7 @@ struct cardTipsView: View{
     //    segmented
     @State private var favoriteColor = 0
     var colors = ["Red", "Green", "Blue"]
+    var typeContent: String
     
     
     var body: some View{
@@ -219,8 +231,7 @@ struct cardTipsView: View{
                 }){
                     HStack {
                         VStack(alignment: .leading) {
-                            
-                            Text(description.monthName)
+                            Text("\(String(mile.month)) Bulan")
                                 .font(.body)
                                 .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
                                 .padding(10)
@@ -245,7 +256,8 @@ struct cardTipsView: View{
                     
                 .sheet(isPresented: $showingDetail) {
                     //                    MARK: -modal/sheet tips
-                    TipsDetailView()
+                    TipsDetailView(mile: mile, type:  typeContent)
+                    
                 }
                 
                 //                MARK: -navigation

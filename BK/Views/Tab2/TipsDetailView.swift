@@ -9,36 +9,41 @@
 import SwiftUI
 
 struct TipsDetailView: View {
+    var mile: Mile
+    var type: String
     //    var item: Tips
-    var tips: [Tips]
-    var index: Int
-    var tipsItem: [TipsItem]
-    
-    init(){
-        tips = Tips.getAll
-        index = UserDefaults.standard.integer(forKey:"month")
-        tipsItem = TipsItem.getAll
-        
-    }
+//    var tips: [Tips]
+//    var index: Int
+//    var tipsItem: [TipsItem]
+//
+//
+//    init(){
+//        tips = Tips.getAll
+//        index = UserDefaults.standard.integer(forKey:"month")
+//        tipsItem = TipsItem.getAll
+//
+//
+//    }
     @State private var selectedSegmented = 0
     @State private var selectedSegmentedText = 0
     
-    var segmentedValue = ["Bahasa", "kognitif", "Motorik", "Sosial"]
-    let cars = ["Subaru WRX", "Tesla Model 3", "Porsche 911", "Renault Zoe", "DeLorean"]
-      @State private var searchText : String = ""
+    var segmentedValue = ["Motorik", "Sosial", "Bahasa", "Kognitif"]
 
+    @State private var searchText : String = ""
+    
     
     var body: some View {
        
         ScrollView(.vertical){
+            
             Image("baby")
                 .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/4 )
                 .padding(.bottom)
 
             VStack(alignment:.leading){
-                Text("Milestone")
+                Text("\(type)")
 
-                Text("Anak usia \(tips[index].monthName)")
+                Text("Anak usia \(String(mile.month))")
                     .font(.title)
                     .bold()
 //                MARK: Segmented control
@@ -47,25 +52,43 @@ struct TipsDetailView: View {
                         Text(self.segmentedValue[index]).tag(index)
                     }
                 }.pickerStyle(SegmentedPickerStyle())
+                .padding(.top, 20)
 
 //                MARK: Filter content based on segmented
 
-                ForEach(tipsItem.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
-                    cardSimple(description: item.item)
+//                ForEach(mile.milestone.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
+//                    cardSimple(description: item.item)
+//                }
+                if (type == "Milestone"){
+                    ForEach(mile.milestone){item in
+                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
+                            cardSimple(description: item.name)}
+                    }
                 }
+                if (type == "Tips"){
+                    ForEach(mile.tips){item in
+                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
+                            cardSimple(description: item.name)}
+                    }
+                }
+                
+//                ForEach(mile.milestone.category=segmentedValue[self.selectedSegmented]){item in
+//                    cardSimple(description: item.name)
+//                }
 
             }.padding()
          Spacer()
+            
         }
     }
 }
-
-struct TipsDetailView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        TipsDetailView()
-    }
-}
+//
+//struct TipsDetailView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        TipsDetailView()
+//    }
+//}
 
 
 struct cardSimple: View{
