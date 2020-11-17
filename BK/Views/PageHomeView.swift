@@ -11,119 +11,184 @@ import SwiftUI
 struct PageHomeView: View {
     @State var isNavigationBarHidden: Bool = true
     
+    @State var showingSetting = false
+    
+    var settingButton: some View {
+        Button(action: { self.showingSetting.toggle() }) {
+            Image(systemName: "gear")
+                .imageScale(.large)
+                .accessibility(label: Text("Pengaturan"))
+//                .padding()
+        }
+    }
+    
+//        init(){
+//            UIScrollView.appearance().backgroundColor = UIColor(named: "bg")
+//        }
+    
     var body: some View {
         NavigationView{
-            VStack{
-                HStack{
-//                    MARK: example button anak
-//                    Button(action:{
-//                        print("Test")
-//                    }){
-//                        VStack{
-//                            Text("Budi")
-//                                .frame(minWidth: 100, maxWidth: 100, minHeight: 100, maxHeight: 100)
-//                                .background(Color("Color5"))
-//                                .foregroundColor(Color("Color3"))
-//                                .cornerRadius(50)
-//                        }
-//                    }
-                    
-                    //MARK: tambah data anak
-                    VStack(){
-                        Image("boy")
-                            .resizable().frame(width:50, height: 50)
-                            .scaledToFit()
-                            .padding(15)
-                            .background(Color("Color5")
-                            .opacity(0.2))
-                            .cornerRadius(50)
-                        Text("Budi").foregroundColor(Color("Color5"))
-                    }
-                    VStack(){
-                        VStack{
-                            Image(systemName: "plus").foregroundColor(Color("Color5").opacity(0.6))
-                        }
-                        .frame(width:50, height: 50)
-                        .padding(15)
-                        .background(Color("Color5").opacity(0.2))
-                        .cornerRadius(50)
-                        
-                        Text("Data Anak").foregroundColor(Color("Color5"))
-                    }
-                    Spacer()
-                }
-                .padding(.leading)
-                
-                VStack(alignment: .leading){
-                    Text("Hai orang tua budi")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Color5"))
-                    Text("Berikut pilihan untuk membantu perkembangan anak anda.")
-                }.padding()
-                
+            ScrollView(showsIndicators: false){
                 VStack{
+                    ScrollView(.horizontal, showsIndicators: false){
                     HStack{
-                        NavigationLink(destination: MilestoneView(isNavigationBarHidden: $isNavigationBarHidden)){
-                            VStack{
-                                Image(systemName: "checkmark.square.fill")
-                                    .font(.title)
-                                    .padding()
-                                Text("Checklist Milestone")
-                                    .fontWeight(.semibold)
-                                    .padding([.leading, .trailing], 20)
-                            }
-                            .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
-                            .background(Color("Color5"))
-                            .foregroundColor(Color("Color3"))
-                            .cornerRadius(15)
-                        }
-                        
-                        Spacer()
                         Button(action:{
-                            print("test")
+                            print("Test")
                         }){
-                            VStack{
-                                Image("home1")
-                                    .padding()
-                                Text("Skrining Disleksia")
-                                    .fontWeight(.semibold)
-                                    .padding([.leading, .trailing], 20)
+                            ZStack{
+                                Text("Tambah Anak")
+                                    .frame(minWidth: 80, maxWidth: 80, minHeight: 80, maxHeight: 80)
+                                    .background(Color("gray"))
+                                    .foregroundColor(Color("Color5"))
+                                    .cornerRadius(50)
+                                    .multilineTextAlignment(.center)
+                                
+                                Image(systemName: "plus.circle.fill")
+                                .foregroundColor(Color("Color5"))
+                                .padding([.top,.leading],60)
+                                .font(.system(size: 20, weight: .bold))
                             }
-                            .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
-                            .background(Color("Color3"))
-                            .foregroundColor(Color("Color5"))
-                            .cornerRadius(15)
+                            .padding(.leading)
+                        }
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 100, height: 140)
+                                    .cornerRadius(20)
+                                    .foregroundColor(Color("Color3"))
+                                    .padding(.top,30)
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color("gray"))
+                                Image("boy")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(25)
+                                    .shadow(radius: 4)
+                                    .padding(.top, 20)
+                                Text("Budi")
+                                    .padding(.top, 120)
+                            }
+                            ZStack{
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color("gray"))
+                                Image("girl")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(25)
+                                    .shadow(radius: 4)
+                                    .padding(.top, 20)
+                                Text("Bunga")
+                                    .padding(.top, 120)
+                            }
+                            ZStack{
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color("gray"))
+                                Image("girl")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(25)
+                                    .shadow(radius: 4)
+                                    .padding(.top, 20)
+                                Text("Bunga")
+                                    .padding(.top, 120)
+                            }
+                            ZStack{
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color("gray"))
+                                Image("girl")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(25)
+                                    .shadow(radius: 4)
+                                    .padding(.top, 20)
+                                Text("Bunga")
+                                    .padding(.top, 120)
+                            }
                         }
                     }
-                    .padding([.trailing, .leading], 25)
                     
+                    VStack(alignment: .leading){
+                        Text("Hai orang tua budi")
+                                .font(.title)
+                                .fontWeight(.medium)
+                        Text("Berikut pilihan untuk membantu perkembangan anak anda.")
+                    }
+                    .padding()
+                    .foregroundColor(Color("Color5"))
                     
-                    NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
-                        
-                            VStack{
-                                Image("home3")
-                                    .padding()
-                                Text("Hasil")
-                                    .fontWeight(.semibold)
-                                    .padding([.leading, .trailing], 20)
+                    VStack{
+                        HStack{
+                            NavigationLink(destination: MilestoneView(isNavigationBarHidden: $isNavigationBarHidden)){
+                                VStack{
+                                    Image(systemName: "checkmark.square.fill")
+                                        .font(.title)
+                                        .padding()
+                                    Text("Checklist Milestone")
+                                        .fontWeight(.semibold)
+                                        .padding([.leading, .trailing], 20)
+                                }
+                                .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
+                                .background(Color("Color5"))
+                                .foregroundColor(Color("Color3"))
+                                .cornerRadius(15)
                             }
-                             .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
-                            .background(Color("Color3"))
-                            .foregroundColor(Color("Color5"))
-                            .cornerRadius(15)
-                            .padding([.top, .leading] ,25)
+                            
                             Spacer()
+                            Button(action:{
+                                print("test")
+                            }){
+                                VStack{
+                                    Image("home1")
+                                        .padding()
+                                    Text("Skrining Disleksia")
+                                        .fontWeight(.semibold)
+                                        .padding([.leading, .trailing], 20)
+                                }
+                                .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
+                                .background(Color("Color3"))
+                                .foregroundColor(Color("Color5"))
+                                .cornerRadius(15)
+                            }
+                        }
+                        .padding([.trailing, .leading], 25)
+                        
+                        
+                        NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
+                                VStack{
+                                    Image("home3")
+                                        .padding()
+                                    Text("Hasil")
+                                        .fontWeight(.semibold)
+                                        .padding([.leading, .trailing], 20)
+                                }
+                                 .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
+                                .background(Color("Color3"))
+                                .foregroundColor(Color("Color5"))
+                                .cornerRadius(15)
+                                .padding([.top, .leading] ,25)
+                                Spacer()
+                            
+                        }
                         
                     }
                     
                 }
-                
-                Spacer()
             }
-            .padding(.top, 100)
-            .background(Color("Color4"))
-            .edgesIgnoringSafeArea(.top)
+            .navigationBarTitle(Text(""), displayMode: .inline)
+            .navigationBarItems(trailing: settingButton)
+            .sheet(isPresented: $showingSetting) {
+                SettingView()
+                
+            }
+            .navigationBarColor(UIColor(named: "bg"))
+            .background(Color("bg"))
         }
     }
 }

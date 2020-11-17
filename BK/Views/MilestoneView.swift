@@ -16,6 +16,8 @@ struct MilestoneView: View {
     var ages = "3 Tahun 4 Bulan"
     var mileTracks = MilestoneTrack.getAll
     
+    @State var moreText = true
+    
     @State var mileCheck: Bool = false
     //
     //    init(){
@@ -24,25 +26,52 @@ struct MilestoneView: View {
     var body: some View {
         
         ScrollView(showsIndicators: false){
-            ZStack(alignment: .center){
-                Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu. Kamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
-                    .padding()
-                    .background(Color.white)
+            VStack(alignment: .leading) {
+                Text("Tentang Milestone Anak")
+                    .fontWeight(.bold)
+                    .font(Font.system(size:22))
+                Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu.\nKamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
+                    .frame(width: UIScreen.screenWidth - 30, alignment: .leading)
+                    .lineLimit( moreText ? 3 : nil)
+                    .background(Color("bg"))
                     .foregroundColor(Color("Color5"))
                     .cornerRadius(10)
-
-                Button(action:{
-                    print("test")
-                }){
-                    VStack{
-                        Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(Color("Color5"))
-                            .padding(.init(top: -60, leading: 0, bottom: 0, trailing: 100))
+                    .font(.body)
+                    .padding(.top, 5)
+                HStack{
+                    Spacer()
+                    Button(action: {self.moreText.toggle()}) {
+                        HStack{
+                            Text("Lihat Selengkapnya")
+                               
+                            Image(systemName: "arrowtriangle.down.square.fill")
+                        }
+                        .font(.caption)
+                        .foregroundColor(Color("Color5"))
                     }
                 }
-            }
-            .padding([.leading, .trailing])
-            .multilineTextAlignment(.center)
+            }.padding()
+            
+                
+//            ZStack(alignment: .center){
+//                Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu. Kamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
+//                    .padding()
+//                    .background(Color("bg"))
+//                    .foregroundColor(Color("Color5"))
+//                    .cornerRadius(10)
+//
+//                Button(action:{
+//                    print("test")
+//                }){
+//                    VStack{
+//                        Image(systemName: "xmark.circle.fill")
+//                            .foregroundColor(Color("Color5"))
+//                            .padding(.init(top: -60, leading: 0, bottom: 0, trailing: 100))
+//                    }
+//                }
+//            }
+//            .padding([.leading, .trailing])
+//            .multilineTextAlignment(.center)
 
             HStack {
                 NavigationLink(destination: HelpView()){
@@ -51,7 +80,7 @@ struct MilestoneView: View {
                     Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
                 }
                 .padding()
-                .background(Color.white)
+                .background(Color("Color3"))
                 .foregroundColor(Color("Color5"))
 
             }
@@ -66,19 +95,24 @@ struct MilestoneView: View {
                         .foregroundColor(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(#colorLiteral(red: 0.9383720756, green: 0.8294705153, blue: 0.7069537044, alpha: 1)), lineWidth: 2)
+                                .stroke(Color("Color3-2"), lineWidth: 2)
                     )
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: UIScreen.main.bounds.width/2, height: 14).foregroundColor(Color("Color3"))
                         .padding(.leading, 4)
                 }
                 HStack{
-                    Text("15")
-                        .foregroundColor(Color("Color3"))
-                        .font(.headline)
-                    Text("Tanda Terpenuhi")
+                    Text("15 / 30")
                         .foregroundColor(Color("Color5"))
-                        .fontWeight(.semibold)
+                        .font(.headline)
+                    Text("terpenuhi dalam")
+                        .foregroundColor(Color("Color5"))
+                        .font(.caption)
+                    Text("Semua kateogri")
+                        .foregroundColor(Color("Color5"))
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .padding(.leading, -5)
                 }
             }
 
@@ -88,11 +122,11 @@ struct MilestoneView: View {
                         print("semua")
                     }){
                         VStack{
-                            Image("category-1")
+                            Image("Sort")
                                 .frame(minWidth: 65 , maxWidth: 65, minHeight: 65, maxHeight: 65)
-                                .background(Color("Color3"))
+                                .background(Color("Color5"))
                                 .cornerRadius(10)
-                                .foregroundColor(Color("Color5"))
+                                .foregroundColor(Color("Color3"))
                             Text("Semua")
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("Color5"))
@@ -104,75 +138,79 @@ struct MilestoneView: View {
                         print("motorik")
                     }){
                         VStack{
-                            Image("category-2")
+                            Image("Motorik")
                                 .frame(minWidth: 65 , maxWidth: 65, minHeight: 65, maxHeight: 65)
-                                .background(Color("motorik").opacity(0.5))
+                                .background(Color("Color5-2"))
                                 .cornerRadius(10)
                                 .foregroundColor(Color.white)
                             Text("Motorik")
-                                .foregroundColor(Color("Color5"))
+                                .foregroundColor(Color("Color5-2"))
                         }
                     }
                     Button(action:{
                         print("sosial")
                     }){
                         VStack{
-                            Image("category-3")
+                            Image("Sosial")
                                 .frame(minWidth: 65 , maxWidth: 65, minHeight: 65, maxHeight: 65)
                                 .foregroundColor(Color.white)
-                                .background(Color("sosial").opacity(0.5))
+                                .background(Color("Color5-2"))
                                 .cornerRadius(10)
                             Text("Sosial")
-                                .foregroundColor(Color("Color5"))
+                                .foregroundColor(Color("Color5-2"))
                         }
                     }
                     Button(action:{
                         print("bahasa")
                     }){
                         VStack{
-                            Image("category-4")
+                            Image("Bahasa")
                                 .frame(minWidth: 65 , maxWidth: 65, minHeight: 65, maxHeight: 65)
-                                .background(Color("gray"))
-                                .cornerRadius(10)
                                 .foregroundColor(Color.white)
+                                .background(Color("Color5-2"))
+                                .cornerRadius(10)
                             Text("Bahasa")
-                                .foregroundColor(Color("Color5"))
+                                .foregroundColor(Color("Color5-2"))
                         }
                     }
                     Button(action:{
                         print("kognitif")
                     }){
                         VStack{
-                            Image("category-5")
+                            Image("Kognitif")
                                 .frame(minWidth: 65 , maxWidth: 65, minHeight: 65, maxHeight: 65)
-                                .background(Color("gray"))
-                                .cornerRadius(10)
                                 .foregroundColor(Color.white)
+                                .background(Color("Color5-2"))
+                                .cornerRadius(10)
                             Text("Kognitif")
-                                .foregroundColor(Color("Color5"))
+                                .foregroundColor(Color("Color5-2"))
                         }
                     }
                 }
                 .padding()
-                .background(Color("Color4"))
             }
-
 
             ForEach(mileTracks){ mileTrack in
                 HStack {
                     VStack(alignment: .leading) {
                         Text(mileTrack.title)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(Color("Color5"))
                             .fixedSize(horizontal: false, vertical: true)
                         HStack {
                             Image(mileTrack.category)
+                                .frame(minWidth: 25 , maxWidth: 25, minHeight: 25, maxHeight: 25)
+                                .background(Color("Color5-2"))
+                                .cornerRadius(50)
+                                .foregroundColor(Color("Color3-2"))
+                            
                             Text(mileTrack.category.capitalized)
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(Color("Color5"))
                             Spacer()
+                            
                             Button(action: {(
-                                //                                        mileTrack.isComplete
+                                //mileTrack.isComplete
                                 )},
                                    label: {
                                     Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
@@ -180,7 +218,7 @@ struct MilestoneView: View {
                         }
                     }
                     .padding()
-                    .background(Color.white)
+                    .background(Color("Color3"))
                     .cornerRadius(10)
                 }
                 .background(Color("Color3"))
@@ -188,20 +226,17 @@ struct MilestoneView: View {
             }
             .padding([.trailing,.leading])
         }
-        .navigationBarTitle(Text(names).foregroundColor(Color("Color3")), displayMode: .large)
-        .navigationBarItems(trailing: Text(ages).foregroundColor(Color("Color5")))
+        .navigationBarTitle(Text(names).foregroundColor(Color("color1")), displayMode: .large)
         .background(Color("bg"))
         .navigationBarColor(UIColor(named: "bg"))
-
-        
-        
-        
     }
-    
-    
 }
 
-
+extension UIScreen{
+   static let screenWidth = UIScreen.main.bounds.size.width
+   static let screenHeight = UIScreen.main.bounds.size.height
+   static let screenSize = UIScreen.main.bounds.size
+}
 
 struct MilestoneView_Previews: PreviewProvider {
     static var previews: some View {

@@ -12,7 +12,7 @@ class UserSetting: ObservableObject, Codable{
     enum CodingKeys: CodingKey {
         case type, mNotification
     }
-
+    
     static let types = ["Bahasa Indonesia", "English"]
 
     @Published var type = 0
@@ -38,11 +38,11 @@ class UserSetting: ObservableObject, Codable{
 
 struct SettingView: View {
     @ObservedObject var userSetting = UserSetting()
+    
     func loadData(){
         
     }
     var body: some View {
-        NavigationView{
             Form{
                 Toggle(isOn: $userSetting.mNotification.animation()) {
                     Text("Notifikasi")
@@ -52,8 +52,9 @@ struct SettingView: View {
                         Text(UserSetting.types[$0])
                     }
                 }
-            }.navigationBarTitle("Pengaturan")
-        }
+            }
+            .navigationBarTitle("Pengaturan")
+        
     }
 }
 

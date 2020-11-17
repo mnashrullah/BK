@@ -114,6 +114,7 @@ struct HelpView: View {
         }
          .navigationBarTitle("Help")
     }
+    
     func loadArray(){
         // MARK : setup button action sheet
         for i in 0..<self.months.count{
