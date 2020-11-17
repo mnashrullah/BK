@@ -12,8 +12,6 @@ struct Constants {
     struct TabBarImageName {
         static let tabBar0 = "heart.fill"
         static let tabBar1 = "book.fill"
-        
-        
     }
     struct TabBarText {
         static let tabBar0 = "Anak"

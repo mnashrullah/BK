@@ -9,70 +9,86 @@
 import SwiftUI
 
 struct TipsDetailView: View {
+    var mile: Mile
+    var type: String
     //    var item: Tips
-    var tips: [Tips]
-    var index: Int
-    var tipsItem: [TipsItem]
-    
-    init(){
-        tips = Tips.getAll
-        index = UserDefaults.standard.integer(forKey:"month")
-        tipsItem = TipsItem.getAll
-        
-        UISegmentedControl.appearance().backgroundColor = UIColor(named: "Color7")
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "Color8")
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
-    }
+//    var tips: [Tips]
+//    var index: Int
+//    var tipsItem: [TipsItem]
+//
+//
+//    init(){
+//        tips = Tips.getAll
+//        index = UserDefaults.standard.integer(forKey:"month")
+//        tipsItem = TipsItem.getAll
+//
+//
+//    }
     @State private var selectedSegmented = 0
     @State private var selectedSegmentedText = 0
     
-    var segmentedValue = ["Bahasa", "kognitif", "Motorik", "Sosial"]
-    let cars = ["Subaru WRX", "Tesla Model 3", "Porsche 911", "Renault Zoe", "DeLorean"]
-      @State private var searchText : String = ""
+    var segmentedValue = ["Motorik", "Sosial", "Bahasa", "Kognitif"]
 
+    @State private var searchText : String = ""
+    
     
     var body: some View {
        
         ScrollView(.vertical){
-//                MARK: Segmented control
-        Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
-            ForEach(0..<segmentedValue.count) { index in
-                Text(self.segmentedValue[index]).tag(index)
-            }
-        }.pickerStyle(SegmentedPickerStyle())
             
             Image("baby")
-                .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/2 )
+                .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/4 )
                 .padding(.bottom)
 
             VStack(alignment:.leading){
-                Text("Ringkasan")
+                Text("\(type)")
 
-                Text("Anak usia \(tips[index].monthName)")
+                Text("Anak usia \(String(mile.month))")
                     .font(.title)
                     .bold()
+//                MARK: Segmented control
+                Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
+                    ForEach(0..<segmentedValue.count) { index in
+                        Text(self.segmentedValue[index]).tag(index)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                .padding(.top, 20)
 
 //                MARK: Filter content based on segmented
 
-                ForEach(tipsItem.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
-                    cardSimple(description: item.item)
+//                ForEach(mile.milestone.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
+//                    cardSimple(description: item.item)
+//                }
+                if (type == "Milestone"){
+                    ForEach(mile.milestone){item in
+                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
+                            cardSimple(description: item.name)}
+                    }
                 }
-//                .background(Color("Color7"))
+                if (type == "Tips"){
+                    ForEach(mile.tips){item in
+                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
+                            cardSimple(description: item.name)}
+                    }
+                }
+                
+//                ForEach(mile.milestone.category=segmentedValue[self.selectedSegmented]){item in
+//                    cardSimple(description: item.name)
+//                }
 
             }.padding()
          Spacer()
+            
         }
-        .background(Color("bg"))
     }
 }
-
-struct TipsDetailView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        TipsDetailView()
-    }
-}
+//
+//struct TipsDetailView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        TipsDetailView()
+//    }
+//}
 
 
 struct cardSimple: View{
@@ -86,6 +102,7 @@ struct cardSimple: View{
                 VStack(alignment: .leading) {
                     Text(description)
                 }
+                    
                 .layoutPriority(100)
                 
                 Spacer()
@@ -95,10 +112,10 @@ struct cardSimple: View{
         .cornerRadius(10)
             
         .overlay(
-            RoundedRectangle(cornerRadius: 25)
-                .stroke(Color("Color7"), lineWidth: 1)
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 1)
         )
-        .padding([.top,.horizontal])
+            .padding([.top,.horizontal])
     }
 }
 
