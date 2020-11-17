@@ -45,9 +45,10 @@ struct MilestoneView: View {
     //            mile = mileData[UserDefaults.standard.integer(forKey: "month")]
     //            UIScrollView.appearance().backgroundColor = UIColor(named: "Color4")
     //        }
-    @State var limitedText = false
+    @State var limitedText = true
     
     @ObservedObject var observableContent = ObservableContent()
+    var mWidth: Int = Int(UIScreen.main.bounds.width)
     
     var body: some View {
         
@@ -59,36 +60,39 @@ struct MilestoneView: View {
                     .fontWeight(.semibold)
                     .font(.subheadline)
                     .padding([.top, .horizontal])
-                
+                    .foregroundColor(Color("text"))
+
                 Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu. Kamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
-                    
+                    .lineLimit(self.limitedText == true ? 1: nil)
+                    .fixedSize(horizontal: false, vertical: self.limitedText == true ? false:true)
                     .font(.subheadline)
-                    .lineLimit(self.limitedText ? nil:2)
-                    
-                    
+                    .foregroundColor(Color("text"))
                     .padding(.horizontal)
                 HStack(){
                     Spacer()
                     HStack(alignment: .center){
-                        Text("Lihat selengkapnya")
+                        Text(self.limitedText == true ? "Tampil selengkapnya" : "Tampil lebih singkat")
                             .font(.subheadline)
+                            .foregroundColor(Color("text"))
                         if(!limitedText){
-                            Image(systemName:  "arrowtriangle.down.square.fill").frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            Image(systemName:  "arrowtriangle.up.square.fill").frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .background(Color.white)
                                 .foregroundColor(Color("text"))
                         }else{
-                            Image(systemName:  "arrowtriangle.up.square.fill").frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            Image(systemName:  "arrowtriangle.down.square.fill").frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .background(Color.white)
                                 .foregroundColor(Color("text"))
                             
                         }
                         
-                    }                    .padding([.horizontal,.bottom])
+                    }.padding([.horizontal,.bottom])
+                    .padding(.top, 10)
                     
-                }.cornerRadius(10)
+                }
                 
             }
             .background(Color.white)
+            .cornerRadius(10)
             .padding([.leading, .trailing])
             .onTapGesture(count: 1, perform: {
                 self.limitedText.toggle()
@@ -112,23 +116,23 @@ struct MilestoneView: View {
             VStack(alignment: .leading){
                 ZStack (alignment: .leading) {
                     RoundedRectangle(cornerRadius: 10)
-                        .frame(width: UIScreen.main.bounds.width-36, height: 20)
+                        .frame(width: CGFloat(mWidth-36), height: 20)
                         .foregroundColor(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(#colorLiteral(red: 0.9383720756, green: 0.8294705153, blue: 0.7069537044, alpha: 1)), lineWidth: 2)
                         )
                     RoundedRectangle(cornerRadius: 10)
-                        .frame(width: UIScreen.main.bounds.width/2, height: 14).foregroundColor(Color("Color3"))
+                        .frame(width: CGFloat(Double(observableContent.numberAllItemCompleted)/Double(observableContent.numberAllItem)*Double(mWidth-45))
+                               
+                               , height: 14).foregroundColor(Color("Color3"))
                         .padding(.leading, 4)
                 }
                 HStack{
-                    Text("15")
-                        .foregroundColor(Color("Color3"))
+                    Text("\(String(observableContent.numberAllItemCompleted)) dari \(String(observableContent.numberAllItem)) tanda terpenuhi")
+                        .foregroundColor(Color("text"))
                         .font(.headline)
-                    Text("Tanda Terpenuhi")
-                        .foregroundColor(Color("Color5"))
-                        .fontWeight(.semibold)
+                    
                 }
             }
             

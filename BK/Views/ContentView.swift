@@ -24,10 +24,8 @@ struct ContentView: View {
     @EnvironmentObject var userData: UserData
     var body: some View {
         HomeView().onAppear(){
-            print("\(userData.isFirstTime)")
             if (userData.isFirstTime){
                 loadContent()
-                print("first time user loaded")
             }
         }
 //        NavigationView{
@@ -250,7 +248,6 @@ class ObservableContent : ObservableObject{
             
             var res = try context.fetch(req)
             numberAllItem = res.count
-            
             req.predicate = NSPredicate(format: "isComplete = true")
             res = try context.fetch(req)
             numberAllItemCompleted = res.count
@@ -258,16 +255,37 @@ class ObservableContent : ObservableObject{
             req.predicate = NSPredicate(format: "category = '\(mCategory[0])' && isComplete = true")
             res = try context.fetch(req)
             numberItemMotorikCompleted = res.count
-            
             req.predicate = NSPredicate(format: "category = '\(mCategory[0])'")
             res = try context.fetch(req)
             numberItemMotorik = res.count
+            
+            req.predicate = NSPredicate(format: "category = '\(mCategory[1])' && isComplete = true")
+            res = try context.fetch(req)
+            numberItemSosialCompleted = res.count
+            req.predicate = NSPredicate(format: "category = '\(mCategory[1])'")
+            res = try context.fetch(req)
+            numberItemSosial = res.count
+            
+            req.predicate = NSPredicate(format: "category = '\(mCategory[2])' && isComplete = true")
+            res = try context.fetch(req)
+            numberItemBahasaCompleted = res.count
+            req.predicate = NSPredicate(format: "category = '\(mCategory[2])'")
+            res = try context.fetch(req)
+            numberItemBahasaCompleted = res.count
+            
+            req.predicate = NSPredicate(format: "category = '\(mCategory[3])' && isComplete = true")
+            res = try context.fetch(req)
+            numberItemKognitifCompleted = res.count
+            req.predicate = NSPredicate(format: "category = '\(mCategory[3])'")
+            res = try context.fetch(req)
+            numberItemKognitif = res.count
+            
         }
         catch{
             print("error")
         }
-        print("\(String(numberAllItemCompleted)) / \(String(numberAllItem))")
-        print("\(String(numberItemMotorikCompleted)) / \(String(numberItemMotorik))")
+//        print("\(String(numberAllItemCompleted)) / \(String(numberAllItem))")
+//        print("\(String(numberItemMotorikCompleted)) / \(String(numberItemMotorik))")
     }
 }
 
