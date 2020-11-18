@@ -103,7 +103,7 @@ struct MilestoneView: View {
             //          MARK: PROGRESS
             HStack {
                 NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
-                    Text("Progress Terpenuhi")
+                    Text("Progress Terpenuhi").foregroundColor(Color("text"))
                     Spacer()
                     Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
                 }
@@ -165,7 +165,7 @@ struct MilestoneView: View {
                             VStack(alignment: .leading) {
                                 Text(mileTrack.name)
                                     .font(.body)
-                                    .foregroundColor(.primary)
+                                    .foregroundColor(Color("text"))
                                     .fixedSize(horizontal: false, vertical: true)
                                 HStack {
                                     Image(mileTrack.category)
@@ -198,7 +198,8 @@ struct MilestoneView: View {
                                 VStack(alignment: .leading) {
                                     Text(mileTrack.name)
                                         .font(.body)
-                                        .foregroundColor(.primary)
+                                        
+                                        .foregroundColor(Color("text"))
                                         .fixedSize(horizontal: false, vertical: true)
                                     HStack {
                                         Image(mileTrack.category)
@@ -438,7 +439,7 @@ struct CategoryButton: View{
                 .cornerRadius(10)
                 .foregroundColor(categorySelected==category ? colorTextActive: colorTextNotActive)
             Text(text)
-                .foregroundColor(Color("Color5"))
+                .foregroundColor(Color("text"))
         }
     }
 }

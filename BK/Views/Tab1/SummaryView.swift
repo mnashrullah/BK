@@ -29,6 +29,7 @@ struct ProgressBar: View {
                 .animation(.linear)
             Text(String(format: "\(progress)/\(max)"))
                 .font(.body)
+                .foregroundColor(Color("text"))
             
         }
     }
@@ -98,6 +99,10 @@ struct SummaryView: View {
     
     @ObservedObject var observableContent = ObservableContent()
     @EnvironmentObject var mUserData: UserData
+    var colorBgActive = Color("primary")
+    var colorBgNotActive = Color("gray")
+    var colorTextActive = Color("text")
+    var colorTextNotActive = Color.white
     
     var body: some View {
         VStack{
@@ -120,7 +125,7 @@ struct SummaryView: View {
                         HStack(){
                             ForEach(0..<months.count){i in
                                 Button(action: {
-//                                    selectedMonth = months
+                                    selectedMonth = i
                                     print(selectedMonth)
                                 }){
                                     VStack{
@@ -128,9 +133,9 @@ struct SummaryView: View {
                                         Text("Bulan")
                                     }.tag(0)
                                     .padding()
-                                    .background(Color("Color3"))
+                                    .background(selectedMonth == i ? colorBgActive: colorBgNotActive)
                                     .cornerRadius(10)
-                                    .foregroundColor(Color("Color5"))
+                                    .foregroundColor(Color("text"))
 
                                     //                                    .background(Color.gray)
                                     //                                .cornerRadius(10)
