@@ -15,6 +15,9 @@ struct ContentView: View {
         UISegmentedControl.appearance().backgroundColor = UIColor(named: "primary")?.withAlphaComponent(0.3)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "text")], for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "text")], for: .normal)
+        //background color Form
+        UITableView.appearance().backgroundColor = .clear
+            
     }
     
     //    @ObservedObject var observedData = obsevable()
@@ -23,11 +26,13 @@ struct ContentView: View {
     @State var user = ""
     @EnvironmentObject var userData: UserData
     var body: some View {
-        HomeView().onAppear(){
+        HomeView()
+            
+            .navigationBarColor(UIColor(named: "bg"))
+            .onAppear(){
             if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
                 loadContent()
                 UserDefaults.standard.set(true, forKey: "isFirstTime")
-                print("load first time")
             }
         }
 //        NavigationView{
@@ -215,7 +220,6 @@ class ObservableContent : ObservableObject{
             try context.execute(deleteRequest)
             try context.save()
             self.data = []
-            print("delete all success")
         }
         catch{
             print("error")
@@ -425,5 +429,185 @@ class ObservableTips : ObservableObject{
 //        catch{
 //            print("error")
 //        }
+//    }
+}
+
+
+
+struct datatypeChild : Identifiable {
+    
+    var id : NSManagedObjectID
+    var name: String
+    var gender: String
+    var birthDate: Date
+}
+
+class ObservableChild : ObservableObject{
+    @Published var data = [datatypeChild]()
+    var tableChild = "TbChild"
+    
+    init() {
+        loadData()
+    }
+    func loadData(){
+        data = []
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: tableChild)
+        let sort = NSSortDescriptor(key: "name", ascending: true)
+        req.sortDescriptors = [sort]
+        
+        do{
+            let res = try context.fetch(req)
+            for i in res as! [NSManagedObject]{
+                self.data.append(
+                    datatypeChild(
+                        id: i.objectID,
+                        name: i.value(forKey: "name") as! String,
+                        gender: i.value(forKey: "gender") as! String,
+                        birthDate: i.value(forKey: "birthDate") as! Date)
+                )
+            }
+        }
+        catch{
+            print("error")
+        }
+        
+    }
+    
+    func addData(name: String, gender: String, birthDate: Date){
+        //        MARK: Coredata add data milestone done
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let entity = NSEntityDescription.insertNewObject(forEntityName: tableChild, into: context)
+        entity.setValue(name, forKey: "name")
+        entity.setValue(gender, forKey: "gender")
+        entity.setValue(birthDate, forKey: "birthDate")
+        
+        do{
+            try context.save()
+            print("sucess add child")
+            data.append(datatypeChild(
+                id: entity.objectID,
+                name: name,
+                gender: gender,
+                birthDate: birthDate
+            ))
+            loadData()
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+        
+    }
+//    func deleteData(indexset : IndexSet,id : NSManagedObjectID){
+////        MARK: Coredata add data milestone done
+//        let app = UIApplication.shared.delegate as! AppDelegate
+//        let context = app.persistentContainer.viewContext
+//        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
+//        do{
+//            let res = try context.fetch(req)
+//            for i in res as! [NSManagedObject]{
+//                if i.objectID == id{
+//                    try context.execute(NSBatchDeleteRequest(objectIDs: [id]))
+//                    self.data.remove(atOffsets: indexset)
+//                }
+//            }
+//        }
+//        catch{
+//            print("error")
+//        }
+//    }
+//
+    func deleteAllData(){
+        //        MARK: Coredata add data milestone done
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: tableChild)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: req)
+        do{
+            try context.execute(deleteRequest)
+            try context.save()
+            self.data = []
+        }
+        catch{
+            print("error")
+        }
+    }
+
+//
+//    func updateComplete(id: Int, isComplete: Bool){
+////        MARK: Coredata add data milestone done
+//        let app = UIApplication.shared.delegate as! AppDelegate
+//        let context = app.persistentContainer.viewContext
+//        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
+//        req.predicate = NSPredicate(format: "idMilestone = \(id)")
+//        do{
+//            let res = try context.fetch(req)
+//                if res.count == 1 {
+//                    let objectUpdate = res[0] as! NSManagedObject
+//                    objectUpdate.setValue(isComplete, forKey: "isComplete")
+//                    try context.save()
+//                    loadData()
+//                    countAll()
+//                }else{
+//                    print("data not found")
+//                }
+//        }
+//        catch{
+//            print("error")
+//        }
+//    }
+//    func countAll(){
+////        MARK: Coredata add data milestone done
+//        let app = UIApplication.shared.delegate as! AppDelegate
+//        let context = app.persistentContainer.viewContext
+//        var mCategory = ["Motorik","Sosial","Bahasa","Kognitif"]
+//        var isComplete = [true, false]
+//
+//
+//        do{
+//            let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
+//
+//            var res = try context.fetch(req)
+//            numberAllItem = res.count
+//            req.predicate = NSPredicate(format: "isComplete = true")
+//            res = try context.fetch(req)
+//            numberAllItemCompleted = res.count
+//
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[0])' && isComplete = true")
+//            res = try context.fetch(req)
+//            numberItemMotorikCompleted = res.count
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[0])'")
+//            res = try context.fetch(req)
+//            numberItemMotorik = res.count
+//
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[1])' && isComplete = true")
+//            res = try context.fetch(req)
+//            numberItemSosialCompleted = res.count
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[1])'")
+//            res = try context.fetch(req)
+//            numberItemSosial = res.count
+//
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[2])' && isComplete = true")
+//            res = try context.fetch(req)
+//            numberItemBahasaCompleted = res.count
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[2])'")
+//            res = try context.fetch(req)
+//            numberItemBahasa = res.count
+//
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[3])' && isComplete = true")
+//            res = try context.fetch(req)
+//            numberItemKognitifCompleted = res.count
+//            req.predicate = NSPredicate(format: "category = '\(mCategory[3])'")
+//            res = try context.fetch(req)
+//            numberItemKognitif = res.count
+//
+//        }
+//        catch{
+//            print("error")
+//        }
+////        print("\(String(numberAllItemCompleted)) / \(String(numberAllItem))")
+////        print("\(String(numberItemMotorikCompleted)) / \(String(numberItemMotorik))")
 //    }
 }

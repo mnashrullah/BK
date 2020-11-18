@@ -49,6 +49,8 @@ struct MilestoneView: View {
     
     @ObservedObject var observableContent = ObservableContent()
     var mWidth: Int = Int(UIScreen.main.bounds.width)
+    @EnvironmentObject var mUserData: UserData
+    
     
     var body: some View {
         
@@ -61,7 +63,7 @@ struct MilestoneView: View {
                     .font(.subheadline)
                     .padding([.top, .horizontal])
                     .foregroundColor(Color("text"))
-
+                
                 Text("Di bawah ini ditampilkan tanda-tanda perkembangan anak ideal berdasarkan periode waktu yang sesuai dengan umur anakmu. Kamu masih dapat terus menilai perkembangan anakmu sampai umur anak mu melewati 4 tahun")
                     .lineLimit(self.limitedText == true ? 1: nil)
                     .fixedSize(horizontal: false, vertical: self.limitedText == true ? false:true)
@@ -93,13 +95,14 @@ struct MilestoneView: View {
             }
             .background(Color.white)
             .cornerRadius(10)
+            .padding(.top, 20)
             .padding([.leading, .trailing])
             .onTapGesture(count: 1, perform: {
                 self.limitedText.toggle()
             })
             //          MARK: PROGRESS
             HStack {
-                NavigationLink(destination: HelpView()){
+                NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
                     Text("Progress Terpenuhi")
                     Spacer()
                     Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
@@ -146,7 +149,7 @@ struct MilestoneView: View {
                     }
                     
                 }
-            }
+            }.padding(.bottom, 10)
             //            .onAppear(){
             //                print(observableContent.data)
             //            }
@@ -177,9 +180,9 @@ struct MilestoneView: View {
                             .background(Color.white)
                             .cornerRadius(10)
                         }
-    //                    .onTapGesture(){
-    //                        print(mileTrack.idMilestone)
-    //                    }
+                        //                    .onTapGesture(){
+                        //                        print(mileTrack.idMilestone)
+                        //                    }
                         .background(Color("Color3"))
                         .cornerRadius(10)
                     }.buttonStyle(PlainButtonStyle())
@@ -318,44 +321,87 @@ struct MilestoneView: View {
             //            }
             //            .padding([.trailing,.leading])
         }
-        .navigationBarTitle(Text(names).foregroundColor(Color("Color3")), displayMode: .large)
-        .navigationBarItems(trailing: Text(ages).foregroundColor(Color("Color5")))
+        //        .navigationBarTitle(Text(mUserData.myChild?.name ?? "").foregroundColor(Color("Color3")), displayMode: .inline)
+        //        .navigationBarItems(trailing:
+        //                                Text(mUserData.myChild != nil ?
+        //                                        calcAge(birthday: mUserData.myChild!.birthDate) : "")
+        //                                .foregroundColor(Color("Color5")))
         .background(Color("bg"))
-        .navigationBarColor(UIColor(named: "bg"))
         .onAppear(){
-            //            print(miles[0])
-            //            print(UserDefaults.standard.integer(forKey: "month"))
-            //            print(miles.filter { $0.month == month })
-            //            print(miles.filter { $0.month == month })
-            //            print(miles)
-            //            self.mile =  miles.filter { $0.month == month }
-            //            print(mile)
-            //            print(miles.firstIndex(where: { $0.month == 4 })!)
+            print("nashdata")
+            //            print(mUserData.myChild)
+            //            print(mUserData.myChild?.birthDate)
+            //            if (mUserData.myChild != nil){
+            //                print("old")
+            //                print(calcAge(birthday: mUserData.myChild!.birthDate))
             
-            //            print(miles.firstIndex(of: $0.month == month))
-            //            print(miles.map({ (<#Mile#>) -> T in
-            //                miles[0]
-            //            }))
-            //            var myList = [1, 2, 3, 4]
-            //            var filtered = myList.filter { $0 == 3 }
-            
-            // returns the index position of 3 or nil if not found)
-            //            let arr = ["a","b","c","a"]
-            //
-            //            let indexOfA = arr.firstIndex(of: "a") // 0
-            //            let indexOfB = arr.lastIndex(of: "a") // 3
-            //
-            //            let mile: Mile
-            //            mile = miles.filter { $0.month == month })
-            //            print(mile)
         }
+        //            print(miles[0])
+        //            print(UserDefaults.standard.integer(forKey: "month"))
+        //            print(miles.filter { $0.month == month })
+        //            print(miles.filter { $0.month == month })
+        //            print(miles)
+        //            self.mile =  miles.filter { $0.month == month }
+        //            print(mile)
+        //            print(miles.firstIndex(where: { $0.month == 4 })!)
+        
+        //            print(miles.firstIndex(of: $0.month == month))
+        //            print(miles.map({ (<#Mile#>) -> T in
+        //                miles[0]
+        //            }))
+        //            var myList = [1, 2, 3, 4]
+        //            var filtered = myList.filter { $0 == 3 }
+        
+        // returns the index position of 3 or nil if not found)
+        //            let arr = ["a","b","c","a"]
+        //
+        //            let indexOfA = arr.firstIndex(of: "a") // 0
+        //            let indexOfB = arr.lastIndex(of: "a") // 3
+        //
+        //            let mile: Mile
+        //            mile = miles.filter { $0.month == month })
+        //            print(mile)
+        //        }
         
         
         
         
     }
-    
-    
+    func calcAge(birthday: Date) -> String {
+        //        let dateFormater = DateFormatter()
+        //        dateFormater.dateFormat = "MM/dd/yyyy"
+        //        let birthdayDate = dateFormater.date(from: birthday)
+        let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
+        let now = Date()
+        let calcAge = calendar.components([.year, .month, .day], from: birthday, to: now, options: [])
+        let age: Int = calcAge.year ?? 0
+        let month: Int = calcAge.month ?? 0
+        let day: Int = calcAge.day ?? 0
+        var result : String = ""
+        if (age > 0){
+            result = "Umur \(age) tahun \(month) bulan"
+        } else if (age == 0 && month > 0){
+            result = "Umur \(month) bulan \(day) hari"
+        } else if (age == 0 && month == 0 && day > 0){
+            result = "Umur \(day) hari"
+        } else {
+            result = ""
+        }
+        
+        
+        return result
+    }
+    //default
+    //    func calcAge(birthday: String) -> Int {
+    //        let dateFormater = DateFormatter()
+    //        dateFormater.dateFormat = "MM/dd/yyyy"
+    //        let birthdayDate = dateFormater.date(from: birthday)
+    //        let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
+    //        let now = Date()
+    //        let calcAge = calendar.components(.year, from: birthdayDate!, to: now, options: [])
+    //        let age = calcAge.year
+    //        return age!
+    //    }
 }
 
 

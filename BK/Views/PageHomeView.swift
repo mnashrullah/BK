@@ -11,45 +11,83 @@ import SwiftUI
 struct PageHomeView: View {
     @State var isNavigationBarHidden: Bool = true
     var mile: [Mile] = mileData
+    @ObservedObject var observableChild = ObservableChild()
+    @State var childSelected: datatypeChild?
+//    @EnvironmentObject var userData : UserData
+//    @EnvironmentObject var mUserData: UserData
     
     var body: some View {
         NavigationView{
             ScrollView{
-                HStack(){
-                    Spacer()
-                    Image(systemName: "gear")
-                    
-                }.padding(.horizontal)
-                HStack{
-                    //MARK: tambah data anak
-                    VStack(){
-                        Image("boy")
-                            .resizable().frame(width:50, height: 50)
-                            .scaledToFit()
-                            .padding(15)
-                            .background(Color("Color5")
-                                            .opacity(0.2))
-                            .cornerRadius(50)
-                        Text("Budi").foregroundColor(Color("Color5"))
-                    }
-                    VStack(){
-                        VStack{
-                            Image(systemName: "plus").foregroundColor(Color("Color5").opacity(0.6))
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack{
+                        //MARK: tambah data anak
+                        NavigationLink(
+                            destination: AddChildView(isNavigationBarHidden: $isNavigationBarHidden)
+                        ){
+                            
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 100, height: 140)
+                                        .cornerRadius(20)
+                                      
+                                        .foregroundColor(.clear)
+                                        .padding(.top,30)
+                                    Text("Tambah Anak")
+                                        .frame(minWidth: 80, maxWidth: 80, minHeight: 80, maxHeight: 80)
+                                        .background(Color("gray"))
+                                        .foregroundColor(Color("Color5"))
+                                        .cornerRadius(50)
+                                        .multilineTextAlignment(.center)
+                                    
+                                    Image(systemName: "plus.circle.fill")
+                                    .foregroundColor(Color("Color5"))
+                                    .padding([.top,.leading],60)
+                                    .font(.system(size: 20, weight: .bold))
+                                }
+                            
                         }
-                        .frame(width:50, height: 50)
-                        .padding(15)
-                        .background(Color("Color5").opacity(0.2))
-                        .cornerRadius(50)
-                        
-                        Text("Data Anak").foregroundColor(Color("Color5"))
+                        ForEach(observableChild.data){child in
+                            Button(action:{
+//                                print(child.name)
+                                childSelected = child
+//                                mUserData.myChild = child
+//                                print(mUserData.myChild)
+                                
+                            }){
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 100, height: 140)
+                                        .cornerRadius(20)
+                                        .foregroundColor(child.name == childSelected?.name ? Color("Color3"): .clear)
+//                                        .foregroundColor(.clear)
+                                        .padding(.top,30)
+                                    Circle()
+                                        .frame(width: 80, height: 80)
+                                        .foregroundColor(Color("gray"))
+                                    Image(child.gender == "Laki-laki" ? "boy" : "girl")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 60, height: 60)
+                                        .cornerRadius(25)
+                                        .shadow(radius: 4)
+                                        .padding(.top, 20)
+                                    Text(child.name)
+                                        .foregroundColor(Color("text"))
+                                        .padding(.top, 120)
+                                }
+                            }.buttonStyle(PlainButtonStyle())
+                        }
                     }
+                    
+                    
                     Spacer()
                 }
                 .padding(.leading, 25)
                 
                 HStack {
                     VStack(alignment: .leading){
-                        Text("Hai orang tua budi")
+                        Text("Hai orang tua \(childSelected?.name ?? "")")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color("Color5"))
@@ -59,183 +97,183 @@ struct PageHomeView: View {
                     Spacer()
                 }
                 .padding([.horizontal], 25)
-                .padding([.top, .bottom], 10)
-//
-//                VStack(alignment:.leading){
-//                    HStack(alignment:.center){
-//                        VStack{
-//                            Image("menu1")
-//                                .foregroundColor(Color.red)
-//                                .frame(width:20, height: 20)
-//                                .padding([.horizontal,.top],10)
-//                            Spacer()
-//
-//                        }
-//                        VStack(alignment:.leading){
-//                            Text("Lacak Tumbuh Kembang Anak")
-//                                .foregroundColor(Color("text"))
-//                                .font(.body)
-//                                .fontWeight(.bold)
-//                            Text("Lacak tumbuh kembang anak adalah serangkaian tahapan untuk melacak masa tumbuh kembang anak yang sangat penting bagi seorang anak")
-//                                .foregroundColor(Color("text"))
-//                                .font(.body)
-//                                .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-//                        }
-//                    }
-//                    .padding()
-//                    .background(Color("primary"))
-//                    .cornerRadius(15)
-////                    HStack(alignment:.center){
-////                        Image("menu2")
-////                            .foregroundColor(Color.red)
-////                            .frame(width:20, height: 20)
-////                            .padding(.horizontal,10)
-////                        VStack(alignment:.leading){
-////                            Text("Skrining Disleksia")
-////                                .foregroundColor(Color("text"))
-////                                .font(.body)
-////                            Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
-////                                .foregroundColor(Color("text"))
-////                                .font(.caption)
-////
-////
-////                        }
-////                    }.padding(.bottom,12)
-////                    HStack(alignment:.center){
-////                        Image("menu3")
-////                            .foregroundColor(Color.red)
-////                            .frame(width:20, height: 20)
-////                            .padding(.horizontal,10)
-////                        VStack(alignment:.leading){
-////                            Text("Hasil Progres & Skrining")
-////                                .foregroundColor(Color("text"))
-////                                .font(.body)
-////                            Text("Orang tua dapat melihat progres tumbuh kembang anak.")
-////                                .foregroundColor(Color("text"))
-////                                .font(.caption)
-////
-////
-////                        }
-////                    }.padding(.bottom,12)
-//
-//                }.padding(.horizontal)
-//                VStack(alignment:.leading){
-//                    HStack(alignment:.center){
-//                        VStack{
-//                            Image("menu1")
-//                                .foregroundColor(Color.red)
-//                                .frame(width:20, height: 20)
-//                                .padding([.horizontal,.top],10)
-//                            Spacer()
-//
-//                        }
-//                        VStack(alignment:.leading){
-//                            Text("Lacak Tumbuh Kembang Anak")
-//                                .foregroundColor(Color("text"))
-//                                .font(.body)
-//                                .fontWeight(.bold)
-//                            Text("Lacak tumbuh kembang anak adalah serangkaian tahapan untuk melacak masa tumbuh kembang anak yang sangat penting bagi seorang anak")
-//                                .foregroundColor(Color("text"))
-//                                .font(.body)
-//                                .fixedSize(horizontal: false, vertical: true)
-//                        }
-//                    }
-//                    .padding()
-//                    .background(Color("primary"))
-//                    .cornerRadius(15)
-////                    HStack(alignment:.center){
-////                        Image("menu2")
-////                            .foregroundColor(Color.red)
-////                            .frame(width:20, height: 20)
-////                            .padding(.horizontal,10)
-////                        VStack(alignment:.leading){
-////                            Text("Skrining Disleksia")
-////                                .foregroundColor(Color("text"))
-////                                .font(.body)
-////                            Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
-////                                .foregroundColor(Color("text"))
-////                                .font(.caption)
-////
-////
-////                        }
-////                    }.padding(.bottom,12)
-////                    HStack(alignment:.center){
-////                        Image("menu3")
-////                            .foregroundColor(Color.red)
-////                            .frame(width:20, height: 20)
-////                            .padding(.horizontal,10)
-////                        VStack(alignment:.leading){
-////                            Text("Hasil Progres & Skrining")
-////                                .foregroundColor(Color("text"))
-////                                .font(.body)
-////                            Text("Orang tua dapat melihat progres tumbuh kembang anak.")
-////                                .foregroundColor(Color("text"))
-////                                .font(.caption)
-////
-////
-////                        }
-////                    }.padding(.bottom,12)
-//
-//                }.padding(.horizontal)
-//                VStack(alignment:.leading){
-//                    HStack(alignment:.center){
-//                        VStack{
-//                            Image("menu1")
-//                                .foregroundColor(Color.red)
-//                                .frame(width:20, height: 20)
-//                                .padding([.horizontal,.top],10)
-//                            Spacer()
-//
-//                        }
-//                        VStack(alignment:.leading){
-//                            Text("Lacak Tumbuh Kembang Anak")
-//                                .foregroundColor(Color("text"))
-//                                .font(.body)
-//                                .fontWeight(.bold)
-//                            Text("Lacak tumbuh kembang anak adalah serangkaian tahapan untuk melacak masa tumbuh kembang anak yang sangat penting bagi seorang anak")
-//                                .foregroundColor(Color("text"))
-//                                .font(.body)
-//                                .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-//                        }
-//                    }
-//                    .padding()
-//                    .background(Color("primary"))
-//                    .cornerRadius(15)
-////                    HStack(alignment:.center){
-////                        Image("menu2")
-////                            .foregroundColor(Color.red)
-////                            .frame(width:20, height: 20)
-////                            .padding(.horizontal,10)
-////                        VStack(alignment:.leading){
-////                            Text("Skrining Disleksia")
-////                                .foregroundColor(Color("text"))
-////                                .font(.body)
-////                            Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
-////                                .foregroundColor(Color("text"))
-////                                .font(.caption)
-////
-////
-////                        }
-////                    }.padding(.bottom,12)
-////                    HStack(alignment:.center){
-////                        Image("menu3")
-////                            .foregroundColor(Color.red)
-////                            .frame(width:20, height: 20)
-////                            .padding(.horizontal,10)
-////                        VStack(alignment:.leading){
-////                            Text("Hasil Progres & Skrining")
-////                                .foregroundColor(Color("text"))
-////                                .font(.body)
-////                            Text("Orang tua dapat melihat progres tumbuh kembang anak.")
-////                                .foregroundColor(Color("text"))
-////                                .font(.caption)
-////
-////
-////                        }
-////                    }.padding(.bottom,12)
-//
-//                }.padding(.horizontal)
-//                Spacer()
+                .padding([.bottom], 10)
+                //
+                //                VStack(alignment:.leading){
+                //                    HStack(alignment:.center){
+                //                        VStack{
+                //                            Image("menu1")
+                //                                .foregroun dColor(Color.red)
+                //                               .frame(width:20, height: 20)
+                //                                .padding([.horizontal,.top],10)
+                //                            Spacer()
+                //
+                //                        }
+                //                        VStack(alignment:.leading){
+                //                            Text("Lacak Tumbuh Kembang Anak")
+                //                                .foregroundColor(Color("text"))
+                //                                .font(.body)
+                //                                .fontWeight(.bold)
+                //                            Text("Lacak tumbuh kembang anak adalah serangkaian tahapan untuk melacak masa tumbuh kembang anak yang sangat penting bagi seorang anak")
+                //                                .foregroundColor(Color("text"))
+                //                                .font(.body)
+                //                                .fixedSize(horizontal: false, vertical: true)
+                //                        }
+                //                    }
+                //                    .padding()
+                //                    .background(Color("primary"))
+                //                    .cornerRadius(15)
+                ////                    HStack(alignment:.center){
+                ////                        Image("menu2")
+                ////                            .foregroundColor(Color.red)
+                ////                            .frame(width:20, height: 20)
+                ////                            .padding(.horizontal,10)
+                ////                        VStack(alignment:.leading){
+                ////                            Text("Skrining Disleksia")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.body)
+                ////                            Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.caption)
+                ////
+                ////
+                ////                        }
+                ////                    }.padding(.bottom,12)
+                ////                    HStack(alignment:.center){
+                ////                        Image("menu3")
+                ////                            .foregroundColor(Color.red)
+                ////                            .frame(width:20, height: 20)
+                ////                            .padding(.horizontal,10)
+                ////                        VStack(alignment:.leading){
+                ////                            Text("Hasil Progres & Skrining")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.body)
+                ////                            Text("Orang tua dapat melihat progres tumbuh kembang anak.")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.caption)
+                ////
+                ////
+                ////                        }
+                ////                    }.padding(.bottom,12)
+                //
+                //                }.padding(.horizontal)
+                //                VStack(alignment:.leading){
+                //                    HStack(alignment:.center){
+                //                        VStack{
+                //                            Image("menu1")
+                //                                .foregroundColor(Color.red)
+                //                                .frame(width:20, height: 20)
+                //                                .padding([.horizontal,.top],10)
+                //                            Spacer()
+                //
+                //                        }
+                //                        VStack(alignment:.leading){
+                //                            Text("Lacak Tumbuh Kembang Anak")
+                //                                .foregroundColor(Color("text"))
+                //                                .font(.body)
+                //                                .fontWeight(.bold)
+                //                            Text("Lacak tumbuh kembang anak adalah serangkaian tahapan untuk melacak masa tumbuh kembang anak yang sangat penting bagi seorang anak")
+                //                                .foregroundColor(Color("text"))
+                //                                .font(.body)
+                //                                .fixedSize(horizontal: false, vertical: true)
+                //                        }
+                //                    }
+                //                    .padding()
+                //                    .background(Color("primary"))
+                //                    .cornerRadius(15)
+                ////                    HStack(alignment:.center){
+                ////                        Image("menu2")
+                ////                            .foregroundColor(Color.red)
+                ////                            .frame(width:20, height: 20)
+                ////                            .padding(.horizontal,10)
+                ////                        VStack(alignment:.leading){
+                ////                            Text("Skrining Disleksia")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.body)
+                ////                            Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.caption)
+                ////
+                ////
+                ////                        }
+                ////                    }.padding(.bottom,12)
+                ////                    HStack(alignment:.center){
+                ////                        Image("menu3")
+                ////                            .foregroundColor(Color.red)
+                ////                            .frame(width:20, height: 20)
+                ////                            .padding(.horizontal,10)
+                ////                        VStack(alignment:.leading){
+                ////                            Text("Hasil Progres & Skrining")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.body)
+                ////                            Text("Orang tua dapat melihat progres tumbuh kembang anak.")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.caption)
+                ////
+                ////
+                ////                        }
+                ////                    }.padding(.bottom,12)
+                //
+                //                }.padding(.horizontal)
+                //                VStack(alignment:.leading){
+                //                    HStack(alignment:.center){
+                //                        VStack{
+                //                            Image("menu1")
+                //                                .foregroundColor(Color.red)
+                //                                .frame(width:20, height: 20)
+                //                                .padding([.horizontal,.top],10)
+                //                            Spacer()
+                //
+                //                        }
+                //                        VStack(alignment:.leading){
+                //                            Text("Lacak Tumbuh Kembang Anak")
+                //                                .foregroundColor(Color("text"))
+                //                                .font(.body)
+                //                                .fontWeight(.bold)
+                //                            Text("Lacak tumbuh kembang anak adalah serangkaian tahapan untuk melacak masa tumbuh kembang anak yang sangat penting bagi seorang anak")
+                //                                .foregroundColor(Color("text"))
+                //                                .font(.body)
+                //                                .fixedSize(horizontal: false, vertical: true)
+                //                        }
+                //                    }
+                //                    .padding()
+                //                    .background(Color("primary"))
+                //                    .cornerRadius(15)
+                ////                    HStack(alignment:.center){
+                ////                        Image("menu2")
+                ////                            .foregroundColor(Color.red)
+                ////                            .frame(width:20, height: 20)
+                ////                            .padding(.horizontal,10)
+                ////                        VStack(alignment:.leading){
+                ////                            Text("Skrining Disleksia")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.body)
+                ////                            Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.caption)
+                ////
+                ////
+                ////                        }
+                ////                    }.padding(.bottom,12)
+                ////                    HStack(alignment:.center){
+                ////                        Image("menu3")
+                ////                            .foregroundColor(Color.red)
+                ////                            .frame(width:20, height: 20)
+                ////                            .padding(.horizontal,10)
+                ////                        VStack(alignment:.leading){
+                ////                            Text("Hasil Progres & Skrining")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.body)
+                ////                            Text("Orang tua dapat melihat progres tumbuh kembang anak.")
+                ////                                .foregroundColor(Color("text"))
+                ////                                .font(.caption)
+                ////
+                ////
+                ////                        }
+                ////                    }.padding(.bottom,12)
+                //
+                //                }.padding(.horizontal)
+                //                Spacer()
                 
                 
                 
@@ -254,7 +292,7 @@ struct PageHomeView: View {
                             .foregroundColor(Color("Color5"))
                             .cornerRadius(15)
                         }
-
+                        
                         Spacer()
                         Button(action:{
                             print("test")
@@ -273,10 +311,10 @@ struct PageHomeView: View {
                         }
                     }
                     .padding([.trailing, .leading], 25)
-
-
+                    
+                    
                     NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
-
+                        
                         VStack{
                             Image("menu3")
                                 .padding()
@@ -290,19 +328,29 @@ struct PageHomeView: View {
                         .cornerRadius(15)
                         .padding([.horizontal] ,25)
                         Spacer()
-
+                        
                     }
-
+                    
                 }
                 
                 Spacer()
             }
+            .navigationBarTitle("", displayMode: .inline)
             .padding(.top, 80)
-            .background(Color("Color4"))
+//            .background(Color("Color4"))
+            
+            .background(Color("bg"))
             .edgesIgnoringSafeArea(.top)
-            .navigationBarHidden(true)
+            .navigationBarItems(trailing: Image(systemName: "gear"))
+//            .navigationBarHidden(isNavigationBarHidden)
             .onAppear(){
                 loadData()
+                observableChild.loadData()
+//                print(mUserData.myChild)
+//                if (childSelected == nil){
+//                    childSelected = observableChild.data[0]
+//                }
+//                self.isNavigationBarHidden = true
             }
         }
     }
@@ -311,12 +359,11 @@ struct PageHomeView: View {
         
     }
 }
-
-struct PageHomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            PageHomeView()
-            PageHomeView()
-        }
-    }
-}
+//
+//struct PageHomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        
+//            PageHomeView()
+//        
+//    }
+//}

@@ -82,7 +82,7 @@ struct SummaryView: View {
 //    @State private var selectorIndex = 0
 //
 //    @State private var numbers = ["Milestone", "Skrining"]
-//    var months = ["2 Bulan", "4 Bulan", "9 Bulan", "12 Bulan", "18 Bulan", "24 Bulan", "36 Bulan", "48 Bulan", "60 Bulan" ]
+    var months = ["2", "4", "9", "12", "18", "24", "36", "48", "60" ]
 //    @State private var selectedMonths = 0
     
 //    var names = "Budi"
@@ -97,7 +97,7 @@ struct SummaryView: View {
 //    
     
     @ObservedObject var observableContent = ObservableContent()
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var mUserData: UserData
     
     var body: some View {
         VStack{
@@ -112,24 +112,26 @@ struct SummaryView: View {
                     .cornerRadius(5)
                     .padding()
                     .pickerStyle(SegmentedPickerStyle())
+                   
                     
+                   
 //                    MARK: pilih tahun
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(){
-                            ForEach(userData.miles){mileTrack in
+                            ForEach(0..<months.count){i in
                                 Button(action: {
-                                    selectedMonth = mileTrack.month
+//                                    selectedMonth = months
                                     print(selectedMonth)
                                 }){
                                     VStack{
-                                        Text("\(String(mileTrack.month))")
+                                        Text("\(months[i])")
                                         Text("Bulan")
                                     }.tag(0)
                                     .padding()
                                     .background(Color("Color3"))
                                     .cornerRadius(10)
                                     .foregroundColor(Color("Color5"))
-                                    
+
                                     //                                    .background(Color.gray)
                                     //                                .cornerRadius(10)
                                     //                                .foregroundColor(Color.white)
@@ -201,6 +203,9 @@ struct SummaryView: View {
         .onAppear {
             self.isNavigationBarHidden = false
             observableContent.countAll()
+            
+            print("summary")
+            print(mUserData.myChild)
             
         }
     }

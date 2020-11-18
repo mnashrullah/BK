@@ -108,9 +108,6 @@ struct HelpView: View {
            
         }.onAppear{
             self.loadArray()
-//            print(self.milestone)
-//            self.milestone =
-            print(self.milestone)
         }
          .navigationBarTitle("Help")
     }

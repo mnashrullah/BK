@@ -164,10 +164,9 @@ struct TipsView: View {
                     }
                 }
                     
-                .navigationBarTitle(Text("Tips"))
+                .navigationBarTitle(Text("Tips"), displayMode: .inline)
                 .background(Color("bg"))
-                .navigationBarColor(UIColor(named: "bg"))
-                
+                .navigationBarHidden(false)
                 .onAppear(){
 //                    print("conten all \(observableContent.data)")
 //                    print("conten \(observableContent.data[0])")

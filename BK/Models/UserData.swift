@@ -9,8 +9,10 @@
 import Combine
 import SwiftUI
 
-final class UserData: ObservableObject {
+class UserData: ObservableObject {
     @Published var miles = mileData
     @Published var month = 2
     @Published var isFirstTime = true
+    @Published var score = 0
+    @Published var myChild: datatypeChild?
 }

@@ -13,9 +13,10 @@ struct HomeView: View {
     private let initialLaunchKey = "isInitialLaunch"
     @State var selected = 0
     init(){
+        //setup tabbar color
         UITableView.appearance().tableFooterView = UIView()
         UITableView.appearance().separatorStyle = .none
-        UITabBar.appearance().backgroundColor = UIColor(named: "primary")
+        UITabBar.appearance().backgroundColor = UIColor(named: "Color3")
 
     }
     
