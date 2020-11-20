@@ -294,9 +294,7 @@ struct PageHomeView: View {
                         }
                         
                         Spacer()
-                        Button(action:{
-                            print("test")
-                        }){
+                        NavigationLink(destination: ScreeningView(isNavigationBarHidden: $isNavigationBarHidden)){
                             VStack{
                                 Image("menu2")
                                     .padding()
@@ -309,6 +307,22 @@ struct PageHomeView: View {
                             .foregroundColor(Color("Color5"))
                             .cornerRadius(15)
                         }
+                        
+//                        Button(action:{
+//                            print("test")
+//                        }){
+//                            VStack{
+//                                Image("menu2")
+//                                    .padding()
+//                                Text("Skrining Disleksia")
+//                                    .fontWeight(.semibold)
+//                                    .padding([.leading, .trailing], 20)
+//                            }
+//                            .frame(minWidth: 165, maxWidth: 165, minHeight: 165, maxHeight: 165)
+//                            .background(Color("Color3"))
+//                            .foregroundColor(Color("Color5"))
+//                            .cornerRadius(15)
+//                        }
                     }
                     .padding([.trailing, .leading], 25)
                     
@@ -335,7 +349,8 @@ struct PageHomeView: View {
                 
                 Spacer()
             }
-            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarTitle("Anak", displayMode: .inline)
+            .navigationBarHidden(true)
             .padding(.top, 80)
 //            .background(Color("Color4"))
             

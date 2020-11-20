@@ -33,7 +33,7 @@ struct AddChildView: View {
     }
     
     var body: some View {
-        Form {
+        
             Section{
                 HStack(alignment: .center){
                     Spacer()
@@ -68,7 +68,7 @@ struct AddChildView: View {
                 //                           Text("Tanggal Lahir \(birthDate, formatter: dateFormatter)")
                 //                Text("\(name)  \(type) \(amount)")
             }
-        }
+        
     
         
         .background(Color("bg"))
