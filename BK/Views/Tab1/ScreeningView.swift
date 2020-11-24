@@ -10,15 +10,17 @@ import SwiftUI
 
 struct ScreeningView: View {
     @Binding var isNavigationBarHidden: Bool
+    
     var body: some View {
-        VStack{
-            Text("Under Construction")
-        }
-        .navigationBarTitle("Skrining Disleksia", displayMode: .inline)
-           
-        .onAppear {
-            self.isNavigationBarHidden = false
-        }
+        QuizView()
+//        VStack{
+//            Text("Under Construction")
+//        }
+//        .navigationBarTitle("Skrining Disleksia", displayMode: .inline)
+//
+//        .onAppear {
+//            self.isNavigationBarHidden = false
+//        }
 
         
         
