@@ -31,11 +31,11 @@ import SwiftUI
 //        return Color("primary")
 //    }
 //}
-//extension UIColor {
-//
-//    static let primary = UIColor(red: 244, green: 234, blue: 222, alpha: 100)
-//
-//}
+extension UIColor {
+
+    static let colorTabbar = UIColor(red: 244, green: 182, blue: 149, alpha: 100)
+
+}
 
 extension UIColor {
 //    how to use > UIColor(named: "bgColor")

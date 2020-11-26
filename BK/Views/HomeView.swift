@@ -16,7 +16,8 @@ struct HomeView: View {
         //setup tabbar color
         UITableView.appearance().tableFooterView = UIView()
         UITableView.appearance().separatorStyle = .none
-        UITabBar.appearance().backgroundColor = UIColor(named: "Color3")
+//        UITabBar.appearance().backgroundColor = UIColor(named: "Color3")
+        UITabBar.appearance().backgroundColor = UIColor.colorTabbar
 
     }
     

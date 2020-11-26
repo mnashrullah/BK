@@ -209,8 +209,8 @@ struct SummaryView: View {
             self.isNavigationBarHidden = false
             observableContent.countAll()
             
-            print("summary")
-            print(mUserData.myChild)
+//            print("summary")
+//            print(mUserData.myChild)
             
         }
     }

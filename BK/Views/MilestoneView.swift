@@ -329,7 +329,7 @@ struct MilestoneView: View {
         //                                .foregroundColor(Color("Color5")))
         .background(Color("bg"))
         .onAppear(){
-            print("nashdata")
+//            print("nashdata")
             //            print(mUserData.myChild)
             //            print(mUserData.myChild?.birthDate)
             //            if (mUserData.myChild != nil){

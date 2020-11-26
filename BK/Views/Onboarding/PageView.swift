@@ -49,29 +49,29 @@ struct PageView: View {
                                                   
                                               }
                                           }.padding(.bottom,12)
-                                          HStack(alignment:.center){
-                                                Image("menu2")
-                                                  .foregroundColor(Color.red)
-                                                  .frame(width:20, height: 20)
-                                                  .padding(.horizontal,10)
-                                              VStack(alignment:.leading){
-                                                  Text("Skrining Disleksia")
-                                                      .foregroundColor(Color("text"))
-                                                      .font(.body)
-                                                  Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
-                                                      .foregroundColor(Color("text"))
-                                                      .font(.caption)
-                                                  
-                                                  
-                                              }
-                                          }.padding(.bottom,12)
+//                                          HStack(alignment:.center){
+//                                                Image("menu2")
+//                                                  .foregroundColor(Color.red)
+//                                                  .frame(width:20, height: 20)
+//                                                  .padding(.horizontal,10)
+//                                              VStack(alignment:.leading){
+//                                                  Text("Skrining Disleksia")
+//                                                      .foregroundColor(Color("text"))
+//                                                      .font(.body)
+//                                                  Text("Sekarang skrining disleksia dapat mudah dilakukan sendiri.")
+//                                                      .foregroundColor(Color("text"))
+//                                                      .font(.caption)
+//
+//
+//                                              }
+//                                          }.padding(.bottom,12)
                                           HStack(alignment:.center){
                                                 Image("menu3")
                                                   .foregroundColor(Color.red)
                                                   .frame(width:20, height: 20)
                                                   .padding(.horizontal,10)
                                               VStack(alignment:.leading){
-                                                  Text("Hasil Progres & Skrining")
+                                                  Text("Hasil Progres")
                                                       .foregroundColor(Color("text"))
                                                       .font(.body)
                                                   Text("Orang tua dapat melihat progres tumbuh kembang anak.")
