@@ -20,8 +20,8 @@ struct AddChildView: View {
         formatter.dateStyle = .long
         return formatter
     }
-    
-    @State private var birthDate = Date()
+    @State private var birthDate: Date = Calendar.current.date(byAdding: DateComponents(year: -1, month: -2), to: Date()) ?? Date()
+
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var observableChild = ObservableChild()
     var btnSimpan : some View { Button(action: {
@@ -31,53 +31,58 @@ struct AddChildView: View {
         Text("Simpan")
     }
     }
+    var btnCancel : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        Text("Batalkan")
+    }
+    }
     
     var body: some View {
-        
-            Section{
-                HStack(alignment: .center){
-                    Spacer()
-                    ZStack{
-                        
-                        Circle()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(Color("gray"))
-                        Image(type == "Laki-laki" ? "boy" : "girl")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 60, height: 60)
-                            .cornerRadius(25)
-                            .shadow(radius: 4)
-                            .padding(.top, 20)
-                        
-                    }.padding()
-                    Spacer()
-                    
-                }
-                TextField("Nama", text: $name)
-                    .foregroundColor(Color("text"))
-                Picker("Jenis Kelamn", selection: $type) {
-                    ForEach(Self.types, id: \.self) {
-                        Text($0)
+        NavigationView {
+            
+            Form{
+                Section{
+                    HStack(alignment: .center){
+                        Spacer()
+                        ZStack{
+
+                            Circle()
+                                .frame(width: 80, height: 80)
+                                .foregroundColor(Color("gray"))
+                            Image(type == "Laki-laki" ? "boy" : "girl")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(25)
+                                .shadow(radius: 4)
+                                .padding(.top, 20)
+
+                        }.padding()
+                        Spacer()
+
+                    }
+                    TextField("Nama", text: $name)
+                        .foregroundColor(Color("text"))
+                    Picker("Jenis Kelamn", selection: $type) {
+                        ForEach(Self.types, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
+                        Text("Tanggal lahir")
                     }
                 }
-                DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
-                    Text("Tanggal lahir")
-                }
-                
-                //                           Text("Tanggal Lahir \(birthDate, formatter: dateFormatter)")
-                //                Text("\(name)  \(type) \(amount)")
             }
         
-    
-        
-        .background(Color("bg"))
-        .navigationBarTitle(Text("Tambah data anak"), displayMode: .inline)
-        .navigationBarItems(trailing:btnSimpan)
-        .onAppear {
-            self.isNavigationBarHidden = false
-            print(observableChild.data)
             
+            .background(Color("bg"))
+            .navigationBarTitle(Text("Tambah Data Anak"), displayMode: .inline)
+            .navigationBarItems(leading: btnCancel, trailing: btnSimpan.disabled(name == ""))
+            .onAppear {
+                self.isNavigationBarHidden = false
+                print(observableChild.data)
+            }
         }
     }
 }

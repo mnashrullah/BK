@@ -33,7 +33,7 @@ import SwiftUI
 //}
 extension UIColor {
 
-    static let colorTabbar = UIColor(red: 244, green: 182, blue: 149, alpha: 100)
+//    static let colorTabbar = UIColor(red: 244, green: 182, blue: 149, alpha: 100)
 
 }
 

@@ -71,6 +71,7 @@ struct SummaryView: View {
     //    }
     
     @Binding var isNavigationBarHidden: Bool
+    var child: datatypeChild
 //    var percent: Double = 50
 //    var thickness: CGFloat = 20
 //    var fontSize:CGFloat = 15
@@ -97,7 +98,9 @@ struct SummaryView: View {
 //        ]
 //    
     
-    @ObservedObject var observableContent = ObservableContent()
+//    @ObservedObject var observableContent = ObservableContent()
+    
+    @ObservedObject var observableChildMilestone = ObservableChildMilestone()
     @EnvironmentObject var mUserData: UserData
     var colorBgActive = Color("primary")
     var colorBgNotActive = Color("gray")
@@ -154,7 +157,7 @@ struct SummaryView: View {
                     }
                     .padding([.horizontal, .top])
                     
-                    ProgressBar(progress: observableContent.numberAllItemCompleted, max: observableContent.numberAllItem, lineSize: 20)
+                    ProgressBar(progress: observableChildMilestone.numberAllItemCompleted, max: observableChildMilestone.numberAllItem, lineSize: 20)
                         .frame(width: 150.0, height: 150.0)
                         .padding(20)
                     
@@ -169,28 +172,28 @@ struct SummaryView: View {
                     
                     HStack(){
                         VStack{
-                            ProgressBar(progress: observableContent.numberItemMotorikCompleted, max: observableContent.numberItemMotorik, lineSize: 10)
+                            ProgressBar(progress: observableChildMilestone.numberItemMotorikCompleted, max: observableChildMilestone.numberItemMotorik, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
                             Text("Motorik")
                                 .foregroundColor(Color("text"))
                         }
                         VStack{
-                            ProgressBar(progress: observableContent.numberItemSosialCompleted, max: observableContent.numberItemSosial, lineSize: 10)
+                            ProgressBar(progress: observableChildMilestone.numberItemSosialCompleted, max: observableChildMilestone.numberItemSosial, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
                             Text("Sosial")
                                 .foregroundColor(Color("text"))
                         }
                         VStack{
-                            ProgressBar(progress: observableContent.numberItemBahasaCompleted, max: observableContent.numberItemBahasa, lineSize: 10)
+                            ProgressBar(progress: observableChildMilestone.numberItemBahasaCompleted, max: observableChildMilestone.numberItemBahasa, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
                             Text("Bahasa")
                                 .foregroundColor(Color("text"))
                         }
                         VStack{
-                            ProgressBar(progress: observableContent.numberItemKognitifCompleted, max: observableContent.numberItemKognitif, lineSize: 10)
+                            ProgressBar(progress: observableChildMilestone.numberItemKognitifCompleted, max: observableChildMilestone.numberItemKognitif, lineSize: 10)
                                 .frame(width: Constants.mSize.width/7, height: Constants.mSize.width/7)
                                 .padding()
                             Text("Kognitif")
@@ -207,7 +210,10 @@ struct SummaryView: View {
         .navigationBarTitle(Text("Hasil"), displayMode: .inline)
         .onAppear {
             self.isNavigationBarHidden = false
-            observableContent.countAll()
+            print("coba hasil milestone")
+            print(observableChildMilestone.data)
+            observableChildMilestone.loadData(idChild: child.idChild, month: child.month)
+            print(observableChildMilestone.data)
             
 //            print("summary")
 //            print(mUserData.myChild)
@@ -216,9 +222,9 @@ struct SummaryView: View {
     }
     
 }
-
-struct SummaryView_Previews: PreviewProvider {
-    static var previews: some View {
-        SummaryView(isNavigationBarHidden: .constant(false))
-    }
-}
+//
+//struct SummaryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SummaryView(isNavigationBarHidden: .constant(false))
+//    }
+//}

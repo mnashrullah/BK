@@ -115,7 +115,7 @@ struct HelpView: View {
         // MARK : setup button action sheet
         for i in 0..<self.months.count{
             let button: ActionSheet.Button = .default(Text(self.self.months[i]), action: {
-                Text("\(self.months[i])")
+//                Text("\(self.months[i])")
                 self.selectedMonths = i
             })
             self.buttonsArray[i] =  button

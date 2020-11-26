@@ -14,10 +14,10 @@ struct HomeView: View {
     @State var selected = 0
     init(){
         //setup tabbar color
-        UITableView.appearance().tableFooterView = UIView()
-        UITableView.appearance().separatorStyle = .none
-//        UITabBar.appearance().backgroundColor = UIColor(named: "Color3")
-        UITabBar.appearance().backgroundColor = UIColor.colorTabbar
+//        UITableView.appearance().tableFooterView = UIView()
+//        UITableView.appearance().separatorStyle = .none
+        UITabBar.appearance().backgroundColor = UIColor(named: "Color3")
+//        UITabBar.appearance().backgroundColor = UIColor.colorTabbar
 
     }
     
@@ -28,7 +28,7 @@ struct HomeView: View {
             if show || UserDefaults.standard.bool(forKey: initialLaunchKey){
                 // MARK: TabView show
                 TabView (selection: $selected) {
-                    PageHomeView().tabItem({
+                    ChildView().tabItem({
                         Image(systemName: Constants.TabBarImageName.tabBar0)
                             .font(.body)
                         Text("\(Constants.TabBarText.tabBar0)")

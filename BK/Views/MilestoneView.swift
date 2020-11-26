@@ -31,6 +31,7 @@ struct MilestoneView: View {
     
     
     @Binding var isNavigationBarHidden: Bool
+    var child: datatypeChild
     
     var names = "Axel"
     var ages = "3 Tahun 4 Bulan"
@@ -47,7 +48,8 @@ struct MilestoneView: View {
     //        }
     @State var limitedText = true
     
-    @ObservedObject var observableContent = ObservableContent()
+//    @ObservedObject var observableContent = ObservableContent()
+    @ObservedObject var observableChildMilestone = ObservableChildMilestone()
     var mWidth: Int = Int(UIScreen.main.bounds.width)
     @EnvironmentObject var mUserData: UserData
     
@@ -102,7 +104,7 @@ struct MilestoneView: View {
             })
             //          MARK: PROGRESS
             HStack {
-                NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden)){
+                NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, child: child )){
                     Text("Progress Terpenuhi").foregroundColor(Color("text"))
                     Spacer()
                     Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
@@ -126,16 +128,16 @@ struct MilestoneView: View {
                                 .stroke(Color(#colorLiteral(red: 0.9383720756, green: 0.8294705153, blue: 0.7069537044, alpha: 1)), lineWidth: 2)
                         )
                     RoundedRectangle(cornerRadius: 10)
-                        .frame(width: CGFloat(Double(observableContent.numberAllItemCompleted)/Double(observableContent.numberAllItem)*Double(mWidth-45))
-                               
+                        .frame(width: CGFloat(Double(observableChildMilestone.numberAllItemCompleted)/Double(observableChildMilestone.numberAllItem)*Double(mWidth-45))
+
                                , height: 14).foregroundColor(Color("Color3"))
                         .padding(.leading, 4)
                 }
                 HStack{
-                    Text("\(String(observableContent.numberAllItemCompleted)) dari \(String(observableContent.numberAllItem)) tanda terpenuhi")
+                    Text("\(String(observableChildMilestone.numberAllItemCompleted)) dari \(String(observableChildMilestone.numberAllItem)) tanda terpenuhi")
                         .foregroundColor(Color("text"))
                         .font(.headline)
-                    
+
                 }
             }
             
@@ -157,9 +159,9 @@ struct MilestoneView: View {
             
             
             if (self.mCategory[self.categorySelected] == self.mCategory[0] ){
-                ForEach(observableContent.data){ mileTrack in
+                ForEach(observableChildMilestone.data){ mileTrack in
                     Button(action:{
-                        observableContent.updateComplete(id: mileTrack.idMilestone, isComplete: !mileTrack.isComplete)
+                        observableChildMilestone.updateComplete(idChild: child.idChild, idMilestone: mileTrack.idMilestone, month: child.month, isComplete: !mileTrack.isComplete)
                     }){
                         HStack {
                             VStack(alignment: .leading) {
@@ -189,10 +191,10 @@ struct MilestoneView: View {
                 }
                 .padding([.trailing,.leading])
             } else{
-                ForEach(observableContent.data){ mileTrack in
+                ForEach(observableChildMilestone.data){ mileTrack in
                     if (mileTrack.category == self.mCategory[self.categorySelected]){
                         Button(action:{
-                            observableContent.updateComplete(id: mileTrack.idMilestone, isComplete: !mileTrack.isComplete)
+                            observableChildMilestone.updateComplete(idChild: child.idChild, idMilestone: mileTrack.idMilestone, month: child.month, isComplete: !mileTrack.isComplete)
                         }){
                             HStack {
                                 VStack(alignment: .leading) {
@@ -322,13 +324,18 @@ struct MilestoneView: View {
             //            }
             //            .padding([.trailing,.leading])
         }
-        //        .navigationBarTitle(Text(mUserData.myChild?.name ?? "").foregroundColor(Color("Color3")), displayMode: .inline)
+        .navigationBarTitle(Text(child.name).foregroundColor(Color("text")), displayMode: .inline)
         //        .navigationBarItems(trailing:
         //                                Text(mUserData.myChild != nil ?
         //                                        calcAge(birthday: mUserData.myChild!.birthDate) : "")
         //                                .foregroundColor(Color("Color5")))
         .background(Color("bg"))
         .onAppear(){
+            print(observableChildMilestone.data)
+            observableChildMilestone.loadData(idChild: child.idChild, month: child.month)
+            print(observableChildMilestone.data)
+            
+            
 //            print("nashdata")
             //            print(mUserData.myChild)
             //            print(mUserData.myChild?.birthDate)
@@ -406,18 +413,18 @@ struct MilestoneView: View {
 }
 
 
-
-struct MilestoneView_Previews: PreviewProvider {
-    //    static var previews: some View {
-    //        MilestoneView(isNavigationBarHidden: .constant(false))
-    //
-    //    }
-    static var previews: some View {
-        let userData = UserData()
-        return MilestoneView(isNavigationBarHidden: .constant(false))
-            .environmentObject(userData)
-    }
-}
+//
+//struct MilestoneView_Previews: PreviewProvider {
+//    //    static var previews: some View {
+//    //        MilestoneView(isNavigationBarHidden: .constant(false))
+//    //
+//    //    }
+//    static var previews: some View {
+//        let userData = UserData()
+//        return MilestoneView(isNavigationBarHidden: .constant(false))
+//            .environmentObject(userData)
+//    }
+//}
 
 
 struct CategoryButton: View{
