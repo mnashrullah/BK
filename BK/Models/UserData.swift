@@ -16,4 +16,5 @@ class UserData: ObservableObject {
     @Published var score = 0
     @Published var myChild: datatypeChild?
     @Published var mileSelected: Mile?
+    
 }

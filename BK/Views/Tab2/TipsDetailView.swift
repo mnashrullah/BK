@@ -11,6 +11,8 @@ import SwiftUI
 struct TipsDetailView: View {
     var mile: Mile
     var type: String
+    @State var month: Int = 0
+    
     //    var item: Tips
 //    var tips: [Tips]
 //    var index: Int
@@ -31,6 +33,10 @@ struct TipsDetailView: View {
 
     @State private var searchText : String = ""
     
+    @ObservedObject var observableContent = ObservableContent()
+    
+    @ObservedObject var observableTips = ObservableTips()
+    
     
     var body: some View {
        
@@ -44,7 +50,7 @@ struct TipsDetailView: View {
                 Text("\(type)")
                     .foregroundColor(Color("text"))
 
-                Text("Anak usia \(String(mile.month))")
+                Text("Anak usia \(String(month)) bulan")
                     .font(.title)
                     .bold()
                     .foregroundColor(Color("text"))
@@ -61,15 +67,22 @@ struct TipsDetailView: View {
 //                ForEach(mile.milestone.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
 //                    cardSimple(description: item.item)
 //                }
+//                if (type == "Milestone"){
+//                    ForEach(mile.milestone){item in
+//                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
+//                            cardSimple(description: item.name)}
+//                    }
+//                }
                 if (type == "Milestone"){
-                    ForEach(mile.milestone){item in
-                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
-                            cardSimple(description: item.name)}
-                    }
-                }
+                   ForEach(observableContent.data){item in
+                       if(item.category == segmentedValue[selectedSegmented]){
+                        cardSimple(description: item.name)}
+                   }
+               }
+                
                 if (type == "Tips"){
-                    ForEach(mile.tips){item in
-                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
+                    ForEach(observableTips.data){item in
+                        if(item.category == segmentedValue[selectedSegmented]){
                             cardSimple(description: item.name)}
                     }
                 }
@@ -80,6 +93,23 @@ struct TipsDetailView: View {
 
             }.padding()
          Spacer()
+            
+        }
+        .onAppear(){
+            print("TipsDetailView")
+            self.month = UserDefaults.standard.integer(forKey: "month")
+            
+            if type == "Milestone"{
+                print("load milestone")
+                observableContent.loadByMonth(month:self.month)
+                print(observableContent.data)
+            } else if type == "Tips"{
+                print("load tips")
+                observableTips.loadByMonth(month:self.month)
+                print(observableTips.data)
+                
+            }
+            
             
         }
     }

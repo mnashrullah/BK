@@ -171,6 +171,32 @@ class ObservableContent : ObservableObject{
         }
         
     }
+    func loadByMonth(month: Int){
+        data = []
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
+        req.predicate = NSPredicate(format: "month == \(month)")
+        let sort = NSSortDescriptor(key: "category", ascending: true)
+        req.sortDescriptors = [sort]
+        do{
+            let res = try context.fetch(req)
+            for i in res as! [NSManagedObject]{
+                self.data.append(
+                    datatypeMilestone(
+                        id: i.objectID,
+                        idMilestone: i.value(forKey: "idMilestone") as! Int,
+                        month: i.value(forKey: "month") as! Int,
+                        name: i.value(forKey: "name") as! String,
+                        category: i.value(forKey: "category") as! String,
+                        isComplete: i.value(forKey: "isComplete") as! Bool))
+            }
+        }
+        catch{
+            print("error")
+        }
+        
+    }
     
     func addData(idMilestone: Int, month: Int, name: String, category: String, isComplete: Bool){
         //        MARK: Coredata add data milestone done
@@ -659,6 +685,33 @@ class ObservableTips : ObservableObject{
         let context = app.persistentContainer.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbTips")
         //        MARK: Coredata load data milestone done
+        do{
+            let res = try context.fetch(req)
+            for i in res as! [NSManagedObject]{
+                self.data.append(
+                    datatypeTips(
+                        id: i.objectID,
+                        idTips: i.value(forKey: "month") as! Int,
+                        month: i.value(forKey: "month") as! Int,
+                        name: i.value(forKey: "name") as! String,
+                        category: i.value(forKey: "category") as! String
+                    )
+                )
+            }
+        }
+        catch{
+            print("error")
+        }
+        
+    }
+    func loadByMonth(month: Int){
+        data = []
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbTips")
+        req.predicate = NSPredicate(format: "month == \(month)")
+        let sort = NSSortDescriptor(key: "category", ascending: true)
+        req.sortDescriptors = [sort]
         do{
             let res = try context.fetch(req)
             for i in res as! [NSManagedObject]{

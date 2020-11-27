@@ -168,9 +168,6 @@ struct TipsView: View {
                 .background(Color("bg"))
                 .navigationBarHidden(false)
                 .onAppear(){
-//                    print("conten all \(observableContent.data)")
-//                    print("conten \(observableContent.data[0])")
-//                    print("userdata \(userData.miles)")
                 }
                 Spacer()
                     
@@ -205,6 +202,7 @@ struct cardTipsView: View{
     @State private var favoriteColor = 0
     var colors = ["Red", "Green", "Blue"]
     var typeContent: String
+    @State var month = 0
     
     
     var body: some View{
@@ -226,7 +224,9 @@ struct cardTipsView: View{
                 //                MARK: -BUTTON modal
                 Button(action:{
                     self.showingDetail.toggle()
-                    UserDefaults.standard.set(self.index, forKey: "month")
+                    UserDefaults.standard.set(self.mile.month, forKey: "month")
+                    self.month = mile.month
+                    print("tipsview button ditekan \(month) \(index)")
                 }){
                     HStack {
                         VStack(alignment: .leading) {
