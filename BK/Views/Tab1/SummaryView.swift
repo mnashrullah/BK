@@ -112,42 +112,42 @@ struct SummaryView: View {
             ScrollView(showsIndicators: false){
                 //                MARK: pilih segmented
                 VStack() {
-                    Picker("Numbers", selection: $selectedSegmented) {
-                        ForEach(0 ..< segmentedValue.count) { index in
-                            Text(self.segmentedValue[index]).tag(index)
-                        }
-                    }
-                    .cornerRadius(5)
-                    .padding()
-                    .pickerStyle(SegmentedPickerStyle())
-                   
-                    
+//                    Picker("Numbers", selection: $selectedSegmented) {
+//                        ForEach(0 ..< segmentedValue.count) { index in
+//                            Text(self.segmentedValue[index]).tag(index)
+//                        }
+//                    }
+//                    .cornerRadius(5)
+//                    .padding()
+//                    .pickerStyle(SegmentedPickerStyle())
+//                   
+//                    
                    
 //                    MARK: pilih tahun
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(){
-                            ForEach(0..<months.count){i in
-                                Button(action: {
-                                    selectedMonth = i
-                                    print(selectedMonth)
-                                }){
-                                    VStack{
-                                        Text("\(months[i])")
-                                        Text("Bulan")
-                                    }.tag(0)
-                                    .padding()
-                                    .background(selectedMonth == i ? colorBgActive: colorBgNotActive)
-                                    .cornerRadius(10)
-                                    .foregroundColor(Color("text"))
-
-                                    //                                    .background(Color.gray)
-                                    //                                .cornerRadius(10)
-                                    //                                .foregroundColor(Color.white)
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
+//                    ScrollView(.horizontal, showsIndicators: false){
+//                        HStack(){
+//                            ForEach(0..<months.count){i in
+//                                Button(action: {
+//                                    selectedMonth = i
+//                                    print(selectedMonth)
+//                                }){
+//                                    VStack{
+//                                        Text("\(months[i])")
+//                                        Text("Bulan")
+//                                    }.tag(0)
+//                                    .padding()
+//                                    .background(selectedMonth == i ? colorBgActive: colorBgNotActive)
+//                                    .cornerRadius(10)
+//                                    .foregroundColor(Color("text"))
+//
+//                                    //                                    .background(Color.gray)
+//                                    //                                .cornerRadius(10)
+//                                    //                                .foregroundColor(Color.white)
+//                                }
+//                            }
+//                        }
+//                        .padding(.horizontal)
+//                    }
                     //                    MARK: chart main
                     HStack(){
                         Text("Hasil Milestone")

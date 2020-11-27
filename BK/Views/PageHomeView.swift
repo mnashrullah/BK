@@ -231,9 +231,14 @@ struct PageHomeView: View {
                             .background(Color("Color3"))
                             .cornerRadius(15)
                             
-                            .frame(minHeight: 120, maxHeight: 120)
+                            .frame(minWidth: 0,
+                                    maxWidth: .infinity,
+                                    minHeight: 0,
+                                    maxHeight: 120,
+                                    alignment: .topLeading
+                            )
         
-                        }.padding(.horizontal)
+                        }.padding()
                     }
                     NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, child: child)){
                         VStack(alignment:.leading){
@@ -261,8 +266,16 @@ struct PageHomeView: View {
                             .padding()
                             .background(Color("Color3"))
                             .cornerRadius(15)
-                            .frame(minHeight: 120, maxHeight: 120)
-                        }.padding(.horizontal)
+                            
+//                            .frame(minHeight: 120, maxHeight: 120)
+                            .frame(minWidth: 0,
+                                    maxWidth: .infinity,
+                                    minHeight: 0,
+                                    maxHeight: 120,
+                                    alignment: .topLeading
+                            )
+        
+                        }.padding()
                     }
                 }
                 
@@ -280,10 +293,12 @@ struct PageHomeView: View {
 //                }
 //            }
             .onAppear(){
-                observableChild.loadData()
+//                observableChild.loadData()
                 self.isNavigationBarHidden = false
-                print(child)
-                print(observableChildMilestone.firstLoadData(idChild: child.idChild, month: child.month))
+//                print(child)
+//                
+//                observableChild.loadData()
+                observableChildMilestone.firstLoadData(idChild: child.idChild, month: child.month)
                 
             }
         

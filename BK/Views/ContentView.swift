@@ -340,13 +340,14 @@ class ObservableChildMilestone : ObservableObject{
     @Published var numberItemKognitifCompleted: Int = 0
 
 
-//    init() {
+    init() {
 //        loadData()
 //        getMonth()
-////        countAll()
-//    }
-    func loadData(idChild: Int, month: Int){
         getMonthCategory()
+//        countAll()
+    }
+    func loadData(idChild: Int, month: Int){
+//        getMonthCategory()
         countAll(idChild: idChild, month: month)
         data = []
         let app = UIApplication.shared.delegate as! AppDelegate
@@ -411,8 +412,10 @@ class ObservableChildMilestone : ObservableObject{
         do{
             let res = try context.fetch(req)
             if (res.count == 0){
-                print("addChildMilestone")
+                print("firstLoadData")
                 addData(idChild: idChild, month: month)
+            } else{
+                print("firstLoadData ignored")
             }
         }
         catch{
@@ -421,6 +424,9 @@ class ObservableChildMilestone : ObservableObject{
     }
     
     func decideMonth(month: Int) -> Int{
+        print(month)
+        print("count \(monthCategory.count)")
+        
         var monthSelected = 0
         for i in 0..<monthCategory.count {
             var startNumber = 0
@@ -434,12 +440,15 @@ class ObservableChildMilestone : ObservableObject{
             }
             if (month > startNumber && month <= endNumber){
                 monthSelected = monthCategory[i+1]
-            }
-            if (month > monthCategory[monthCategory.count-1]){
+            } else if (month > monthCategory[monthCategory.count-1]){
                 monthSelected = monthCategory[monthCategory.count-1]
-  
+            } else{
+                monthSelected = 2
             }
+            
         }
+//        print("addData month \(month)")
+//        print("addData month selected2 \(monthSelected)")
         return monthSelected
     }
 
@@ -448,25 +457,9 @@ class ObservableChildMilestone : ObservableObject{
         let context = app.persistentContainer.viewContext
         
 //        MARK: mengambil bulan yang sesuai dengan data anak
-        var monthSelected: Int = 0
-        for i in 0..<monthCategory.count {
-            var startNumber = 0
-            var endNumber = 0
-            if i == 0 {
-                startNumber = 0
-                endNumber = monthCategory[i]
-            } else if (i < monthCategory.count-1) {
-                startNumber = monthCategory[i]
-                endNumber = monthCategory[i+1]
-            }
-            if (month > startNumber && month <= endNumber){
-                monthSelected = monthCategory[i+1]
-            }
-            if (month > monthCategory[monthCategory.count-1]){
-                monthSelected = monthCategory[monthCategory.count-1]
-
-            }
-        }
+        let monthSelected: Int = decideMonth(month: month)
+//        print("count monthcategory\(monthCategory.count)")
+        
 //        MARK: mengambil data milestone yang sesuai dengan bulan
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
         req.predicate = NSPredicate(format: "month = \(monthSelected)")
@@ -492,7 +485,10 @@ class ObservableChildMilestone : ObservableObject{
         catch{
             print("error")
         }
-//        self.loadData(idChild: child, month: <#Int#>)
+        self.loadData(idChild: idChild, month: monthSelected)
+        print("coba")
+        print(data)
+        
     }
     
    
