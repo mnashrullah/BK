@@ -20,7 +20,7 @@ struct ChildView: View {
             showingSheet    .toggle()
         }){
             Image(systemName: "plus")
-        }
+        }.padding()
     }
     @State var name: String = ""
     

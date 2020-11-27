@@ -31,12 +31,15 @@ struct ContentView: View {
             
             .navigationBarColor(UIColor(named: "bg"))
             .onAppear(){
-                loadContent()
-
-//            if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
 //                loadContent()
-//                UserDefaults.standard.set(true, forKey: "isFirstTime")
-//            }
+
+            if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
+                print("isFirstTime load data")
+                loadContent()
+                UserDefaults.standard.set(true, forKey: "isFirstTime")
+            }else{
+                print("isFirstTime not load data")
+            }
         }
 //        NavigationView{
 //            VStack{
@@ -67,6 +70,7 @@ struct ContentView: View {
 //        }
     }
     func loadContent(){
+        print("loadcontent")
         deleteAllContent()
         for i in userData.miles{
             for j in i.milestone {
@@ -424,9 +428,6 @@ class ObservableChildMilestone : ObservableObject{
     }
     
     func decideMonth(month: Int) -> Int{
-        print(month)
-        print("count \(monthCategory.count)")
-        
         var monthSelected = 0
         for i in 0..<monthCategory.count {
             var startNumber = 0
@@ -439,16 +440,39 @@ class ObservableChildMilestone : ObservableObject{
                 endNumber = monthCategory[i+1]
             }
             if (month > startNumber && month <= endNumber){
+                print("inside")
                 monthSelected = monthCategory[i+1]
-            } else if (month > monthCategory[monthCategory.count-1]){
+            }
+            if (month > monthCategory[monthCategory.count-1]){
+                print("inside")
                 monthSelected = monthCategory[monthCategory.count-1]
-            } else{
+  
+            }
+            if month <= 2 {
+                print("inside")
                 monthSelected = 2
             }
+
+//            if (month > monthCategory[monthCategory.count-1]){
+//                monthSelected = monthCategory[i+1]
+//            }
+//            if (month > 0 && month <= endNumber){
+//                monthSelected = monthCategory[monthCategory.count-1]
+//            }
+//            if month == 0 {
+//                monthSelected = 2
+//            }
             
+//
+//            print("decideMonth \(month)")
+//            print("decideMonth \(monthCategory)")
+//            print("decideMonth \(monthSelected)")
+
         }
-//        print("addData month \(month)")
-//        print("addData month selected2 \(monthSelected)")
+        
+        print("addData month \(monthCategory)")
+        print("addData month \(month)")
+        print("addData month selected2 \(monthSelected)")
         return monthSelected
     }
 
