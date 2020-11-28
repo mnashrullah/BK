@@ -11,12 +11,17 @@ import SwiftUI
 struct HomeView: View {
     @State var show = false
     private let initialLaunchKey = "isInitialLaunch"
+    @Environment(\.colorScheme) var colorScheme
     @State var selected = 0
     init(){
         //setup tabbar color
 //        UITableView.appearance().tableFooterView = UIView()
 //        UITableView.appearance().separatorStyle = .none
-        UITabBar.appearance().backgroundColor = UIColor(named: "Color3")
+//        UITabBar.appearance().backgroundColor = UIColor(named: "bg")
+        UITabBar.appearance().backgroundColor = colorScheme == .dark ?  UIColor(named: "Color3"): UIColor(named: "bg")
+              
+//        UITabBar.appearance().backgroundColor = UIColor.red
+        
 //        UITabBar.appearance().backgroundColor = UIColor.colorTabbar
 
     }
@@ -40,7 +45,7 @@ struct HomeView: View {
                         Text("\(Constants.TabBarText.tabBar1)")
                     }).tag(1)                    
                 }
-            .accentColor(Color("text"))
+                .accentColor(colorScheme == .dark ?  Color.white: Color("bg"))
                         
                     
             }

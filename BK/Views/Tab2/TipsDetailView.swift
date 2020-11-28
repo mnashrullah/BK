@@ -39,79 +39,69 @@ struct TipsDetailView: View {
     
     
     var body: some View {
-       
-        ScrollView(.vertical){
+        ZStack{
+            Color("bg")
+                .edgesIgnoringSafeArea(.all)
             
-            Image("baby")
-                .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/4 )
-                .padding(.bottom)
-
-            VStack(alignment:.leading){
-                Text("\(type)")
-                    .foregroundColor(Color("text"))
-
-                Text("Anak usia \(String(month)) bulan")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(Color("text"))
-//                MARK: Segmented control
-                Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
-                    ForEach(0..<segmentedValue.count) { index in
-                        Text(self.segmentedValue[index]).tag(index)
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
-                .padding(.top, 20)
-
-//                MARK: Filter content based on segmented
-
-//                ForEach(mile.milestone.filter{$0.category.localizedStandardContains(segmentedValue[self.selectedSegmented])}){item in
-//                    cardSimple(description: item.item)
-//                }
-//                if (type == "Milestone"){
-//                    ForEach(mile.milestone){item in
-//                        if(item.category.rawValue == segmentedValue[selectedSegmented]){
-//                            cardSimple(description: item.name)}
-//                    }
-//                }
-                if (type == "Milestone"){
-                   ForEach(observableContent.data){item in
-                       if(item.category == segmentedValue[selectedSegmented]){
-                        cardSimple(description: item.name)}
-                   }
-               }
+            ScrollView(.vertical){
                 
-                if (type == "Tips"){
-                    ForEach(observableTips.data){item in
-                        if(item.category == segmentedValue[selectedSegmented]){
+                Image("baby")
+                    .scaledToFit().frame(width: Constants.mSize.width,height: Constants.mSize.height/4 )
+                    .padding(.bottom)
+
+                VStack(alignment:.leading){
+                    Text("\(type)")
+                        .foregroundColor(Color("text"))
+
+                    Text("Anak usia \(String(month)) bulan")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(Color("text"))
+                    Picker(selection: $selectedSegmented, label: Text("What is your favorite color?")) {
+                        ForEach(0..<segmentedValue.count) { index in
+                            Text(self.segmentedValue[index]).tag(index)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    .padding(.top, 20)
+                    if (type == "Milestone"){
+                       ForEach(observableContent.data){item in
+                           if(item.category == segmentedValue[selectedSegmented]){
                             cardSimple(description: item.name)}
+                       }
+                   }
+                    
+                    if (type == "Tips"){
+                        ForEach(observableTips.data){item in
+                            if(item.category == segmentedValue[selectedSegmented]){
+                                cardSimple(description: item.name)}
+                        }
                     }
-                }
-                
-//                ForEach(mile.milestone.category=segmentedValue[self.selectedSegmented]){item in
-//                    cardSimple(description: item.name)
-//                }
-
-            }.padding()
-         Spacer()
-            
-        }
-        .onAppear(){
-            print("TipsDetailView")
-            self.month = UserDefaults.standard.integer(forKey: "month")
-            
-            if type == "Milestone"{
-                print("load milestone")
-                observableContent.loadByMonth(month:self.month)
-                print(observableContent.data)
-            } else if type == "Tips"{
-                print("load tips")
-                observableTips.loadByMonth(month:self.month)
-                print(observableTips.data)
+                }.padding()
+             Spacer()
+               
                 
             }
-            
-            
+            .onAppear(){
+                print("TipsDetailView")
+                self.month = UserDefaults.standard.integer(forKey: "month")
+                
+                if type == "Milestone"{
+                    print("load milestone")
+                    observableContent.loadByMonth(month:self.month)
+                    print(observableContent.data)
+                } else if type == "Tips"{
+                    print("load tips")
+                    observableTips.loadByMonth(month:self.month)
+                    print(observableTips.data)
+                    
+                }
+                
+                
+            }
         }
+        
+       
+       
     }
 }
 //
