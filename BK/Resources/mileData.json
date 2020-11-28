@@ -50,21 +50,21 @@
                 "month": 2,
                 "name": "Bereaksi terhadap suara yang ia dengar dengan menggerakkan kepalanya",
                 "category": "Bahasa",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5005,
                 "month": 2,
                 "name": "Mulai mengikuti pergerakan benda dengan matanya",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5006,
                 "month": 2,
                 "name": "Dapat menegakkan kepala dan badannya ketika berbaring telungkup",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -119,21 +119,21 @@
                 "month": 4,
                 "name": "Meraih mainan dengan satu tangan",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5011,
                 "month": 4,
                 "name": "Mampu menegakkan kepalanya tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5012,
                 "month": 4,
                 "name": "Memasukkan tangan ke mulut",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -188,21 +188,21 @@
                 "month": 6,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5017,
                 "month": 6,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5018,
                 "month": 6,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -257,21 +257,21 @@
                 "month": 9,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5023,
                 "month": 9,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5024,
                 "month": 9,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -326,21 +326,21 @@
                 "month": 12,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5029,
                 "month": 12,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5030,
                 "month": 12,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -395,21 +395,21 @@
                 "month": 18,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5035,
                 "month": 18,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5036,
                 "month": 18,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -464,21 +464,21 @@
                 "month": 24,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5041,
                 "month": 24,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5042,
                 "month": 24,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -533,21 +533,21 @@
                 "month": 36,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5047,
                 "month": 36,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5048,
                 "month": 36,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -602,21 +602,21 @@
                 "month": 48,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5053,
                 "month": 48,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5054,
                 "month": 48,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
@@ -672,21 +672,21 @@
                 "month": 60,
                 "name": "Memasukkan barang ke mulut",
                 "category": "Kognitif",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5059,
                 "month": 60,
                 "name": "Mampu duduk tanpa bantuan apapun",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             },
             {
                 "id": 5060,
                 "month": 60,
                 "name": "Berguling ke kedua arah, ke depan dan belakang",
                 "category": "Motorik",
-                "isComplete": false
+                "isComplete": true
             }
         ],
     },
