@@ -124,7 +124,7 @@ struct ProgressCompletedView: View {
                                         }
                                     }
         )
-        .navigationBarTitle(Text("Progres Terpenuhic"))
+        .navigationBarTitle(Text("Progres Terpenuhi"))
         .navigationBarBackButtonHidden(!selectionsMilestone.isEmpty)
         .background(Color("bg"))
         .onAppear(){

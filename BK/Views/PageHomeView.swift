@@ -140,7 +140,7 @@ struct PageHomeView: View {
                 .padding([.horizontal])
                 .padding([.bottom], 10)
                 
-                                VStack(alignment:.leading){
+//                                VStack(alignment:.leading){
 //                                    HStack(alignment:.center){
 //                                        VStack{
 //                                            Image("menu1")
@@ -196,10 +196,10 @@ struct PageHomeView: View {
                 //
                 //                        }
                 //                    }.padding(.bottom,12)
-                
-                                }.padding(.horizontal)
-                                Spacer()
-                
+//
+//                                }.padding(.horizontal)
+//                                Spacer()
+//
                 
                 
                 VStack{
@@ -229,15 +229,18 @@ struct PageHomeView: View {
                             }
                             .frame(minWidth: 0, maxWidth: Constants.mSize.width,
                                     minHeight: 0,
-                                    maxHeight: 120,
+                                    maxHeight: 150,
                                     alignment: .topLeading
                             )
                             .padding()
                             .background(Color("Color3"))
                             .cornerRadius(15)
         
-                        }.padding()
+                        }
                     }
+                    
+                    .padding([.horizontal])
+                    .padding([.bottom], 10)
                     NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, child: child)){
                         VStack(alignment:.leading){
                             HStack(alignment:.center){
@@ -255,8 +258,6 @@ struct PageHomeView: View {
                                         .font(.body)
                                         .fontWeight(.bold)
                                     Text("Hasil menunjukkan progress dari lacak tumbuh kembang anak")
-                                        .frame(maxWidth: .infinity)
-                                        .lineLimit(3)
                                         .foregroundColor(Color("text"))
                                         .font(.body)
                                         .fixedSize(horizontal: false, vertical: true)
@@ -265,15 +266,18 @@ struct PageHomeView: View {
                             }
                             .frame(minWidth: 0, maxWidth: Constants.mSize.width,
                                     minHeight: 0,
-                                    maxHeight: 120,
+                                    maxHeight: 150,
                                     alignment: .topLeading
                             )
                             .padding()
                             .background(Color("Color3"))
                             .cornerRadius(15)
         
-                        }.padding()
+                        }
                     }
+                    
+                    .padding([.horizontal])
+                    .padding([.bottom], 10)
                 }
                 
                 Spacer()
