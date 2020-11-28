@@ -19,6 +19,10 @@ struct PageHomeView: View {
 //    @EnvironmentObject var mUserData: UserData
     
     @State var showingSheet = false
+//    @State var milestoneValue: Double = 0
+//    @State var stringMilestoneValue: String = "0"
+//    @State var statusPerkembangan = ""
+    
     var body: some View {
             ScrollView{
 //                ScrollView(.horizontal, showsIndicators: false){
@@ -107,6 +111,58 @@ struct PageHomeView: View {
                                 .padding(.top, 120)
                                 
                         }
+                    VStack{
+                        HStack(){
+                            VStack(spacing: 10){
+                                
+                                Text("\(observableChildMilestone.progressValueString)")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color("text"))
+                                
+                                Text("Milestone")
+                                    .font(.footnote)
+                                    
+                                    .foregroundColor(Color("text"))
+                            }
+                            .frame(minWidth: 0,
+                                   maxWidth: .infinity)
+                            Divider()
+                            VStack(spacing: 10){
+                                
+                                Text("\(child.age)")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    
+                                    .foregroundColor(Color("text"))
+                                    .multilineTextAlignment(.center)
+                                Text("Umur")
+                                    .font(.footnote)
+                                    .foregroundColor(Color("text"))
+                            }
+                            .frame(minWidth: 0,
+                                   maxWidth: .infinity)
+                            
+                            Divider()
+                            VStack(spacing: 10){
+                               
+                                Text("\(observableChildMilestone.progressStatus)")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color("text"))
+                                Text("Perkembangan")
+                                    .font(.footnote)
+                                    .foregroundColor(Color("text"))
+                            }
+                            .frame(minWidth: 0,
+                                   maxWidth: .infinity)
+                        }
+                        .padding()
+                        .background(Color("Color3"))
+                        .cornerRadius(10)
+
+                    }
+                    .padding()
 //                    HStack{
 //                        VStack{
 //                            Text("90%")
@@ -127,6 +183,7 @@ struct PageHomeView: View {
                     
                     
                 }
+                
                 HStack{
                     Text("Discover")
                         .font(.title)
@@ -300,10 +357,11 @@ struct PageHomeView: View {
 //                
 //                observableChild.loadData()
                 observableChildMilestone.firstLoadData(idChild: child.idChild, month: child.month)
-                
+                observableChildMilestone.countAll(idChild: child.idChild, month: child.month)
             }
         
     }
+    
 }
 //
 //struct PageHomeView_Previews: PreviewProvider {

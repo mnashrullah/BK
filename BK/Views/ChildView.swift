@@ -87,7 +87,7 @@ struct ChildView: View {
                                 VStack(alignment: .leading){
                                     Text(child.name)
                                         .foregroundColor(Color("text"))
-                                    Text("\(child.age)")
+                                    Text("Umur \(child.age)")
                                         .font(.caption)
                                         .foregroundColor(Color("text"))
                                 }

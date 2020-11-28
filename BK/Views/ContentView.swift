@@ -368,6 +368,10 @@ class ObservableChildMilestone : ObservableObject{
 
     @Published var numberItemKognitif: Int = 0
     @Published var numberItemKognitifCompleted: Int = 0
+    
+    @Published var progressStatus = ""
+    @Published var progressValue:Double = 0
+    @Published var progressValueString: String = "0"
 
 
     init() {
@@ -775,6 +779,17 @@ class ObservableChildMilestone : ObservableObject{
         catch{
             print("error")
         }
+        
+        progressValue = Double(numberAllItemCompleted) / Double(numberAllItem) * 100
+        progressValueString = String(format: "%.1f", progressValue)
+        if (progressValue >= 80){
+            progressStatus = "Baik"
+        } else {
+            progressStatus = "Biasa"
+        }
+        
+        
+        
         print("\(String(numberAllItemCompleted)) / \(String(numberAllItem))")
         print("\(String(numberItemMotorikCompleted)) / \(String(numberItemMotorik))")
     }
@@ -1053,27 +1068,27 @@ class ObservableChild : ObservableObject{
             print("error")
         }
     }
-    func calcAge(birthday: Date) -> String {
-        let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
-        let now = Date()
-        let calcAge = calendar.components([.year, .month, .day], from: birthday, to: now, options: [])
-        let age: Int = calcAge.year ?? 0
-        let month: Int = calcAge.month ?? 0
-        let day: Int = calcAge.day ?? 0
-        var result : String = ""
-        if (age > 0){
-            result = "Umur \(age) tahun \(month) bulan"
-        } else if (age == 0 && month > 0){
-            result = "Umur \(month) bulan \(day) hari"
-        } else if (age == 0 && month == 0 && day > 0){
-            result = "Umur \(day) hari"
-        } else if (age == 0 && month == 0 && day == 0){
-            result = "Umur \(day+1) hari"
-        } else {
-            result = ""
-        }
-        return result
-    }
+//    func calcAge(birthday: Date) -> String {
+//        let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
+//        let now = Date()
+//        let calcAge = calendar.components([.year, .month, .day], from: birthday, to: now, options: [])
+//        let age: Int = calcAge.year ?? 0
+//        let month: Int = calcAge.month ?? 0
+//        let day: Int = calcAge.day ?? 0
+//        var result : String = ""
+//        if (age > 0){
+//            result = "Umur \(age) tahun \(month) bulan"
+//        } else if (age == 0 && month > 0){
+//            result = "Umur \(month) bulan \(day) hari"
+//        } else if (age == 0 && month == 0 && day > 0){
+//            result = "Umur \(day) hari"
+//        } else if (age == 0 && month == 0 && day == 0){
+//            result = "Umur \(day+1) hari"
+//        } else {
+//            result = ""
+//        }
+//        return result
+//    }
 
 //
 //    func updateComplete(id: Int, isComplete: Bool){

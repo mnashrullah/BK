@@ -431,7 +431,7 @@ struct MilestoneView: View {
                             .edgesIgnoringSafeArea(.vertical)
                         // This VStack is the popup
                     VStack(alignment: .center) {
-                        Text("Perkembangan \(child.name) Terlambat")
+                        Text("Perkembangan \(child.name) \(observableChildMilestone.progressStatus)")
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color("text"))
                             .font(.title)

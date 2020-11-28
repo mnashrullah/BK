@@ -18,13 +18,13 @@ func calcAge(birthday: Date) -> String {
     let day: Int = calcAge.day ?? 0
     var result : String = ""
     if (age > 0){
-        result = "Umur \(age) tahun \(month) bulan"
+        result = "\(age) tahun \(month) bulan"
     } else if (age == 0 && month > 0){
-        result = "Umur \(month) bulan \(day) hari"
+        result = "\(month) bulan \(day) hari"
     } else if (age == 0 && month == 0 && day > 0){
-        result = "Umur \(day) hari"
+        result = "\(day) hari"
     } else if (age == 0 && month == 0 && day == 0){
-        result = "Umur \(day+1) hari"
+        result = "\(day+1) hari"
     } else {
         result = ""
     }
