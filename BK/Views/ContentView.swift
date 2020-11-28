@@ -406,6 +406,66 @@ class ObservableChildMilestone : ObservableObject{
             print("error")
         }
     }
+    func loadDataComplete(idChild: Int, month: Int){
+        countAll(idChild: idChild, month: month)
+        data = []
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: TbChildMilestone)
+        let monthSelected = decideMonth(month: month)
+        req.predicate = NSPredicate(format: "idChild == \(idChild) && month == \(monthSelected) && isComplete == true")
+        
+//        let sort = NSSortDescriptor(key: "category", ascending: true)
+//        req.sortDescriptors = [sort]
+        do{
+            let res = try context.fetch(req)
+            for i in res as! [NSManagedObject]{
+                self.data.append(
+                    datatypeChildMilestone(
+                        id: i.objectID,
+                        idChild: i.value(forKey: "idChild") as! Int,
+                        idMilestone: i.value(forKey: "idMilestone") as! Int,
+                        month: i.value(forKey: "month") as! Int,
+                        name: i.value(forKey: "name") as! String,
+                        category: i.value(forKey: "category") as! String,
+                        isComplete: i.value(forKey: "isComplete") as! Bool))
+            }
+        }
+        catch{
+            print("error")
+        }
+    }
+    func loadDataNotComplete(idChild: Int, month: Int){
+        countAll(idChild: idChild, month: month)
+        data = []
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: TbChildMilestone)
+        let monthSelected = decideMonth(month: month)
+        req.predicate = NSPredicate(format: "idChild == \(idChild) && month == \(monthSelected) && isComplete == false")
+        
+//        let sort = NSSortDescriptor(key: "category", ascending: true)
+//        req.sortDescriptors = [sort]
+        do{
+            let res = try context.fetch(req)
+            for i in res as! [NSManagedObject]{
+                self.data.append(
+                    datatypeChildMilestone(
+                        id: i.objectID,
+                        idChild: i.value(forKey: "idChild") as! Int,
+                        idMilestone: i.value(forKey: "idMilestone") as! Int,
+                        month: i.value(forKey: "month") as! Int,
+                        name: i.value(forKey: "name") as! String,
+                        category: i.value(forKey: "category") as! String,
+                        isComplete: i.value(forKey: "isComplete") as! Bool))
+            }
+        }
+        catch{
+            print("error")
+        }
+    }
+    
+    
     func getMonthCategory(){
         
         let app = UIApplication.shared.delegate as! AppDelegate
@@ -578,6 +638,65 @@ class ObservableChildMilestone : ObservableObject{
 //    }
 //
 //
+    
+    func updateBatchComplete(idChild: Int, idMilestone: [Int], month: Int){
+//        MARK: Coredata add data milestone done
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: TbChildMilestone)
+        var monthSelected = decideMonth(month: month)
+        
+        for i in idMilestone{
+            print("update complete \(String(i))")
+            req.predicate = NSPredicate(format: "idChild = \(idChild) && idMilestone = \(i) && month = \(monthSelected)")
+            do{
+                let res = try context.fetch(req)
+                    if res.count == 1 {
+                        let objectUpdate = res[0] as! NSManagedObject
+                        objectUpdate.setValue(true, forKey: "isComplete")
+                        try context.save()
+                    }else{
+                        print("data not found")
+                    }
+            }
+            catch{
+                print("error")
+            }
+        }
+        loadData(idChild: idChild, month: month)
+        countAll(idChild: idChild, month: month)
+//
+    }
+    func updateBatchNotComplete(idChild: Int, idMilestone: [Int], month: Int){
+//        MARK: Coredata add data milestone done
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: TbChildMilestone)
+        let monthSelected = decideMonth(month: month)
+        
+        for i in idMilestone{
+            print("update complete \(String(i))")
+            req.predicate = NSPredicate(format: "idChild = \(idChild) && idMilestone = \(i) && month = \(monthSelected)")
+            do{
+                let res = try context.fetch(req)
+                    if res.count == 1 {
+                        let objectUpdate = res[0] as! NSManagedObject
+                        objectUpdate.setValue(false, forKey: "isComplete")
+                        try context.save()
+                    }else{
+                        print("data not found")
+                    }
+            }
+            catch{
+                print("error")
+            }
+        }
+        loadData(idChild: idChild, month: month)
+        countAll(idChild: idChild, month: month)
+//
+    }
+    
+    
     func updateComplete(idChild: Int, idMilestone: Int, month: Int, isComplete: Bool){
 //        MARK: Coredata add data milestone done
         let app = UIApplication.shared.delegate as! AppDelegate

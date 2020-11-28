@@ -54,6 +54,7 @@
 		D7B151F8253CC5EF00FF926C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151F7253CC5EF00FF926C /* Page.swift */; };
 		D7B151FC253DDD4D00FF926C /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151FB253DDD4D00FF926C /* Milestone.swift */; };
 		D7B15200253EC51900FF926C /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B151FF253EC51900FF926C /* Tips.swift */; };
+		D7D5391F2572BF9300F0D667 /* ProgressCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5391E2572BF9300F0D667 /* ProgressCompletedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		D7B151F7253CC5EF00FF926C /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		D7B151FB253DDD4D00FF926C /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		D7B151FF253EC51900FF926C /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		D7D5391E2572BF9300F0D667 /* ProgressCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCompletedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				D792E93F2552A59600CE0C92 /* Tab1 */,
 				D792E93E2552A57A00CE0C92 /* Tab2 */,
 				D7B151ED253CC0E800FF926C /* MilestoneView.swift */,
+				D7D5391E2572BF9300F0D667 /* ProgressCompletedView.swift */,
 				0A841B62254D1EBA005940B0 /* SettingView.swift */,
 				0A1F8B842551905500E8D774 /* ResultView.swift */,
 				0A1F8B862551B18D00E8D774 /* BarView.swift */,
@@ -364,6 +367,7 @@
 				D792E9472558F06400CE0C92 /* PageView.swift in Sources */,
 				D7B151EA253CC04600FF926C /* Constant.swift in Sources */,
 				D792E9442558F06400CE0C92 /* PageViewController.swift in Sources */,
+				D7D5391F2572BF9300F0D667 /* ProgressCompletedView.swift in Sources */,
 				D7B151EC253CC0B500FF926C /* HomeView.swift in Sources */,
 				D7538A45256FEB0D00CE7152 /* Utils.swift in Sources */,
 				0A1F8B852551905500E8D774 /* ResultView.swift in Sources */,

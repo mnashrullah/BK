@@ -41,6 +41,8 @@ struct MilestoneView: View {
     @State var categorySelected = 0
     
     @State var mileCheck: Bool = false
+    @State var showingAlert: Bool = false
+    @State var showingAlertSave: Bool = false
     //
     //        init(){
     //            mile = mileData[UserDefaults.standard.integer(forKey: "month")]
@@ -48,11 +50,27 @@ struct MilestoneView: View {
     //        }
     @State var limitedText = true
     
-//    @ObservedObject var observableContent = ObservableContent()
+    //    @ObservedObject var observableContent = ObservableContent()
     @ObservedObject var observableChildMilestone = ObservableChildMilestone()
     var mWidth: Int = Int(UIScreen.main.bounds.width)
     @EnvironmentObject var mUserData: UserData
     
+    @State var items: [String] = ["Apples", "Oranges", "Bananas", "Pears", "Mangos", "Grapefruit"]
+    @State var selectionsMilestone: [Int] = []
+    var btnCancel : some View {
+        Button(action: {
+            
+        }){
+            Text("Batalkan")
+        }.padding()
+    }
+    var btnSave : some View {
+        Button(action: {
+            
+        }){
+            Text("Simpan")
+        }.padding()
+    }
     
     var body: some View {
         
@@ -104,7 +122,7 @@ struct MilestoneView: View {
             })
             //          MARK: PROGRESS
             HStack {
-                NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, child: child )){
+                NavigationLink(destination: ProgressCompletedView(child: child)){
                     Text("Progress Terpenuhi").foregroundColor(Color("text"))
                     Spacer()
                     Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
@@ -129,7 +147,7 @@ struct MilestoneView: View {
                         )
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: CGFloat(Double(observableChildMilestone.numberAllItemCompleted)/Double(observableChildMilestone.numberAllItem)*Double(mWidth-45))
-
+                               
                                , height: 14).foregroundColor(Color("Color3"))
                         .padding(.leading, 4)
                 }
@@ -137,7 +155,7 @@ struct MilestoneView: View {
                     Text("\(String(observableChildMilestone.numberAllItemCompleted)) dari \(String(observableChildMilestone.numberAllItem)) tanda terpenuhi")
                         .foregroundColor(Color("text"))
                         .font(.headline)
-
+                    
                 }
             }
             
@@ -157,11 +175,18 @@ struct MilestoneView: View {
             //            }
             //            self.mile =  miles.filter { $0.month == month }
             
-            
+            //            MARK: COBA
             if (self.mCategory[self.categorySelected] == self.mCategory[0] ){
                 ForEach(observableChildMilestone.data){ mileTrack in
                     Button(action:{
-                        observableChildMilestone.updateComplete(idChild: child.idChild, idMilestone: mileTrack.idMilestone, month: child.month, isComplete: !mileTrack.isComplete)
+                        if(selectionsMilestone.contains(mileTrack.idMilestone)){
+                            //remove milestone id from list
+                            self.selectionsMilestone.removeAll(where: { $0 == mileTrack.idMilestone })
+                        }else{
+                            //add milestone to list
+                            selectionsMilestone.append(mileTrack.idMilestone)
+                        }
+                        print(selectionsMilestone)
                     }){
                         HStack {
                             VStack(alignment: .leading) {
@@ -175,16 +200,13 @@ struct MilestoneView: View {
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                     Spacer()
-                                    Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                                    Image(systemName: selectionsMilestone.contains(mileTrack.idMilestone) ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
                                 }
                             }
                             .padding()
                             .background(Color.white)
                             .cornerRadius(10)
                         }
-                        //                    .onTapGesture(){
-                        //                        print(mileTrack.idMilestone)
-                        //                    }
                         .background(Color("Color3"))
                         .cornerRadius(10)
                     }.buttonStyle(PlainButtonStyle())
@@ -193,150 +215,272 @@ struct MilestoneView: View {
             } else{
                 ForEach(observableChildMilestone.data){ mileTrack in
                     if (mileTrack.category == self.mCategory[self.categorySelected]){
-                        Button(action:{
-                            observableChildMilestone.updateComplete(idChild: child.idChild, idMilestone: mileTrack.idMilestone, month: child.month, isComplete: !mileTrack.isComplete)
-                        }){
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(mileTrack.name)
-                                        .font(.body)
-                                        
-                                        .foregroundColor(Color("text"))
-                                        .fixedSize(horizontal: false, vertical: true)
-                                    HStack {
-                                        Image(mileTrack.category)
-                                        Text(mileTrack.category)
-                                            .font(.caption)
-                                            .foregroundColor(.secondary)
-                                        Spacer()
-                                        Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
-                                    }
+                        
+                            Button(action:{
+                                if(selectionsMilestone.contains(mileTrack.idMilestone)){
+                                    //remove milestone id from list
+                                    self.selectionsMilestone.removeAll(where: { $0 == mileTrack.idMilestone })
+                                }else{
+                                    //add milestone to list
+                                    selectionsMilestone.append(mileTrack.idMilestone)
                                 }
-                                .padding()
-                                .background(Color.white)
+                                print(selectionsMilestone)
+                            }){
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text(mileTrack.name)
+                                            .font(.body)
+                                            .foregroundColor(Color("text"))
+                                            .fixedSize(horizontal: false, vertical: true)
+                                        HStack {
+                                            Image(mileTrack.category)
+                                            Text(mileTrack.category)
+                                                .font(.caption)
+                                                .foregroundColor(.secondary)
+                                            Spacer()
+                                            Image(systemName: selectionsMilestone.contains(mileTrack.idMilestone) ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                                        }
+                                    }
+                                    .padding()
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                }
+                                .background(Color("Color3"))
                                 .cornerRadius(10)
-                            }
-                            
-                            .background(Color("Color3"))
-                            .cornerRadius(10)
-                        }.buttonStyle(PlainButtonStyle())
+                            }.buttonStyle(PlainButtonStyle())
+                        
+                       
                     }
                     
                 }
-                .padding([.trailing,.leading])
+                    .padding([.trailing,.leading])
+                
+                    //            MARK: ENCOBA
+                    //            if (self.mCategory[self.categorySelected] == self.mCategory[0] ){
+                    //                ForEach(observableChildMilestone.data){ mileTrack in
+                    //                    Button(action:{
+                    //                        observableChildMilestone.updateComplete(idChild: child.idChild, idMilestone: mileTrack.idMilestone, month: child.month, isComplete: !mileTrack.isComplete)
+                    //                    }){
+                    //                        HStack {
+                    //                            VStack(alignment: .leading) {
+                    //                                Text(mileTrack.name)
+                    //                                    .font(.body)
+                    //                                    .foregroundColor(Color("text"))
+                    //                                    .fixedSize(horizontal: false, vertical: true)
+                    //                                HStack {
+                    //                                    Image(mileTrack.category)
+                    //                                    Text(mileTrack.category)
+                    //                                        .font(.caption)
+                    //                                        .foregroundColor(.secondary)
+                    //                                    Spacer()
+                    //                                    Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                    //                                }
+                    //                            }
+                    //                            .padding()
+                    //                            .background(Color.white)
+                    //                            .cornerRadius(10)
+                    //                        }
+                    //                        //                    .onTapGesture(){
+                    //                        //                        print(mileTrack.idMilestone)
+                    //                        //                    }
+                    //                        .background(Color("Color3"))
+                    //                        .cornerRadius(10)
+                    //                    }.buttonStyle(PlainButtonStyle())
+                    //                }
+                    //                .padding([.trailing,.leading])
+                    //            } else{
+                    //                ForEach(observableChildMilestone.data){ mileTrack in
+                    //                    if (mileTrack.category == self.mCategory[self.categorySelected]){
+                    //                        Button(action:{
+                    //                            observableChildMilestone.updateComplete(idChild: child.idChild, idMilestone: mileTrack.idMilestone, month: child.month, isComplete: !mileTrack.isComplete)
+                    //                        }){
+                    //                            HStack {
+                    //                                VStack(alignment: .leading) {
+                    //                                    Text(mileTrack.name)
+                    //                                        .font(.body)
+                    //
+                    //                                        .foregroundColor(Color("text"))
+                    //                                        .fixedSize(horizontal: false, vertical: true)
+                    //                                    HStack {
+                    //                                        Image(mileTrack.category)
+                    //                                        Text(mileTrack.category)
+                    //                                            .font(.caption)
+                    //                                            .foregroundColor(.secondary)
+                    //                                        Spacer()
+                    //                                        Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                    //                                    }
+                    //                                }
+                    //                                .padding()
+                    //                                .background(Color.white)
+                    //                                .cornerRadius(10)
+                    //                            }
+                    //
+                    //                            .background(Color("Color3"))
+                    //                            .cornerRadius(10)
+                    //                        }.buttonStyle(PlainButtonStyle())
+                    //                    }
+                    //
+                    //                }
+                    //                .padding([.trailing,.leading])
+                    //            }
+                    Spacer()
+                    
+                    
+                    
+                    //                ForEach(observableContent.data[0]){ mileTrack in
+                    //                    HStack {
+                    //                        VStack(alignment: .leading) {
+                    //                            Text(mileTrack.name)
+                    //                                .font(.body)
+                    //                                .foregroundColor(.primary)
+                    //                                .fixedSize(horizontal: false, vertical: true)
+                    //                            HStack {
+                    //                                Image(mileTrack.category.rawValue)
+                    //                                Text(mileTrack.category.rawValue.capitalized)
+                    //                                    .font(.caption)
+                    //                                    .foregroundColor(.secondary)
+                    //                                Spacer()
+                    //                                Button(action: {(
+                    //                                    //                                        mileTrack.isComplete
+                    //                                    )},
+                    //                                       label: {
+                    //                                        Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                    //                                })
+                    //                            }
+                    //                        }
+                    //                        .padding()
+                    //                        .background(Color.white)
+                    //                        .cornerRadius(10)
+                    //                    }
+                    //                    .background(Color("Color3"))
+                    //                    .cornerRadius(10)
+                    //                }
+                    //                .padding([.trailing,.leading])
+                    //            }else{
+                    //
+                    ////                ForEach(userData.miles[mileIndex].milestone.filter{$0.category.rawValue == mCategory[categorySelected]}){ mileTrack in
+                    ////                    HStack {
+                    //                ForEach(observableContent.data[0]){ mileTrack in
+                    //                    HStack {
+                    //                        VStack(alignment: .leading) {
+                    //                            Text(mileTrack.name)
+                    //                                .font(.body)
+                    //                                .foregroundColor(.primary)
+                    //                                .fixedSize(horizontal: false, vertical: true)
+                    //                            HStack {
+                    //                                Image(mileTrack.category.rawValue)
+                    //                                Text(mileTrack.category.rawValue.capitalized)
+                    //                                    .font(.caption)
+                    //                                    .foregroundColor(.secondary)
+                    //                                Spacer()
+                    //                                Button(action: {(
+                    //                                    //                                        mileTrack.isComplete
+                    //                                    )},
+                    //                                       label: {
+                    //                                        Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                    //                                })
+                    //                            }
+                    //                        }
+                    //                        .padding()
+                    //                        .background(Color.white)
+                    //                        .cornerRadius(10)
+                    //                    }
+                    //                    .background(Color("Color3"))
+                    //                    .cornerRadius(10)
+                    //                }
+                    //                .padding([.trailing,.leading])
+                    //            }
+                    
+                    //         MARK: LIST CHECKLIST MILESTONE BY HILMY
+                    //            ForEach(mileTracks){ mileTrack in
+                    //                HStack {
+                    //                    VStack(alignment: .leading) {
+                    //                        Text(mileTrack.title)
+                    //                            .font(.body)
+                    //                            .foregroundColor(.primary)
+                    //                            .fixedSize(horizontal: false, vertical: true)
+                    //                        HStack {
+                    //                            Image(mileTrack.category)
+                    //                            Text(mileTrack.category.capitalized)
+                    //                                .font(.caption)
+                    //                                .foregroundColor(.secondary)
+                    //                            Spacer()
+                    //                            Button(action: {(
+                    //                                //                                        mileTrack.isComplete
+                    //                                )},
+                    //                                   label: {
+                    //                                    Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
+                    //                            })
+                    //                        }
+                    //                    }
+                    //                    .padding()
+                    //                    .background(Color.white)
+                    //                    .cornerRadius(10)
+                    //                }
+                    //                .background(Color("Color3"))
+                    //                .cornerRadius(10)
+                    //            }
+                    //            .padding([.trailing,.leading])
+                
             }
-            Spacer()
-            
-            
-            
-            //                ForEach(observableContent.data[0]){ mileTrack in
-            //                    HStack {
-            //                        VStack(alignment: .leading) {
-            //                            Text(mileTrack.name)
-            //                                .font(.body)
-            //                                .foregroundColor(.primary)
-            //                                .fixedSize(horizontal: false, vertical: true)
-            //                            HStack {
-            //                                Image(mileTrack.category.rawValue)
-            //                                Text(mileTrack.category.rawValue.capitalized)
-            //                                    .font(.caption)
-            //                                    .foregroundColor(.secondary)
-            //                                Spacer()
-            //                                Button(action: {(
-            //                                    //                                        mileTrack.isComplete
-            //                                    )},
-            //                                       label: {
-            //                                        Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
-            //                                })
-            //                            }
-            //                        }
-            //                        .padding()
-            //                        .background(Color.white)
-            //                        .cornerRadius(10)
-            //                    }
-            //                    .background(Color("Color3"))
-            //                    .cornerRadius(10)
-            //                }
-            //                .padding([.trailing,.leading])
-            //            }else{
-            //
-            ////                ForEach(userData.miles[mileIndex].milestone.filter{$0.category.rawValue == mCategory[categorySelected]}){ mileTrack in
-            ////                    HStack {
-            //                ForEach(observableContent.data[0]){ mileTrack in
-            //                    HStack {
-            //                        VStack(alignment: .leading) {
-            //                            Text(mileTrack.name)
-            //                                .font(.body)
-            //                                .foregroundColor(.primary)
-            //                                .fixedSize(horizontal: false, vertical: true)
-            //                            HStack {
-            //                                Image(mileTrack.category.rawValue)
-            //                                Text(mileTrack.category.rawValue.capitalized)
-            //                                    .font(.caption)
-            //                                    .foregroundColor(.secondary)
-            //                                Spacer()
-            //                                Button(action: {(
-            //                                    //                                        mileTrack.isComplete
-            //                                    )},
-            //                                       label: {
-            //                                        Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
-            //                                })
-            //                            }
-            //                        }
-            //                        .padding()
-            //                        .background(Color.white)
-            //                        .cornerRadius(10)
-            //                    }
-            //                    .background(Color("Color3"))
-            //                    .cornerRadius(10)
-            //                }
-            //                .padding([.trailing,.leading])
-            //            }
-            
-            //         MARK: LIST CHECKLIST MILESTONE BY HILMY
-            //            ForEach(mileTracks){ mileTrack in
-            //                HStack {
-            //                    VStack(alignment: .leading) {
-            //                        Text(mileTrack.title)
-            //                            .font(.body)
-            //                            .foregroundColor(.primary)
-            //                            .fixedSize(horizontal: false, vertical: true)
-            //                        HStack {
-            //                            Image(mileTrack.category)
-            //                            Text(mileTrack.category.capitalized)
-            //                                .font(.caption)
-            //                                .foregroundColor(.secondary)
-            //                            Spacer()
-            //                            Button(action: {(
-            //                                //                                        mileTrack.isComplete
-            //                                )},
-            //                                   label: {
-            //                                    Image(systemName: mileTrack.isComplete ? "checkmark.square" : "square").foregroundColor(Color("Color5"))
-            //                            })
-            //                        }
-            //                    }
-            //                    .padding()
-            //                    .background(Color.white)
-            //                    .cornerRadius(10)
-            //                }
-            //                .background(Color("Color3"))
-            //                .cornerRadius(10)
-            //            }
-            //            .padding([.trailing,.leading])
         }
         .navigationBarTitle(Text(child.name).foregroundColor(Color("text")), displayMode: .inline)
+        //        .navigationBarItems(leading: btnCancel, trailing: btnSave)
+        //        .navigationBarItems(trailing: !selectionsMilestone.isEmpty ? btnSave : EmptyView())
+        //        .navigationBarItems(trailing: !selectionsMilestone.isEmpty ? btnSave : EmptyView())
+        
+        .navigationBarItems(leading:
+                                HStack {
+                                    if(!selectionsMilestone.isEmpty){
+                                        Button(action: {
+                                            self.showingAlert = true
+                                        }) {
+                                            Text("Batalkan")
+                                        }
+                                        .alert(isPresented:$showingAlert) {
+                                            Alert(title: Text(""), message: Text("Apakah anda yakin akan menghapus ceklist perkembangan anak?"), primaryButton: .destructive(Text("Batalkan")) {
+                                                print("Deleting...")
+                                                selectionsMilestone.removeAll()
+                                            }, secondaryButton: .cancel(Text("Kembali")))
+                                        }
+                                    }
+                                    
+                                }, trailing:
+                                    HStack {
+                                        if(!selectionsMilestone.isEmpty){
+                                            Button(action: {
+                                                self.showingAlertSave = true
+                                            }) {
+                                                Text("Simpan")
+                                            }
+                                            .alert(isPresented:$showingAlertSave) {
+                                                Alert(title: Text(""), message: Text("Apakah anda yakin akan menyimpan milestone perkembangan anak?"),
+                                                      primaryButton: .default(Text("Simpan")) {
+                                                        print("Simpan...")
+                                                        observableChildMilestone.updateBatchComplete(idChild: child.idChild, idMilestone: selectionsMilestone, month: child.month)
+                                                        loadData()
+                                                      },
+                                                      secondaryButton: .cancel(Text("Kembali"))
+                                                )
+                                            }
+                                        }
+                                    }
+        )
+        
+        .navigationBarBackButtonHidden(!selectionsMilestone.isEmpty)
+        
         //        .navigationBarItems(trailing:
         //                                Text(mUserData.myChild != nil ?
         //                                        calcAge(birthday: mUserData.myChild!.birthDate) : "")
         //                                .foregroundColor(Color("Color5")))
         .background(Color("bg"))
         .onAppear(){
-            print(observableChildMilestone.data)
-            observableChildMilestone.loadData(idChild: child.idChild, month: child.month)
-            print(observableChildMilestone.data)
+            loadData()
             
             
-//            print("nashdata")
+            
+            
+            //            print("nashdata")
             //            print(mUserData.myChild)
             //            print(mUserData.myChild?.birthDate)
             //            if (mUserData.myChild != nil){
@@ -371,9 +515,11 @@ struct MilestoneView: View {
         //            print(mile)
         //        }
         
-        
-        
-        
+    }
+    
+    func loadData(){
+        selectionsMilestone = []
+        observableChildMilestone.loadDataNotComplete(idChild: child.idChild, month: child.month)
     }
     func calcAge(birthday: Date) -> String {
         //        let dateFormater = DateFormatter()

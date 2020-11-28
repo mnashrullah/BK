@@ -60,7 +60,7 @@ struct ChildView: View {
                             maxWidth: .infinity,
                             minHeight: 0,
                             maxHeight: .infinity,
-                            alignment: .topLeading
+                            alignment: .center
                     )
                     .listRowBackground(Color("bg"))
                 } else {

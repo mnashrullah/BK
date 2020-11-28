@@ -45,7 +45,7 @@ struct HomeView: View {
                         Text("\(Constants.TabBarText.tabBar1)")
                     }).tag(1)                    
                 }
-                .accentColor(colorScheme == .dark ?  Color.white: Color("bg"))
+                .accentColor(colorScheme == .dark ?  Color.white: Color("text"))
                         
                     
             }
