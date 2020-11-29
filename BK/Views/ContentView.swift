@@ -783,7 +783,7 @@ class ObservableChildMilestone : ObservableObject{
         progressValue = Double(numberAllItemCompleted) / Double(numberAllItem) * 100
         progressValueString = String(format: "%.1f", progressValue)
         if (progressValue >= 80){
-            progressStatus = "Baik"
+            progressStatus = "Ideal"
         } else {
             progressStatus = "Biasa"
         }

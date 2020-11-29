@@ -208,7 +208,8 @@ struct MilestoneView: View {
                 }
             }
             if (showingResult){
-                ZStack{
+                if (observableChildMilestone.progressStatus == "Biasa"){
+                    ZStack{
                     Color("bg").opacity(0.4)
                         .edgesIgnoringSafeArea(.vertical)
                     VStack(alignment: .center) {
@@ -219,7 +220,7 @@ struct MilestoneView: View {
                             .fixedSize(horizontal: false, vertical: true)
                             
                             .multilineTextAlignment(.center)
-                        Text("Sampai saat ini, \(child.name) mengalami keterlambatan perkembangan dibandingkan anak pada umumnya. Namun tenang,  pada akhirnya \(child.name) akan mengejar keterlambatan tersebut.")
+                        Text("Sampai saat ini, \(child.name) mengalami keterlambatan perkembangan dibandingkan anak pada umumnya. Namun tenang, pada akhirnya \(child.name) akan mengejar keterlambatan tersebut.")
                             .lineLimit(nil)
                             .fixedSize(horizontal: false, vertical: true)
                             .font(.subheadline)
@@ -231,7 +232,7 @@ struct MilestoneView: View {
                             .padding([.top, .bottom], 15)
                             .aspectRatio(contentMode: .fit)
                         
-                        Text("Anda masih dapat memantau perkembangan \(child.name). Apabila anda khawatir, kami menyarankan untuk berkonsultasi dengan ")
+                        Text("Anda masih dapat memantau perkembangan \(child.name). Apabila anda khawatir, kami menyarankan untuk berkonsultasi dengan spesialis anak ")
                             .lineLimit(nil)
                             .fixedSize(horizontal: false, vertical:true)
                             .font(.subheadline)
@@ -240,10 +241,10 @@ struct MilestoneView: View {
                             .multilineTextAlignment(.center)
                         
                         
-                        NavigationLink(destination: ProgressCompletedView(child: child)){
+                        NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, child: child)){
                             VStack(alignment:.leading){
                                 HStack{
-                                    Text("Progress Terpenuhi").foregroundColor(Color("text"))
+                                    Text("Lihat Hasil").foregroundColor(Color("text"))
                                     Spacer()
                                     Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
                                 }
@@ -263,6 +264,65 @@ struct MilestoneView: View {
                     .background(Color("bg"))
                     .cornerRadius(20).shadow(radius: 20)
                 }
+                }
+                else if (observableChildMilestone.progressStatus == "Ideal"){
+                    ZStack{
+                    Color("bg").opacity(0.4)
+                        .edgesIgnoringSafeArea(.vertical)
+                    VStack(alignment: .center) {
+                        Text("Perkembangan \(child.name) sudah \(observableChildMilestone.progressStatus)")
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(Color("text"))
+                            .font(.title)
+                            .fixedSize(horizontal: false, vertical: true)
+                            
+                            .multilineTextAlignment(.center)
+                        Text("Sampai saat ini, perkembangan \(child.name) sudah mengikuti perkembangan anak ideal pada umumnya.")
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .font(.subheadline)
+                            .foregroundColor(Color("text"))
+                            .padding(.horizontal)
+                            .multilineTextAlignment(.center)
+                        Image("ideal")
+                            .resizable()
+                            .padding([.top, .bottom], 15)
+                            .aspectRatio(contentMode: .fit)
+                        
+                        Text("Anda masih dapat memantau perkembangan \(child.name).")
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical:true)
+                            .font(.subheadline)
+                            .foregroundColor(Color("text"))
+                            .padding(.horizontal)
+                            .multilineTextAlignment(.center)
+                        
+                        
+                        NavigationLink(destination: SummaryView(isNavigationBarHidden: $isNavigationBarHidden, child: child)){
+                            VStack(alignment:.leading){
+                                HStack{
+                                    Text("Lihat Hasil").foregroundColor(Color("text"))
+                                    Spacer()
+                                    Image(systemName: "chevron.right").foregroundColor(Color("Color5"))
+                                }
+                                
+                                .padding()
+                                .background(Color("Color3"))
+                                .cornerRadius(15)
+                                
+                            }.padding()
+                        }
+                        
+                    }
+                    .padding()
+                    
+                    
+                    .frame(width: 300)
+                    .background(Color("bg"))
+                    .cornerRadius(20).shadow(radius: 20)
+                }
+                }
+                
                 
             }
         }
