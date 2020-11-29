@@ -232,11 +232,11 @@ struct cardTipsView: View{
                         VStack(alignment: .leading) {
                             Text("\(String(mile.month)) Bulan")
                                 .font(.body)
-                                .fontWeight(self.isActive == self.index ? .semibold : .none)
-                                .foregroundColor(self.isActive == self.index ? activeText : notActiveText)
+                                .fontWeight(.semibold)
+                                .foregroundColor(activeText)
                                 .padding(10)
                         }
-                        .background(self.isActive == self.index ? activeColor.frame(width:500): notActiveColor.frame(width:500))
+                        .background(activeColor.frame(width:500))
                         .offset(y:35)
                             
                         .layoutPriority(100)
@@ -248,12 +248,12 @@ struct cardTipsView: View{
                         
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
-                    .stroke(self.isActive == self.index ? activeColor : Color(.sRGB, red: 255/255, green: 150/255, blue: 150/255, opacity: 0.2), lineWidth: 2)
+                    .stroke(activeColor, lineWidth: 2)
                     )
                         .padding([.top,.horizontal])
                 }
                 .buttonStyle(PlainButtonStyle())
-                .opacity(self.isActive == self.index ? 1 : 0.8)
+//                .opacity(self.isActive == self.index ? 1 : 0.8)
                     
                 .sheet(isPresented: $showingDetail) {
                     //                    MARK: -modal/sheet tips

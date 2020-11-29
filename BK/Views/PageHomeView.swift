@@ -15,28 +15,30 @@ struct PageHomeView: View {
     @State var showingSheet = false
     
     var body: some View {
-            VStack{
+            ScrollView{
                 
                 VStack(){
                     
-                    ZStack{
-                            Circle()
-                                .frame(width: 80, height: 80)
-                                .foregroundColor(Color("gray"))
-                            Image(child.gender == "Laki-laki" ? "boy" : "girl")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 60, height: 60)
-                                .cornerRadius(25)
-                                .shadow(radius: 4)
-                                .padding(.top, 20)
-                            Text(child.name)
-                                .foregroundColor(Color("text"))
-                                .fontWeight(.bold)
-                                .font(.title)
-                                .padding(.top, 120)
-                                
-                        }
+                    VStack{
+                        ZStack{
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(Color("gray"))
+                                Image(child.gender == "Laki-laki" ? "boy" : "girl")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 60, height: 60)
+                                    .cornerRadius(25)
+                                    .shadow(radius: 4)
+                                    .padding(.top, 20)
+                            }
+                        Text(child.name)
+                            .foregroundColor(Color("text"))
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding(.top, 10)
+                    }
+                    
                     VStack{
                         HStack(){
                             VStack(spacing: 10){
@@ -111,7 +113,7 @@ struct PageHomeView: View {
                 }
                 
                 HStack{
-                    Text("Discover")
+                    Text("Temukan")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color("text"))
