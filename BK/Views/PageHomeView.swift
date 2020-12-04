@@ -31,7 +31,7 @@ struct PageHomeView: View {
                                     .cornerRadius(25)
                                     .shadow(radius: 4)
                                     .padding(.top, 20)
-                            }
+                        }.padding(.top)
                         Text(child.name)
                             .foregroundColor(Color("text"))
                             .fontWeight(.bold)
