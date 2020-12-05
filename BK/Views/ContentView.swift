@@ -8,13 +8,43 @@
 
 import SwiftUI
 import CoreData
+extension Color {
+ 
+    func uiColor() -> UIColor {
+
+        if #available(iOS 14.0, *) {
+            return UIColor(self)
+        }
+
+        let components = self.components()
+        return UIColor(red: components.r, green: components.g, blue: components.b, alpha: components.a)
+    }
+
+    private func components() -> (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
+
+        let scanner = Scanner(string: self.description.trimmingCharacters(in: CharacterSet.alphanumerics.inverted))
+        var hexNumber: UInt64 = 0
+        var r: CGFloat = 0.0, g: CGFloat = 0.0, b: CGFloat = 0.0, a: CGFloat = 0.0
+
+        let result = scanner.scanHexInt64(&hexNumber)
+        if result {
+            r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
+            g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
+            b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
+            a = CGFloat(hexNumber & 0x000000ff) / 255
+        }
+        return (r, g, b, a)
+    }
+}
 
 struct ContentView: View {
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "primary")
-        UISegmentedControl.appearance().backgroundColor = UIColor(named: "primary")?.withAlphaComponent(0.3)
+        UISegmentedControl.appearance().backgroundColor = .clear
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "Color3light")
+        UISegmentedControl.appearance().backgroundColor = UIColor(named: "Color3")
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "text") ?? UIColor.black], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "text") ?? UIColor.black], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "Color3light") ?? UIColor.black], for: .normal)
+//        UISegmentedControl.appearance().backgroundColor = UIColor
         //background color Form
         UITableView.appearance().backgroundColor = .clear
         UITableView.appearance().separatorStyle = .none
@@ -31,15 +61,15 @@ struct ContentView: View {
             
             .navigationBarColor(UIColor(named: "bg"))
             .onAppear(){
-//                loadContent()
-
-            if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
-                print("isFirstTime load data")
                 loadContent()
-                UserDefaults.standard.set(true, forKey: "isFirstTime")
-            }else{
-                print("isFirstTime not load data")
-            }
+
+//            if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
+//                print("isFirstTime load data")
+//                loadContent()
+//                UserDefaults.standard.set(true, forKey: "isFirstTime")
+//            }else{
+//                print("isFirstTime not load data")
+//            }
         }
 //        NavigationView{
 //            VStack{
@@ -71,30 +101,58 @@ struct ContentView: View {
     }
     func loadContent(){
         print("loadcontent")
-        deleteAllContent()
-        for i in userData.miles{
-            for j in i.milestone {
-                self.observableContent.addData(
-                    idMilestone: j.id,
-                    month: j.month,
-                    name: j.name,
-                    category: j.category.rawValue,
-                    isComplete: j.isComplete
-                )
-            }
-            for j in i.tips{
-                self.observableTips.addData(
-                    idTips: j.id,
-                    month: j.month,
-                    name: j.name,
-                    category: j.category.rawValue
-                )
-            }
-        }
+        deleteAllTips()
+        loadAllTips()
+        
+//        deleteAllContent()
+//        for i in userData.miles{
+//            for j in i.milestone {
+//                self.observableContent.addData(
+//                    idMilestone: j.id,
+//                    month: j.month,
+//                    name: j.name,
+//                    category: j.category.rawValue,
+//                    isComplete: j.isComplete
+//                )
+//            }
+//            for j in i.tips{
+//                self.observableTips.addData(
+//                    idTips: j.id,
+//                    month: j.month,
+//                    name: j.name,
+//                    category: j.category.rawValue
+//                )
+//            }
+//        }
 //        print(self.observableContent.data)
     }
-    func deleteAllContent(){
-        self.observableContent.deleteAllData()
+    func addMilestone(){
+//        for i in userData.miles{
+//            for j in i.milestone {
+//                self.observableContent.addData(
+//                    idMilestone: j.id,
+//                    month: j.month,
+//                    name: j.name,
+//                    category: j.category.rawValue,
+//                    isComplete: j.isComplete
+//                )
+//            }
+    }
+    func loadAllTips(){
+        print(userData.dataTips)
+        for i in userData.dataTips{
+            self.observableTips.addData(
+                id: i.id,
+                month: i.month,
+                name: i.name
+            )
+        }
+    }
+
+//    func deleteMilestone(){
+//        self.observableContent.deleteAllData()
+//    }
+    func deleteAllTips(){
         self.observableTips.deleteAllData()
     }
 }
@@ -796,19 +854,18 @@ class ObservableChildMilestone : ObservableObject{
 }
 
 
-
-struct datatypeTips : Identifiable {
-    
-    var id : NSManagedObjectID
-    var idTips: Int
-    var month: Int
-    var name: String
-    var category: String
-}
+//
+//struct datatypeTips : Identifiable {
+//
+//    var id : NSManagedObjectID
+//    var idTips: Int
+//    var month: Int
+//    var name: String
+//}
 
 class ObservableTips : ObservableObject{
     
-    @Published var data = [datatypeTips]()
+    @Published var data = [mileTips]()
     
     init() {
         loadData()
@@ -818,17 +875,14 @@ class ObservableTips : ObservableObject{
         let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.persistentContainer.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbTips")
-        //        MARK: Coredata load data milestone done
         do{
             let res = try context.fetch(req)
             for i in res as! [NSManagedObject]{
                 self.data.append(
-                    datatypeTips(
-                        id: i.objectID,
-                        idTips: i.value(forKey: "month") as! Int,
+                    mileTips(
+                        id: i.value(forKey: "id") as! Int,
                         month: i.value(forKey: "month") as! Int,
-                        name: i.value(forKey: "name") as! String,
-                        category: i.value(forKey: "category") as! String
+                        name: i.value(forKey: "name") as! String
                     )
                 )
             }
@@ -844,18 +898,14 @@ class ObservableTips : ObservableObject{
         let context = app.persistentContainer.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbTips")
         req.predicate = NSPredicate(format: "month == \(month)")
-        let sort = NSSortDescriptor(key: "category", ascending: true)
-        req.sortDescriptors = [sort]
         do{
             let res = try context.fetch(req)
             for i in res as! [NSManagedObject]{
                 self.data.append(
-                    datatypeTips(
-                        id: i.objectID,
-                        idTips: i.value(forKey: "month") as! Int,
+                    mileTips(
+                        id: i.value(forKey: "id") as! Int,
                         month: i.value(forKey: "month") as! Int,
-                        name: i.value(forKey: "name") as! String,
-                        category: i.value(forKey: "category") as! String
+                        name: i.value(forKey: "name") as! String
                     )
                 )
             }
@@ -866,24 +916,19 @@ class ObservableTips : ObservableObject{
         
     }
     
-    func addData(idTips: Int, month: Int, name: String, category: String){
-        //        MARK: Coredata add data milestone done
+    func addData(id: Int, month: Int, name: String){
         let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.persistentContainer.viewContext
         let entity = NSEntityDescription.insertNewObject(forEntityName: "TbTips", into: context)
-        entity.setValue(idTips, forKey: "idTips")
+        entity.setValue(id, forKey: "id")
         entity.setValue(month, forKey: "month")
         entity.setValue(name, forKey: "name")
-        entity.setValue(category, forKey: "category")
-        
         do{
             try context.save()
-            data.append(datatypeTips(
-                id: entity.objectID,
-                idTips: idTips,
+            data.append(mileTips(
+                id: id,
                 month: month,
-                name: name,
-                category: category
+                name: name
             ))
         }
         catch{
@@ -891,27 +936,7 @@ class ObservableTips : ObservableObject{
         }
         
     }
-//    func deleteData(indexset : IndexSet,id : NSManagedObjectID){
-////        MARK: Coredata add data milestone done
-//        let app = UIApplication.shared.delegate as! AppDelegate
-//        let context = app.persistentContainer.viewContext
-//        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
-//        do{
-//            let res = try context.fetch(req)
-//            for i in res as! [NSManagedObject]{
-//                if i.objectID == id{
-//                    try context.execute(NSBatchDeleteRequest(objectIDs: [id]))
-//                    self.data.remove(atOffsets: indexset)
-//                }
-//            }
-//        }
-//        catch{
-//            print("error")
-//        }
-//    }
-
     func deleteAllData(){
-        //        MARK: Coredata add data milestone done
         let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.persistentContainer.viewContext
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbTips")
@@ -925,29 +950,6 @@ class ObservableTips : ObservableObject{
             print("error")
         }
     }
-//
-//
-//    func updateComplete(){
-////        MARK: Coredata add data milestone done
-//        let app = UIApplication.shared.delegate as! AppDelegate
-//        let context = app.persistentContainer.viewContext
-//        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
-//        req.predicate = NSPredicate(format: "idMilestone = 5001")
-//        do{
-//            let res = try context.fetch(req)
-//                if res.count == 1 {
-//                    let objectUpdate = res[0] as! NSManagedObject
-//                    objectUpdate.setValue(true, forKey: "isComplete")
-//                    try context.save()
-//                    loadData()
-//                }else{
-//                    print("data not found")
-//                }
-//        }
-//        catch{
-//            print("error")
-//        }
-//    }
 }
 
 

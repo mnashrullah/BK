@@ -12,6 +12,8 @@ import UIKit
 import SwiftUI
 
 let mileData: [Mile] = load("mileData.json")
+let milestoneData: [mileCategory] = load("milestoneData.json")
+let tipsData: [mileTips] = load("tipsData.json")
 //
 //let mileData: [Mile] = load("landmarkData.json")
 func load<T: Decodable>(_ filename: String) -> T {

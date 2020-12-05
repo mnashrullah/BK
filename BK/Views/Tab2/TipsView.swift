@@ -76,7 +76,7 @@ struct TipsView: View {
 //    }
     
     @State private var selectedSegmented = 0
-    var segmentedValue = ["Milestone", "Tips"]
+    var segmentedValue = ["Ringkasan", "Tips"]
     
     @ObservedObject var observableContent = ObservableContent()
     @ObservedObject var observableTips = ObservableTips()
@@ -164,7 +164,7 @@ struct TipsView: View {
                     }
                 }
                     
-                .navigationBarTitle(Text("Tips"), displayMode: .inline)
+                .navigationBarTitle(Text("Ringkasan"), displayMode: .inline)
                 .background(Color("bg"))
                 .navigationBarHidden(false)
                 .onAppear(){
@@ -192,7 +192,7 @@ struct cardTipsView: View{
     var activeOpacity = 1
     var notActiveOpacity = 0.2
 //    var monthName: String
-    var image = Image("baby")
+//    var image = Image("baby")
     var isActive: Int
     var index: Int
     @Binding var showingDetail: Bool
@@ -242,7 +242,8 @@ struct cardTipsView: View{
                         .layoutPriority(100)
                         Spacer()
                     }
-                    .background(image.resizable().scaledToFill())
+                    .background(Image(self.typeContent == "Ringkasan" ? "babymilestone" : "baby").resizable().scaledToFill())
+                    
                         
                     .frame(height:Constants.mSize.height/8)
                         

@@ -27,8 +27,7 @@
         <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="TbTips" representedClassName="TbTips" syncable="YES" codeGenerationType="class">
-        <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="idTips" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
@@ -37,6 +36,6 @@
         <element name="TbChildMilestone" positionX="182.12109375" positionY="230.8671875" width="119.59375" height="133"/>
         <element name="TbMilestone" positionX="365.3046875" positionY="109.36328125" width="128" height="118"/>
         <element name="TbMonth" positionX="234" positionY="288" width="128" height="58"/>
-        <element name="TbTips" positionX="211.84375" positionY="326.4296875" width="128" height="103"/>
+        <element name="TbTips" positionX="211.84375" positionY="326.4296875" width="128" height="88"/>
     </elements>
 </model>

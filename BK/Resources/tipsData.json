@@ -67,7 +67,7 @@
     {
         "id": 114,
         "month": 2,
-        "name": "Peganglah mainan atau mainan kerincingan (mainan lonceng) di atas kepalanya dan pancing (stimulasi) dia untuk meraihnya."
+        "name": "Peganglah mainan atau mainan kerincingan (mainan lonceng) di atas kepalanya dan pancing Anak untuk meraihnya."
     },
     {
         "id": 115,
@@ -197,7 +197,7 @@
     {
         "id": 153,
         "month": 6,
-        "name": "Letakkan ia pada posisi tengkurap atau terlentang dan letakkan mainan di luar jangkauannya, lalu pancing (stimulasi) dia untuk meraihnya."
+        "name": "Letakkan ia pada posisi tengkurap atau terlentang dan letakkan mainan di luar jangkauannya, lalu pancing atau dukung Anak untuk meraihnya."
     },
     {
         "id": 161,
@@ -212,7 +212,7 @@
     {
         "id": 163,
         "month": 9,
-        "name": "Lanjutkan dengan rutinitas; mereka sangat penting sekarang."
+        "name": "Lanjutkan dengan rutinitas; ini sangat penting."
     },
     {
         "id": 164,
@@ -311,7 +311,7 @@
     {
         "id": 189,
         "month": 12,
-        "name": "Bermainlah dengan balok, penyortir bentuk dan mainan lain yang memancingnya (stimulasinya) untuk menggunakan tangannya."
+        "name": "Bermainlah dengan balok, penyortir bentuk dan mainan lain yang memotivasi Anak untuk menggunakan tangannya."
     },
     {
         "id": 190,
@@ -342,5 +342,352 @@
         "id": 195,
         "month": 12,
         "name": "Berikan ia mainan dorong seperti gerobak atau mobil mainan yang dapat di dorong-dorong."
-    }
+    },
+    {
+        "id": 201,
+        "month": 18,
+        "name": "Sediakan lingkungan yang aman dan penuh kasih. Penting untuk konsisten dan dapat diprediksi."
+    },
+    {
+        "id": 202,
+        "month": 18,
+        "name": "Pujilah perilakunya yang baik lebih banyak daripada menghukum perilaku buruknya."
+    },
+    {
+        "id": 203,
+        "month": 18,
+        "name": "Jelaskan emosinya. Misalnya, katakan, 'Kamu senang saat kita membaca buku ini.'"
+    },
+    {
+        "id": 204,
+        "month": 18,
+        "name": "Dukung ia ketika bermain permainan berpura-pura."
+    },
+    {
+        "id": 205,
+        "month": 18,
+        "name": "Dukung empatinya. Misalnya saat melihat anak yang sedang sedih, ajak dia untuk memeluk atau menepuk anak lainnya."
+    },
+    {
+        "id": 206,
+        "month": 18,
+        "name": "Bacalah buku dan bicarakan gambar-gambar itu dengan kata-kata sederhana."
+    },
+    {
+        "id": 207,
+        "month": 18,
+        "name": "Tirulah kata-kata yang ia ucapkan."
+    },{
+        "id": 208,
+        "month": 18,
+        "name": "Gunakan kata-kata yang menggambarkan perasaan dan emosi"
+    },
+    {
+        "id": 209,
+        "month": 18,
+        "name": "Gunakan ungkapan yang sederhana dan jelas."
+    },
+    {
+        "id": 210,
+        "month": 18,
+        "name": "Ajukan pertanyaan sederhana."
+    },
+    {
+        "id": 211,
+        "month": 18,
+        "name": "Sembunyikan barang-barang di bawah selimut dan bantal dan ajak Anak untuk menemukannya."
+    },
+    {
+        "id": 212,
+        "month": 18,
+        "name": "Bermain dengan balok, bola, teka-teki, buku, dan mainan yang mengajarkan sebab dan akibat serta pemecahan masalah."
+    },
+    {
+        "id": 213,
+        "month": 18,
+        "name": "Sebutkan gambar di buku dan bagian tubuh."
+    },
+    {
+        "id": 214,
+        "month": 18,
+        "name": "Sediakan mainan yang mendukung permainan berpura-pura; Misalnya boneka, telepon mainan."
+    },
+    {
+        "id": 215,
+        "month": 18,
+        "name": "Sediakan tempat yang aman bagi anak Anda untuk berjalan dan bergerak."
+    },
+    {
+        "id": 216,
+        "month": 18,
+        "name": "Sediakan mainan yang bisa dia dorong atau tarik dengan aman."
+    },
+    {
+        "id": 217,
+        "month": 18,
+        "name": "Berikan bola untuknya menendang, berguling, dan melempar."
+    },
+    {
+        "id": 218,
+        "month": 18,
+        "name": "Motivasi Anak untuk minum dari cangkirnya dan menggunakan sendok, tidak peduli seberapa berantakannya."
+    },
+    {
+        "id": 219,
+        "month": 18,
+        "name": "Tiup gelembung dan biarkan anak Anda meletuskannya."
+    },
+    {
+        "id": 221,
+        "month": 24,
+        "name": "Dukung anak Anda untuk membantu tugas-tugas sederhana di rumah, seperti menyapu dan membuat makan malam. Puji anak Anda karena telah menjadi penolong yang baik."
+    },
+    {
+        "id": 222,
+        "month": 24,
+        "name": "Pada usia ini, anak-anak masih bermain bersebelahan (tidak dengan) satu sama lain dan tidak berbagi dengan baik. Untuk play dates, beri anak banyak mainan untuk dimainkan. Perhatikan anak-anak dengan saksama dan turun tangan jika mereka berkelahi atau berdebat."
+    },
+    {
+        "id": 223,
+        "month": 24,
+        "name": "Berikan perhatian dan pujian kepada anak Anda saat dia mengikuti instruksi. Batasi perhatian untuk perilaku menantang. Habiskan lebih banyak waktu untuk memuji perilaku yang baik daripada menghukum perilaku buruk."
+    },
+    {
+        "id": 224,
+        "month": 24,
+        "name": "Ajari anak Anda untuk mengidentifikasi dan mengatakan bagian tubuh, binatang, dan hal umum lainnya."
+    },
+    {
+        "id": 225,
+        "month": 24,
+        "name": "Jangan mengoreksi anak Anda ketika dia mengucapkan kata-kata yang salah. Sebaliknya, katakan dengan benar. Misalnya, “Itu adalah bola”."
+    },
+    {
+        "id": 226,
+        "month": 24,
+        "name": "Dukung anak Anda untuk mengucapkan sepatah kata alih-alih menunjuk. Jika anak Anda tidak bisa mengucapkan seluruh kata ('susu'), beri dia suara pertama ('s') untuk membantunya. Seiring waktu, Anda dapat mendorong anak Anda untuk mengucapkan seluruh kalimat - 'Saya ingin susu'."
+    },
+    {
+        "id": 227,
+        "month": 24,
+        "name": "Sembunyikan mainan anak Anda di sekitar ruangan dan biarkan dia menemukannya."
+    },{
+        "id": 228,
+        "month": 24,
+        "name": "Bantu anak Anda mengerjakan teka-teki dengan bentuk, warna, atau hewan ternak. Beri nama setiap bagian saat anak Anda meletakkan puzzle di tempatnya."
+    },
+    {
+        "id": 229,
+        "month": 24,
+        "name": "Ajaklah anak Anda untuk bermain dengan balok. Bergiliran membangun menara dan merobohkannya."
+    },
+    {
+        "id": 230,
+        "month": 24,
+        "name": "Lakukan proyek seni dengan anak Anda menggunakan krayon, cat, dan kertas. Jelaskan apa yang dibuat anak Anda dan gantung di dinding atau lemari es."
+    },
+    {
+        "id": 231,
+        "month": 24,
+        "name": "Minta anak Anda untuk membantu Anda membuka pintu dan laci serta membalik halaman di buku atau majalah."
+    },
+    {
+        "id": 232,
+        "month": 24,
+        "name": "Setelah anak Anda berjalan dengan baik, minta dia membawa barang-barang kecil untuk Anda."
+    },
+    {
+        "id": 233,
+        "month": 24,
+        "name": "Tendang bola bolak-balik dengan anak Anda. Jika anak Anda mahir dalam hal itu, dorong dia untuk berlari dan menendang."
+    },
+    {
+        "id": 234,
+        "month": 24,
+        "name": "Ajak anak Anda ke taman untuk berlari dan memanjat permainan atau berjalan di jalur alam. Perhatikan anak Anda dengan cermat."
+    },
+    {
+        "id": 241,
+        "month": 36,
+        "name": "Pergi ke kelompok bermain dengan anak Anda atau tempat lain di mana ada anak-anak lain, untuk memotivasi anak bergaul dengan orang lain."
+    },
+    {
+        "id": 242,
+        "month": 36,
+        "name": "Bekerjasamalah dengan anak Anda untuk menyelesaikan masalah saat dia marah."
+    },
+    {
+        "id": 243,
+        "month": 36,
+        "name": "Bicarakan tentang emosi anak Anda. Misalnya, katakan, 'Ayah/Bunda tahu kamu marah karena kamu melempar potongan puzzle'. Dukung anak Anda untuk mengidentifikasi perasaan dalam buku."
+    },
+    {
+        "id": 244,
+        "month": 36,
+        "name": "Tetapkan aturan dan batasan untuk anak Anda, dan patuhi itu. Jika anak Anda melanggar aturan, beri dia waktu istirahat selama 30 detik hingga 1 menit di kursi atau di kamarnya. Puji anak Anda karena mengikuti aturan."
+    },
+    {
+        "id": 245,
+        "month": 36,
+        "name": "Berikan instruksi kepada anak Anda dengan 2 atau 3 langkah. Misalnya, 'Pergi ke kamarmu dan ambil sepatu dan mantelmu'."
+    },
+    {
+        "id": 246,
+        "month": 36,
+        "name": "Bacakan untuk anak Anda setiap hari. Minta anak Anda untuk menunjuk pada hal-hal dalam gambar dan ulangi kata-kata setelah Anda."
+    },
+    {
+        "id": 247,
+        "month": 36,
+        "name": "Beri anak Anda “kotak aktivitas” dengan kertas, krayon, dan buku mewarnai. Warnai dan gambarlah garis dan bentuk dengan anak Anda."
+    },{
+        "id": 248,
+        "month": 36,
+        "name": "Mainkan game yang cocok. Minta anak Anda untuk menemukan benda-benda di buku atau di sekitar rumah yang sama."
+    },
+    {
+        "id": 249,
+        "month": 36,
+        "name": "Mainkan game menghitung. Hitung bagian tubuh, tangga, dan benda lain yang Anda gunakan atau lihat setiap hari."
+    },
+    {
+        "id": 250,
+        "month": 36,
+        "name": "Pegang tangan anak Anda saat naik turun tangga. Saat dia bisa naik turun dengan mudah, ajak dia untuk menggunakan pagar."
+    },
+    {
+        "id": 251,
+        "month": 36,
+        "name": "Bermainlah di luar dengan anak Anda. Pergi ke taman atau jalur pendakian. Biarkan anak Anda bermain dengan bebas dan tanpa aktivitas terstruktur."
+    },
+    {
+        "id": 261,
+        "month": 48,
+        "name": "Bermain-main dengan anak Anda. Biarkan anak menjadi pemimpin dan tiru apa yang dia lakukan."
+    },
+    {
+        "id": 262,
+        "month": 48,
+        "name": "Sarankan anak Anda untuk berpura-pura memainkan acara mendatang yang mungkin membuatnya gugup, seperti pergi ke prasekolah atau bermalam di rumah kakek nenek."
+    },
+    {
+        "id": 263,
+        "month": 48,
+        "name": "Beri anak Anda pilihan sederhana kapan pun Anda bisa. Biarkan anak Anda memilih apa yang akan dikenakan, dimainkan, atau dimakan untuk camilan. Batasi pilihan menjadi 2 atau 3."
+    },
+    {
+        "id": 264,
+        "month": 48,
+        "name": "Selama bermain, biarkan anak Anda menyelesaikan masalahnya sendiri dengan teman-temannya, tetapi berada di dekat Anda untuk membantu jika diperlukan."
+    },
+    {
+        "id": 265,
+        "month": 48,
+        "name": "Ajaklah anak Anda untuk menggunakan kata-kata, berbagi mainan, dan bermain permainan pilihan satu sama lain secara bergiliran."
+    },
+    {
+        "id": 266,
+        "month": 48,
+        "name": "Berikan anak Anda mainan untuk membangun imajinasi, seperti pakaian berdandan, peralatan dapur, dan balok."
+    },
+    {
+        "id": 267,
+        "month": 48,
+        "name": "Gunakan tata bahasa yang baik saat berbicara dengan anak Anda. Alih-alih 'Ibu ingin kamu datang ke sini', katakan, 'Aku ingin kamu datang ke sini'."
+    },
+    {
+        "id": 268,
+        "month": 48,
+        "name": "Gunakan kata-kata seperti 'pertama', 'kedua', dan 'terakhir' saat membicarakan aktivitas sehari-hari. Ini akan membantu anak Anda belajar tentang urutan kejadian."
+    },
+    {
+        "id": 269,
+        "month": 48,
+        "name": "Luangkan waktu untuk menjawab pertanyaan 'mengapa' anak Anda. Jika Anda tidak tahu jawabannya, katakan 'Ayah/Bunda tidak tahu jawabnnya', atau bantu anak Anda menemukan jawabannya di buku, di Internet, atau dari orang dewasa lainnya."
+    },
+    {
+        "id": 270,
+        "month": 48,
+        "name": "Saat Anda membaca bersama anak Anda, minta dia untuk menceritakan apa yang terjadi dalam cerita tersebut saat Anda pergi."
+    },
+    {
+        "id": 271,
+        "month": 48,
+        "name": "Ucapkan warna di buku, gambar, dan benda-benda di rumah. Hitung barang-barang umum, seperti jumlah kerupuk makanan ringan, tangga, atau kereta mainan."
+    },
+    {
+        "id": 272,
+        "month": 48,
+        "name": "Ajari anak Anda untuk bermain game luar ruangan seperti permainan tanda, ikuti pemimpin, dan bebek, bebek, angsa."
+    },
+    {
+        "id": 273,
+        "month": 48,
+        "name": "Mainkan musik favorit anak Anda dan menari bersama anak Anda. Bergiliran menyalin gerakan satu sama lain."
+    },
+    {
+        "id": 281,
+        "month": 60,
+        "name": "Lanjutkan mengatur tanggal bermain, perjalanan ke taman, atau kelompok bermain. Beri anak Anda lebih banyak kebebasan untuk memilih aktivitas bermain dengan teman, dan biarkan anak Anda menyelesaikan masalahnya sendiri."
+    },
+    {
+        "id": 282,
+        "month": 60,
+        "name": "Anak Anda mungkin mulai membalas argumen anda atau menggunakan kata-kata kotor (kata-kata sumpah serapah) sebagai cara untuk merasa mandiri. Jangan memberikan banyak perhatian pada pembicaraan ini, selain waktu menyendiri yang singkat. Sebaliknya, pujilah anak Anda ketika dia meminta sesuatu dengan baik dan dengan tenang menjawab 'tidak'."
+    },
+    {
+        "id": 283,
+        "month": 60,
+        "name": "Ini saat yang tepat untuk berbicara dengan anak Anda tentang sentuhan aman. Tidak seorang pun boleh menyentuh 'bagian pribadi' kecuali dokter atau perawat selama pemeriksaan atau orang tua ketika mereka berusaha menjaga kebersihan anak."
+    },
+    {
+        "id": 284,
+        "month": 60,
+        "name": "Ajari anak Anda alamat dan nomor telepon rumah."
+    },
+    {
+        "id": 285,
+        "month": 60,
+        "name": "Saat membacakan cerita untuk anak Anda, minta dia untuk memprediksi apa yang akan terjadi selanjutnya dalam cerita."
+    },
+    {
+        "id": 286,
+        "month": 60,
+        "name": "Dukung anak Anda untuk 'membaca' dengan melihat gambar dan menceritakan kisahnya."
+    },
+    {
+        "id": 287,
+        "month": 60,
+        "name": "Ajari anak Anda konsep waktu seperti pagi, siang, malam, hari ini, besok, dan kemarin. Mulailah mengajar hari-hari dalam seminggu."
+    },
+    {
+        "id": 288,
+        "month": 60,
+        "name": "Jelajahi minat anak Anda di komunitas Anda. Misalnya, jika anak Anda menyukai binatang, kunjungi kebun binatang atau peternakan. Pergi ke perpustakaan atau cari di Internet untuk mempelajari tentang topik ini."
+    },
+    {
+        "id": 289,
+        "month": 60,
+        "name": "Siapkan sekotak krayon, kertas, cat, gunting anak, dan lem yang praktis. Motivasi anak Anda untuk menggambar dan membuat proyek seni dengan perlengkapan berbeda."
+    },
+    {
+        "id": 290,
+        "month": 60,
+        "name": "Bermainlah dengan mainan yang memotivasi anak Anda untuk menyatukannya."
+    },
+    {
+        "id": 291,
+        "month": 60,
+        "name": "Ajari anak Anda cara memompa kakinya maju mundur di ayunan."
+    },
+    {
+        "id": 292,
+        "month": 60,
+        "name": "Bantu anak Anda memanjat permainan monkey bar."
+    },
+    {
+        "id": 293,
+        "month": 60,
+        "name": "Pergilah berjalan-jalan dengan anak Anda, lakukan perburuan di lingkungan atau taman, bantu dia mengendarai sepeda dengan roda tambahan (dan dengan menggunakan helm)."
+    },
 ]

@@ -41,14 +41,14 @@ struct mileTips: Hashable, Codable, Identifiable {
     var id: Int
     var month: Int
     var name: String
-    var category: Category
-    
-    enum Category: String, CaseIterable, Codable, Hashable {
-        case motorik = "Motorik"
-        case sosial = "Sosial"
-        case bahasa = "Bahasa"
-        case kognitif = "Kognitif"
-    }
+//    var category: Category
+//
+//    enum Category: String, CaseIterable, Codable, Hashable {
+//        case motorik = "Motorik"
+//        case sosial = "Sosial"
+//        case bahasa = "Bahasa"
+//        case kognitif = "Kognitif"
+//    }
     
 }
 struct mileCategory: Hashable, Codable, Identifiable{
