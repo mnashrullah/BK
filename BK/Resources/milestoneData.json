@@ -2,8 +2,1527 @@
     {
         "id": 5001,
         "month": 2,
+        "name": "Dapat menegakkan kepalanya dan mulai mengangkat badannya saat berbaring tengkurap",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5002,
+        "month": 2,
+        "name": "Bergerak dengan lebih halus menggunakan tangan dan kakinya",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5003,
+        "month": 2,
         "name": "Mulai tersenyum ke orang lain",
         "category": "Sosial",
         "isComplete": false
     },
+    {
+        "id": 5004,
+        "month": 2,
+        "name": "Bisa dengan perlahan-lahan menenangkan dirinya sendiri",
+        "category": "Sosial",
+        "isComplete": false
+    },
+    {
+        "id": 5005,
+        "month": 2,
+        "name": "(Dapat memasukkan tangannya ke mulut dan mengisap tangannya)",
+        "category": "Sosial",
+        "isComplete": false
+    },
+    {
+        "id": 5006,
+        "month": 2,
+        "name": "Mencoba untuk melihat atau menatap orang tuanya",
+        "category": "Sosial",
+        "isComplete": false
+    },
+    {
+        "id": 5007,
+        "month": 2,
+        "name": "Mengoceh atau bergumam, membuat suara gemericik",
+        "category": "Bahasa",
+        "isComplete": false
+    },
+    {
+        "id": 5008,
+        "month": 2,
+        "name": "Menengok ke arah suara yang ia dengar",
+        "category": "Bahasa",
+        "isComplete": false
+    },
+    {
+        "id": 5009,
+        "month": 2,
+        "name": "Memperhatikan wajah orang lain",
+        "category": "Kognitif",
+        "isComplete": false
+    },
+    {
+        "id": 5010,
+        "month": 2,
+        "name": "Mulai mengikuti sesuatu (benda) dengan matanya dan mengenali orang dari kejauhan",
+        "category": "Kognitif",
+        "isComplete": false
+    },
+    {
+        "id": 5011,
+        "month": 2,
+        "name": "Mulai bertingkah bosan (menangis, rewel) jika melakukan aktivitas yang itu-itu saja atau tidak berubah",
+        "category": "Kognitif",
+        "isComplete": false
+    },
+    {
+        "id": 5021,
+        "month": 4,
+        "name": "Mampu menegakkan kepalanya sendiri tanpa bantuan apapun",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5022,
+        "month": 4,
+        "name": "Menekan kaki kebawah (seperti hendak melompat) saat memijak permukaan yang keras",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5023,
+        "month": 4,
+        "name": "Mampu berguling atau membalikkan badan ketika berbaring tengkurap menjadi terlentang",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5024,
+        "month": 4,
+        "name": "Mampu memegang mainan lalu menggoyangkanya dan mengayunkannya di ayunan untuk mainan",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5025,
+        "month": 4,
+        "name": "Memasukkan tangan ke mulut",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5026,
+        "month": 4,
+        "name": "Saat berbaring tengkurap, mampu mendorong hingga ke sikunya",
+        "category": "Motorik",
+        "isComplete": false
+    },
+    {
+        "id": 5027,
+        "month": 4,
+        "name": "Tersenyum secara spontan, terutama pada orang lain",
+        "category": "Sosial",
+        "isComplete": false
+    },
+    {
+        "id": 5028,
+        "month": 4,
+        "name": "Suka bermain dengan orang lain dan mungkin bisa menangis saat berhenti bermain",
+        "category": "Sosial",
+        "isComplete": false
+    },
+    {
+        "id": 5029,
+        "month": 4,
+        "name": "Meniru beberapa gerakan dan ekspresi wajah, seperti tersenyum atau mengerutkan kening",
+        "category": "Sosial",
+        "isComplete": false
+    },
+    {
+        "id": 5030,
+        "month": 4,
+        "name": "Mulai mengoceh",
+        "category": "Bahasa",
+        "isComplete": false
+    },
+    {
+        "id": 5031,
+        "month": 4,
+        "name": "Mulai mengoceh",
+        "category": "Bahasa",
+        "isComplete": false
+    },
+    {
+        "id": 5032,
+        "month": 4,
+        "name": "Mengoceh dengan menunjukkan ekspresi dan meniru suara yang dia dengar",
+        "category": "Bahasa",
+        "isComplete": false
+    },
+    {
+        "id": 5033,
+        "month": 4,
+        "name": "Menangis dengan berbagai cara untuk menunjukkan rasa lapar, sakit, atau lelah",
+        "category": "Bahasa",
+        "isComplete": false
+    },
+    {
+       "id": 5034,
+       "month": 4,
+       "name": "Memberi tahu anda ketika ia sedang merasa senang ataupun sedih",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5035,
+       "month": 4,
+       "name": "Bereaksi terhadap kasih sayang",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5036,
+       "month": 4,
+       "name": "Meraih mainan dengan satu tangan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5037,
+       "month": 4,
+       "name": "Menggunakan tangan dan mata secara bersamaan, seperti ketika melihat mainan lalu meraihnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5038,
+       "month": 4,
+       "name": "Mengikuti pergerakan benda dengan matanya dari sisi ke sisi",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5039,
+       "month": 4,
+       "name": "Melihat sesuatu (wajah) dengan cermat atau teliti",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5040,
+       "month": 4,
+       "name": "Mengenali orang dan benda-benda yang familiar dari kejauhan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5041,
+       "month": 6,
+       "name": "Berguling ke kedua arah (depan ke belakang, belakang ke depan)",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5042,
+       "month": 6,
+       "name": "Mulai mampu untuk duduk tanpa bantuan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5043,
+       "month": 6,
+       "name": "Saat berdiri, menopang beban dengan kaki dan ada kemungkinan terjatuh lagi",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5044,
+       "month": 6,
+       "name": "Dalam posisi merangkak lalu menggoyangkan badannya bolak-balik, terkadang merangkak ke belakang sebelum merangkak ke depan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5045,
+       "month": 6,
+       "name": "Mengenali wajah-wajah yang familiar dan mulai bisa membedakan dengan orang yang masih asing",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5046,
+       "month": 6,
+       "name": "Senang bermain dengan orang lain, terutama orang tua",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5047,
+       "month": 6,
+       "name": "Bereaksi dengan emosi orang lain dan sering kali terlihat bahagia",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5048,
+       "month": 6,
+       "name": "Senang melihat dirinya sendiri di depan cermin",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5049,
+       "month": 6,
+       "name": "Merespon atau bereaksi terhadap suara yang ia dengar dengan membuat suara juga",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5050,
+       "month": 6,
+       "name": "Menyatukan vokal saat mengoceh ('ah,' 'eh,' 'oh') dan suka bergiliran dengan ayah atau ibu sambil membuat suara tersebut",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5051,
+       "month": 6,
+       "name": "Menanggapi atau merespon ketika namanya dipanggil",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5052,
+       "month": 6,
+       "name": "Mengeluarkan suara untuk menunjukkan kegembiraan dan ketidaksenangan",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5053,
+       "month": 6,
+       "name": "Mulai mengucapkan bunyi konsonan (bergumam dengan “m”, “b”)",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5054,
+       "month": 6,
+       "name": "Melihat-lihat benda disekitarnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5055,
+       "month": 6,
+       "name": "Memasukkan benda ke mulutnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5056,
+       "month": 6,
+       "name": "Menunjukan rasa penasaran terhadap sesuatu dan mencoba untuk meraih sesuatu yang diluar jangkauannya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5057,
+       "month": 6,
+       "name": "Mulai untuk memindahkan benda dari satu tangan ke tangan lainnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5061,
+       "month": 9,
+       "name": "Berdiri, berpegangan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5062,
+       "month": 9,
+       "name": "Dapat memposisikan dirinya dalam posisi duduk",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5063,
+       "month": 9,
+       "name": "Duduk tanpa bantuan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5064,
+       "month": 9,
+       "name": "Menarik sesuatu untuk dapat berdiri",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5065,
+       "month": 9,
+       "name": "Merangkak",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5066,
+       "month": 9,
+       "name": "Ada kemungkinan untuk takut ketika bertemu dengan orang-orang asing",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5067,
+       "month": 9,
+       "name": "Ada kemungkinan untuk sangat dekat dengan orang dewasa (selain ibu dan ayah) lain.",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5068,
+       "month": 9,
+       "name": "Memiliki mainan favorit",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5069,
+       "month": 9,
+       "name": "Memahami maksud dari kata 'tidak'",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5070,
+       "month": 9,
+       "name": "Mengeluarkan macam-macam suara berbeda seperti 'mamamama' dan 'bababababa'",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5071,
+       "month": 9,
+       "name": "Meniru suara-suara dan gerak tubuh orang lain",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5072,
+       "month": 9,
+       "name": "Menggunakan jarinya untuk menunjuk sesuatu",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5073,
+       "month": 9,
+       "name": "Melihat atau memperhatikan jalur tempat jatuhnya sesuatu benda",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5074,
+       "month": 9,
+       "name": "Mencari sesuatu atau benda-benda yang ia lihat anda sembunyikan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5075,
+       "month": 9,
+       "name": "Bermain “peek-a-boo” (Ciluk Baa)",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5076,
+       "month": 9,
+       "name": "Meletakkan sesuatu di mulutnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5077,
+       "month": 9,
+       "name": "Memindahkan sesuatu dengan mudah dari satu tangan ke tangan lainnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5078,
+       "month": 9,
+       "name": "Mengambil sesuatu (seperti sereal) yang berada di sela-sela ibu jari dan jari telunjuk",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5081,
+       "month": 12,
+       "name": "Memposisikan diri dalam posisi duduk tanpa bantuan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5082,
+       "month": 12,
+       "name": "Menarik sesuatu untuk dapat berdiri, lalu berjalan dengan berpegangan pada furnitur/benda-benda yang ada dirumah (“menjelajahi rumah”)",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5083,
+       "month": 12,
+       "name": "Mungkin mengambil beberapa langkah tanpa menahan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5084,
+       "month": 12,
+       "name": "Mampu berdiri sendiri",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5085,
+       "month": 12,
+       "name": "Malu atau gugup ketika bersama dengan orang asing",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5086,
+       "month": 12,
+       "name": "Menangis saat ibu atau ayah pergi",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5087,
+       "month": 12,
+       "name": "Memiliki benda dan orang favorit",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5088,
+       "month": 12,
+       "name": "Menunjukkan ketakutan dalam beberapa situasi",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5089,
+       "month": 12,
+       "name": "Memberikan anda buku (cerita) saat ia ingin mendengarkan cerita",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5090,
+       "month": 12,
+       "name": "Mengulang-ulang suara atau tindakan untuk mendapatkan perhatian",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5091,
+       "month": 12,
+       "name": "Mengulurkan tangan atau kakinya untuk mempermudah ketika berpakaian",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5092,
+       "month": 12,
+       "name": "Memainkan game seperti “peek-a-boo” (ciluk baa) dan “pat-a-cake” (bermain tepuk dengan denganya)",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5093,
+       "month": 12,
+       "name": "Menanggapi permintaan yang sederhana",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5094,
+       "month": 12,
+       "name": "Menggunakan gerakan sederhana, seperti menggelengkan kepala 'tidak' atau melambai 'bye-bye'",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5095,
+       "month": 12,
+       "name": "Mengeluarkan suara dengan perubahan nada (lebih terdengar seperti berbicara)",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5096,
+       "month": 12,
+       "name": "Mengatakan 'mama' dan 'dada' dan seruan seperti 'uh-oh!'",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5097,
+       "month": 12,
+       "name": "Mencoba meniru atau mengucapkan kata-kata yang Anda ucapkan",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5098,
+       "month": 12,
+       "name": "Menyelidiki atau mengenali benda dengan berbagai cara, seperti diguncang, dibanting, dilempar",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5099,
+       "month": 12,
+       "name": "Menemukan benda-benda tersembunyi dengan mudah",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5100,
+       "month": 12,
+       "name": "Melihat ke arah gambar atau benda yang tepat ketika disebutkan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5101,
+       "month": 12,
+       "name": "Mampu menirukan gerakan tubuh",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5102,
+       "month": 12,
+       "name": "Mulai menggunakan benda-benda dengan benar; Misalnya, minum menggunakan cangkir, menyisir rambut",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5103,
+       "month": 12,
+       "name": "Menggabungkan dua benda",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5104,
+       "month": 12,
+       "name": "Meletakkan benda ke dalam wadah, lalu mengeluarkannya lagi",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5105,
+       "month": 12,
+       "name": "Membiarkan semuanya berjalan tanpa bantuan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5106,
+       "month": 12,
+       "name": "Mencolek dengan jari telunjuk",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5107,
+       "month": 12,
+       "name": "Menuruti atau mengikuti perintah sederhana seperti 'ambil mainannya'",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5111,
+       "month": 18,
+       "name": "Berjalan sendiri tanpa bantuan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5112,
+       "month": 18,
+       "name": "Ada kemungkinan berjalan menaiki tangga dan berlari",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5113,
+       "month": 18,
+       "name": "Menarik mainan sambil berjalan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5114,
+       "month": 18,
+       "name": "Dapat melepas bajunya sendiri",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5115,
+       "month": 18,
+       "name": "Dapat minum dari cangkir",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5116,
+       "month": 18,
+       "name": "Makan dengan sendok ",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5117,
+       "month": 18,
+       "name": "Suka menyerahkan sesuatu kepada orang lain sebagai permainan",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5118,
+       "month": 18,
+       "name": "Ada kemungkinan memiliki tantrum",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5119,
+       "month": 18,
+       "name": "Ada kemungkinan takut pada orang asing",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5120,
+       "month": 18,
+       "name": "Menunjukkan kasih sayang kepada orang yang dikenal",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5121,
+       "month": 18,
+       "name": "Memainkan peran sederhana, seperti memberi makan boneka",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5122,
+       "month": 18,
+       "name": "Ada kemungkinan bergantung pada pengasuh dalam situasi baru",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5123,
+       "month": 18,
+       "name": "Poin untuk menunjukkan sesuatu yang menarik kepada orang lain",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5124,
+       "month": 18,
+       "name": "Menjelajah sendirian tetapi dengan orang tua di dekatnya",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5125,
+       "month": 18,
+       "name": "Mengatakan beberapa kata tunggal",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5125,
+       "month": 18,
+       "name": "Dapat mengatakan 'tidak' dan menggelengkan kepala",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5125,
+       "month": 18,
+       "name": "Poin untuk menunjukkan kepada seseorang apa yang dia inginkan",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5126,
+       "month": 18,
+       "name": "Mengetahui fungsi atau kegunaan benda-benda biasa; misalnya telepon, sikat, sendok",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5127,
+       "month": 18,
+       "name": "Poin untuk mendapatkan perhatian orang lain",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5128,
+       "month": 18,
+       "name": "Menunjukkan minat pada boneka atau boneka binatang dengan berpura-pura memberi makan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5129,
+       "month": 18,
+       "name": "Menunjuk ke satu bagian tubuh",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5130,
+       "month": 18,
+       "name": "Mencoret-coret sendiri",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5131,
+       "month": 18,
+       "name": "Dapat mengikuti perintah verbal 1-langkah tanpa bantuan gerakan apa pun; misalnya, duduk saat Anda mengatakan 'duduk'",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5141,
+       "month": 24,
+       "name": "Dapat berjinjit",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5142,
+       "month": 24,
+       "name": "Bisa menendang bola",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5143,
+       "month": 24,
+       "name": "Mulai berlari",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5144,
+       "month": 24,
+       "name": "Naik dan turun dari furnitur tanpa bantuan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5145,
+       "month": 24,
+       "name": "Berjalan naik dan turun tangga sambil berpegangan",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5146,
+       "month": 24,
+       "name": "Bisa melempar bola",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5147,
+       "month": 24,
+       "name": "Membuat atau menyalin garis dan lingkaran lurus",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5148,
+       "month": 24,
+       "name": "Meniru orang lain, terutama orang dewasa dan anak-anak yang lebih tua",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5149,
+       "month": 24,
+       "name": "Bersemangat saat bersama anak lain",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5150,
+       "month": 24,
+       "name": "Menunjukkan lebih banyak kemerdekaan atau kebebasan",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5151,
+       "month": 24,
+       "name": "Menunjukkan perilaku menantang (melakukan apa yang diperintahkan untuk tidak dilakukannya)",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5152,
+       "month": 24,
+       "name": "Bermain terutama di samping anak-anak lain, tetapi mulai melibatkan anak-anak lain, seperti permainan kejar-kejaran",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5153,
+       "month": 24,
+       "name": "Menunjuk pada benda atau gambar saat diberi nama",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5154,
+       "month": 24,
+       "name": "Mengetahui nama orang dan bagian tubuh yang sudah dikenal",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5155,
+       "month": 24,
+       "name": "Mengatakan kalimat dengan 2 sampai 4 kata",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5156,
+       "month": 24,
+       "name": "Dapat mengikuti instruksi sederhana",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5157,
+       "month": 24,
+       "name": "Mengulangi kata-kata yang terdengar dalam percakapan",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5158,
+       "month": 24,
+       "name": "Menunjuk hal-hal di buku",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5159,
+       "month": 24,
+       "name": "Menemukan berbagai hal bahkan saat hal tersebut tersembunyi di bawah dua atau tiga penutup.",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5160,
+       "month": 24,
+       "name": "Mulai mengurutkan bentuk dan warna",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5161,
+       "month": 24,
+       "name": "Melengkapi kalimat dan rima di buku yang sudah dikenal",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5162,
+       "month": 24,
+       "name": "Memainkan game makes-believe sederhana",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5163,
+       "month": 24,
+       "name": "Membangun menara dari 4 blok atau lebih",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5164,
+       "month": 24,
+       "name": "Mungkin menggunakan satu tangan lebih sering daripada tangan yang lain",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5165,
+       "month": 24,
+       "name": "Mengikuti petunjuk dua langkah seperti 'Ambil sepatu dan taruh di lemari'.",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5166,
+       "month": 24,
+       "name": "Menyebutkan item dalam buku bergambar seperti kucing, burung, atau anjing.",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5171,
+       "month": 36,
+       "name": "Memanjat dengan cukup baik",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5172,
+       "month": 36,
+       "name": "Senang berlari",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5173,
+       "month": 36,
+       "name": "Bersepeda dengan sepeda roda 3",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5174,
+       "month": 36,
+       "name": "Menaiki tangga dengan 1 kaki disetiap pijakan langkah",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5175,
+       "month": 36,
+       "name": "Menirukan orang dewasa ketika bersama teman-temannya",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5176,
+       "month": 36,
+       "name": "Menunjukkan kasih sayang terhadap temannya tanpa disuruh",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5177,
+       "month": 36,
+       "name": "Mau bergantian ketika bermain",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5178,
+       "month": 36,
+       "name": "Terlihat perhatian terhadap temannya yang sedang menangis",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5179,
+       "month": 36,
+       "name": "Memahami konsep “Milik Saya” dan “Milik orang lain”",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5180,
+       "month": 36,
+       "name": "Menunjukkan berbagai macam emosi",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5181,
+       "month": 36,
+       "name": "Tetap tenang ketika tidak bersama Ayah ataupun Bunda",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5182,
+       "month": 36,
+       "name": "Kemungkinan dapat marah ketika ada perubahan besar dalam kegiatan sehari-hari",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5183,
+       "month": 36,
+       "name": "Mengenakan dan melepaskan pakaian tanpa bantuan orang lain",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5184,
+       "month": 36,
+       "name": "Mampu mengikuti 2 atau 3 langkah instruksi",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5185,
+       "month": 36,
+       "name": "Dapat memberikan nama pada benda yang paling familiar",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5186,
+       "month": 36,
+       "name": "Memahami penggunaan kata “Di Dalam”, “Di Atas” dan “Di Bawah”",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5187,
+       "month": 36,
+       "name": "Mampu menyebutkan nama panggilan, umur dan jenis kelamin",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5188,
+       "month": 36,
+       "name": "Menyebutkan nama temannya",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5189,
+       "month": 36,
+       "name": "Mengucapkan kata “Saya”, “Kita”, dan “Kamu” dan beberapa kata-kata dalam jumlah banyak (banyak mobil, banyak kucing, dll)",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5190,
+       "month": 36,
+       "name": "Dapat berbicara dengan cukup baik hingga orang lain dapat memahami maksudnya",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5191,
+       "month": 36,
+       "name": "Melakukan percakapan dengan menggunakan 2 atau 3 kalimat",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5192,
+       "month": 36,
+       "name": "Bisa mengoperasikan mainan yang memiliki tombol, pengungkit dan bagian yang bergerak",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5193,
+       "month": 36,
+       "name": "Bermain-main dengan boneka, hewan dan orang lain",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5194,
+       "month": 36,
+       "name": "Menyelesaikan puzzle yang berjumlah 3 atau 4 potongan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5195,
+       "month": 36,
+       "name": "Memahami maksud dari penggunaan kata “Dua”",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5196,
+       "month": 36,
+       "name": "Menirukan gambar lingkaran menggunakan pensil atau krayon",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5197,
+       "month": 36,
+       "name": "Membalik halaman buku satu-persatu",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5198,
+       "month": 36,
+       "name": "Membangun menara dengan tinggi lebih dari 6 blok",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5199,
+       "month": 36,
+       "name": "Membuka dan menutup kembali tutup toples atau memutar kenop pintu",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5201,
+       "month": 48,
+       "name": "Melompat dan berdiri dengan satu kaki hingga 2 detik",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5202,
+       "month": 48,
+       "name": "Sering kali menangkap bola yang memantul",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5203,
+       "month": 48,
+       "name": "Menuang, memotong makanan dalam pengawasan, dan menumbuk atau melembekkan makanannya sendiri",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5204,
+       "month": 48,
+       "name": "Senang melakukan hal-hal baru",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5205,
+       "month": 48,
+       "name": "Memainkan peran 'Bunda' dan 'Ayah'",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5206,
+       "month": 48,
+       "name": "Semakin kreatif dengan permainan bohong",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5207,
+       "month": 48,
+       "name": "Lebih suka bermain dengan anak lain daripada sendiri",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5208,
+       "month": 48,
+       "name": "Bekerja sama dengan anak-anak lain",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5209,
+       "month": 48,
+       "name": "Seringkali tidak tahu apa yang nyata dan apa yang dipercaya",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5210,
+       "month": 48,
+       "name": "Membicarakan tentang apa yang dia suka dan apa yang dia minati",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5211,
+       "month": 48,
+       "name": "Mengetahui beberapa aturan dasar tata bahasa, seperti menggunakan “he” dan “she” dengan benar.",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5212,
+       "month": 48,
+       "name": "Menyanyikan lagu atau mengucapkan puisi yang diingat (seperti 'Itsy Bitsy Spider' atau 'Wheels on the Bus')",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5213,
+       "month": 48,
+       "name": "Dapat Bercerita",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5214,
+       "month": 48,
+       "name": "Bisa menyebutkan nama depan dan belakang",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5215,
+       "month": 48,
+       "name": "Menyebutkan beberapa warna dan beberapa angka",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5216,
+       "month": 48,
+       "name": "Memahami ide berhitung",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5217,
+       "month": 48,
+       "name": "Mulai memahami waktu",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5218,
+       "month": 48,
+       "name": "Mengingat bagian dari sebuah cerita",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5219,
+       "month": 48,
+       "name": "Memahami ide 'sama' dan 'berbeda'",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5220,
+       "month": 48,
+       "name": "Menggambar seseorang dengan 2 hingga 4 bagian tubuh",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5221,
+       "month": 48,
+       "name": "Dapat menggunakan gunting",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5222,
+       "month": 48,
+       "name": "Mulai menyalin beberapa huruf kapital",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5223,
+       "month": 48,
+       "name": "Memainkan permainan papan atau kartu",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5224,
+       "month": 48,
+       "name": "Memberi tahu Anda (Orang tua) apa yang menurutnya akan terjadi selanjutnya dalam sebuah buku",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5231,
+       "month": 60,
+       "name": "Berdiri dengan satu kaki selama 10 detik atau lebih",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5232,
+       "month": 60,
+       "name": "Dapat meloncat; dan mungkin bisa melewati tali",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5233,
+       "month": 60,
+       "name": "Bisa melakukan jungkir balik",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5234,
+       "month": 60,
+       "name": "Menggunakan sendok dan garpu",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5235,
+       "month": 60,
+       "name": "Bisa menggunakan toilet sendiri",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5236,
+       "month": 60,
+       "name": "Bisa bermain ayunan dan memanjat",
+       "category": "Motorik",
+       "isComplete": false
+   },
+   {
+       "id": 5237,
+       "month": 60,
+       "name": "Ingin menyenangkan teman",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5238,
+       "month": 60,
+       "name": "Ingin menjadi seperti teman",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5239,
+       "month": 60,
+       "name": "Lebih cenderung setuju dengan aturan",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5241,
+       "month": 60,
+       "name": "Suka menyanyi, menari, dan berakting",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5242,
+       "month": 60,
+       "name": "Sadar akan perbedaan jenis kelamin",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5243,
+       "month": 60,
+       "name": "Tahu apa yang nyata dan apa yang dipercaya",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5244,
+       "month": 60,
+       "name": "Menunjukkan lebih banyak kemandirian (misalnya, dapat mengunjungi tetangga sebelah sendirian [pengawasan orang dewasa masih diperlukan])",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5245,
+       "month": 60,
+       "name": "Terkadang menuntut dan terkadang sangat kooperatif",
+       "category": "Sosial",
+       "isComplete": false
+   },
+   {
+       "id": 5246,
+       "month": 60,
+       "name": "Berbicara dengan sangat jelas",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5247,
+       "month": 60,
+       "name": "Menceritakan cerita sederhana menggunakan kalimat lengkap",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5248,
+       "month": 60,
+       "name": "Menggunakan bentuk masa depan; misalnya, 'Nenek akan datang kesini'.",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5249,
+       "month": 60,
+       "name": "Dapat menyebutkan nama dan alamat",
+       "category": "Bahasa",
+       "isComplete": false
+   },
+   {
+       "id": 5250,
+       "month": 60,
+       "name": "Bisa menghitung 10 benda atau lebih",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5251,
+       "month": 60,
+       "name": "Dapat menggambar orang dengan setidaknya 6 bagian tubuh",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5252,
+       "month": 60,
+       "name": "Dapat menulis beberapa huruf atau angka",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5253,
+       "month": 60,
+       "name": "Menyalin segitiga dan bentuk geometris lainnya",
+       "category": "Kognitif",
+       "isComplete": false
+   },
+   {
+       "id": 5254,
+       "month": 60,
+       "name": "Mengetahui tentang hal-hal yang digunakan setiap hari, seperti uang dan makanan",
+       "category": "Kognitif",
+       "isComplete": false
+   },
 ]
