@@ -44,9 +44,21 @@ struct TipsDetailView: View {
             NavigationView{
                 ScrollView{
                     if (type == "Tips"){
-                        Image("baby")
-                            .resizable().scaledToFill()
-                            .padding(.bottom)
+                        ZStack{
+                            Image("baby")
+                                .resizable().scaledToFill()
+                                .padding(.bottom)
+                            
+                            HStack{
+                                Text("\(type) anak usia \(month) bulan").font(.title).fontWeight(.semibold)
+                                    .foregroundColor(Color("text"))
+                                Spacer()
+                            }.padding(.horizontal)
+                            .padding(.top, 200)
+                        }
+                        
+                        
+                        
                         ForEach(observableTips.data){item in
                                 cardSimple(description: item.name)
                         }
@@ -58,9 +70,18 @@ struct TipsDetailView: View {
                             }
                         }.pickerStyle(SegmentedPickerStyle())
                         .padding()
-                        Image("babymilestone")
-                            .resizable().scaledToFill()
-                            .padding(.bottom)
+                        ZStack{
+                            Image("babymilestone")
+                                .resizable().scaledToFill()
+                                .padding(.bottom)
+                            
+                            HStack{
+                                Text("\(type) anak usia \(month) bulan").font(.title).fontWeight(.semibold)
+                                    .foregroundColor(Color("text"))
+                                Spacer()
+                            }.padding(.horizontal)
+                            .padding(.top, 200)
+                        }
                         ForEach(observableContent.data){item in
                           if(item.category == segmentedValue[selectedSegmented]){
                            cardSimple(description: item.name)}
