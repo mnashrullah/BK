@@ -201,6 +201,7 @@ struct PageHomeView: View {
                 
                 Spacer()
             }
+            .navigationBarTitle(Text("Profil"))
             .navigationBarHidden(isNavigationBarHidden)
             .padding(.top, 80)
             .background(Color("bg"))
