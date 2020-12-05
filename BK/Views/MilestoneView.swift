@@ -43,7 +43,7 @@ struct MilestoneView: View {
                     HStack(){
                         Spacer()
                         HStack(alignment: .center){
-                            Text(self.limitedText == true ? "Tampil selengkapnya" : "Tampil lebih singkat")
+                            Text(self.limitedText == true ? "Lihat selengkapnya" : "Lihat lebih sedikit")
                                 .font(.subheadline)
                                 .foregroundColor(Color("text"))
                             if(!limitedText){
