@@ -82,6 +82,7 @@ struct AddChildView: View {
                                 .foregroundColor(Color("text"))
                                 .accentColor(Color("text"))
                                 .background(Color("bg"))
+                                .multilineTextAlignment(.trailing)
                         }
                         Picker("Jenis Kelamin", selection: $type) {
                             ForEach(Self.types, id: \.self) {
@@ -107,7 +108,7 @@ struct AddChildView: View {
                 .onAppear {
                     UITableView.appearance().backgroundColor = UIColor(named: "bg")
                     UITableViewCell.appearance().backgroundColor = UIColor(named: "bg")
-                    UITableView.appearance().separatorStyle = .singleLine
+//                    UITableView.appearance().separatorStyle = .singleLine
                     UITableView.appearance().tintColor = UIColor(named: "text")
                     UITextField.appearance().backgroundColor = UIColor(named: "bg")
                     UIPickerView.appearance().backgroundColor = UIColor(named:"bg")
