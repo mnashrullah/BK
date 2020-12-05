@@ -1,0 +1,346 @@
+[
+    {
+        "id": 101,
+        "month": 2,
+        "name": "Memeluknya, berbicara dengannya, dan bermain dengannya sembari menyusui, mengenakannya pakaian, dan mandi bersama."
+    },
+    {
+        "id": 102,
+        "month": 2,
+        "name": "Membantunya belajar agar dapat menenangkan dirinya sendiri. Tidak masalah jika ia mengisap jarinya."
+    },
+    {
+        "id": 103,
+        "month": 2,
+        "name": "Mulailah membantunya melakukan rutinitas, seperti lebih sering tidur di malam hari daripada di siang hari, dan memiliki jadwal yang teratur."
+    },
+    {
+        "id": 104,
+        "month": 2,
+        "name": "Menyesuaikan diri dengan apa yang disukai dan tidak disukainya dapat membantu Anda merasa lebih nyaman dan percaya diri."
+    },
+    {
+        "id": 105,
+        "month": 2,
+        "name": "Bersikaplah gembira dan tersenyum ketika ia mengeluarkan bunyi atau suara."
+    },
+    {
+        "id": 106,
+        "month": 2,
+        "name": "Tirulah suaranya, tetapi gunakan bahasa yang jelas."
+    },
+    {
+        "id": 107,
+        "month": 2,
+        "name": "Perhatikanlah tangisannya yang berbeda-beda sehingga Anda belajar memahami apa yang dia inginkan."
+    },
+    {
+        "id": 108,
+        "month": 2,
+        "name": "Berbicara, membaca, dan bernyanyilah untuknya."
+    },
+    {
+        "id": 109,
+        "month": 2,
+        "name": "Bermain “peek-a-boo” (Ciluk baa). Bantulah ia ketika bermain “peek-a-boo” (Ciluk baa) juga."
+    },
+    {
+        "id": 110,
+        "month": 2,
+        "name": "Tempatkan cermin (yang aman untuk bayi) di boks bayi Anda sehingga dia bisa melihat dirinya sendiri."
+    },
+    {
+        "id": 111,
+        "month": 2,
+        "name": "Lihatlah foto-foto bersama bayi Anda dan berbicaralah dengannya tentang foto-foto tersebut."
+    },
+    {
+        "id": 112,
+        "month": 2,
+        "name": "Baringkan bayi Anda pada posisi tengkurap ketika dia sudah bangun dan letakkan mainan di dekatnya."
+    },
+    {
+        "id": 113,
+        "month": 2,
+        "name": "Pancing atau stimulasi ia agar memberanikan dirinya mengangkat kepalanya dengan cara mengarahkan mainan yang ia sukai di depannya sejajar dengan matanya"
+    },
+    {
+        "id": 114,
+        "month": 2,
+        "name": "Peganglah mainan atau mainan kerincingan (mainan lonceng) di atas kepalanya dan pancing (stimulasi) dia untuk meraihnya."
+    },
+    {
+        "id": 115,
+        "month": 2,
+        "name": "Gendong ia dalam posisi tegak dengan kaki di lantai. Bernyanyilah atau berbicara dengannya ketika ia berdiri tegak tersebut."
+    },
+    {
+        "id": 121,
+        "month": 4,
+        "name": "Gendong dan berbicaralah dengannya; tersenyum dan gembiralah saat melakukannya."
+    },
+    {
+        "id": 122,
+        "month": 4,
+        "name": "Atur rutinitas yang stabil untuk ia tidur dan makan."
+    },
+    {
+        "id": 123,
+        "month": 4,
+        "name": "Perhatikanlah baik-baik apa yang disukai dan tidak disukainya; Anda akan tahu cara terbaik untuk memenuhi kebutuhannya dan apa yang dapat Anda lakukan untuk membuatnya bahagia."
+    },
+    {
+        "id": 124,
+        "month": 4,
+        "name": "Tirulah suaranya."
+    },
+    {
+        "id": 125,
+        "month": 4,
+        "name": "Bersikaplah gembira dan tersenyumlah saat ia mengeluarkan suara."
+    },
+    {
+        "id": 126,
+        "month": 4,
+        "name": "Ciptakan suasana bermain yang tenang ketika Anda membaca atau bernyanyi untuknya."
+    },
+    {
+        "id": 127,
+        "month": 4,
+        "name": "Berikan mainan yang sesuai dengan usianya, seperti mainan kerincingan atau gambar berwarna."
+    },
+    {
+        "id": 128,
+        "month": 4,
+        "name": "Bermain “Peek a boo” (Ciluk baa)"
+    },
+    {
+        "id": 129,
+        "month": 4,
+        "name": "Sediakan ruang yang aman untuknya ketika ia meraih mainan dan bergerak kesana-kemari."
+    },
+    {
+        "id": 130,
+        "month": 4,
+        "name": "Letakkan mainan di dekatnya sehingga dia bisa meraihnya atau menendang-nendangnya."
+    },
+    {
+        "id": 131,
+        "month": 4,
+        "name": "Letakkan mainan atau mainan kerincingan di tangannya dan bantulah ia untuk memegangnya."
+    },
+    {
+        "id": 132,
+        "month": 4,
+        "name": "Gendong ia dalam posisi tegak dengan kaki di lantai, dan bernyanyilah atau berbicara dengannya ketika dia “berdiri” dengan bantuan tersebut"
+    },
+    {
+        "id": 141,
+        "month": 6,
+        "name": "Bermain di lantai dengannya setiap hari."
+    },
+    {
+        "id": 142,
+        "month": 6,
+        "name": "Belajarlah untuk membaca suasana hatinya. Jika ia senang, terus lakukan apa yang Anda lakukan tersebut. Jika dia kesal, istirahatlah dan hibur dia."
+    },
+    {
+        "id": 143,
+        "month": 6,
+        "name": "Tunjukkan padanya cara menghibur dirinya sendiri saat dia kesal. Dia mungkin mengisap jarinya untuk menenangkan diri."
+    },
+    {
+        "id": 144,
+        "month": 6,
+        "name": "Gunakan permainan ”timbal balik” — ketika dia tersenyum, Anda tersenyum; ketika dia mengeluarkan suara, tirulah suara tersebut."
+    },
+    {
+        "id": 145,
+        "month": 6,
+        "name": "Ulangi suaranya lalu ucapkan kata-kata sederhana dengan suara tersebut. Misalnya, jika dia mengatakan ”bah”, ucapkan ”botol” atau ”buku”."
+    },
+    {
+        "id": 146,
+        "month": 6,
+        "name": "Bacakan buku untuknya setiap hari. Pujilah dia, saat dia ikut mengoceh dan ”membaca” juga."
+    },
+    {
+        "id": 147,
+        "month": 6,
+        "name": "Saat ia melihat sesuatu, tunjuk lalu berbicaralah tentang sesuatu tersebut."
+    },
+    {
+        "id": 148,
+        "month": 6,
+        "name": "Saat dia menjatuhkan mainan ke lantai, ambil mainan tersebut dan berikan kembali kepadanya. Permainan ini membantunya mempelajari sebab dan akibat."
+    },
+    {
+        "id": 149,
+        "month": 6,
+        "name": "Bacakan buku bergambar warna-warni untuknya."
+    },
+    {
+        "id": 150,
+        "month": 6,
+        "name": "Tunjukkan hal-hal baru kepadanya dan beri tahu sebutannya."
+    },
+    {
+        "id": 151,
+        "month": 6,
+        "name": "Tunjukkan kepadanya foto-foto cerah yang ada di majalah dan beritahu sebutannya."
+    },
+    {
+        "id": 152,
+        "month": 6,
+        "name": "Gendong ia saat dia duduk atau letakkan bantal untuk membantunya. Biarkan dia melihat sekeliling dan berikan mainan untuk ia lihat sembari dia menyeimbangkan badannya."
+    },
+    {
+        "id": 153,
+        "month": 6,
+        "name": "Letakkan ia pada posisi tengkurap atau terlentang dan letakkan mainan di luar jangkauannya, lalu pancing (stimulasi) dia untuk meraihnya."
+    },
+    {
+        "id": 161,
+        "month": 9,
+        "name": "Perhatikan cara dia bereaksi terhadap situasi dan orang baru; Usahakan untuk terus melakukan hal-hal yang membuatnya bahagia dan nyaman."
+    },
+    {
+        "id": 162,
+        "month": 9,
+        "name": "Saat dia bergerak kesana kemari, tetaplah dekat dengannya sehingga dia tahu bahwa Anda berada didekatnya."
+    },
+    {
+        "id": 163,
+        "month": 9,
+        "name": "Lanjutkan dengan rutinitas; mereka sangat penting sekarang."
+    },
+    {
+        "id": 164,
+        "month": 9,
+        "name": "Bermainlah dengan cara ”giliranku, giliranmu”."
+    },
+    {
+        "id": 165,
+        "month": 9,
+        "name": "Katakanlah kepadanya tentang perasaannya saat itu. Misalnya, katakan, ”Kamu sangat sedih, mari kita lihat apakah kami bisa membuatmu merasa lebih baik.”"
+    },
+    {
+        "id": 166,
+        "month": 9,
+        "name": "Jelaskan apa yang dilihatnya; misalnya, “merah, bola bundar”."
+    },
+    {
+        "id": 167,
+        "month": 9,
+        "name": "Tanyakanlah tentang apa yang diinginkannya ketika ia menunjuk pada sesuatu."
+    },
+    {
+        "id": 168,
+        "month": 9,
+        "name": "Tirulah suara dan perkataannya."
+    },
+    {
+        "id": 169,
+        "month": 9,
+        "name": "Perintahkan perilaku yang Anda inginkan. Misalnya, daripada mengatakan ”jangan berdiri”, katakan ”waktunya duduk”."
+    },
+    {
+        "id": 170,
+        "month": 9,
+        "name": " Ajarkan sebab-akibat dengan menggelindingkan bola ke depan dan ke belakang, mendorong mobil mainan dan truk, dan memasukkan balok ke dalam dan ke luar wadah."
+    },
+    {
+        "id": 171,
+        "month": 9,
+        "name": "Bermain Ciluk baa dan Petak umpet."
+    },
+    {
+        "id": 172,
+        "month": 9,
+        "name": "Membaca dan berbicara dengannya"
+    },
+    {
+        "id": 173,
+        "month": 9,
+        "name": "Sediakan banyak ruang untuknya bergerak dan bereksplorasi di tempat yang aman."
+    },
+    {
+        "id": 174,
+        "month": 9,
+        "name": "Dekatkan ia dengan benda-benda yang bisa dia tarik dengan aman."
+    },
+    {
+        "id": 181,
+        "month": 12,
+        "name": "Beri ia waktu untuk kenal dengan pengasuhnya yang baru. Bawalah mainan favorit, boneka binatang, atau selimut untuk membantu menghiburnya."
+    },
+    {
+        "id": 182,
+        "month": 12,
+        "name": "Menanggapi perilaku yang tidak diinginkan, katakan 'tidak' dengan tegas. Jangan berteriak, memukul, atau memberikan penjelasan yang panjang. Berikan ia waktu menyendiri selama 30 detik hingga 1 menit untuk membantu mengarahkannya."
+    },
+    {
+        "id": 183,
+        "month": 12,
+        "name": "Berikan pelukan, ciuman, dan pujian yang sering kepadanya atas perilakunya yang baik."
+    },
+    {
+        "id": 184,
+        "month": 12,
+        "name": "Menghabiskan waktu lebih banyak untuk memuji perilaku yang diinginkan daripada menghukum perilaku yang tidak diinginkan (4 kali lebih banyak pujian untuk perilaku yang diinginkan sebagai pengalihan untuk perilaku yang tidak diinginkan)."
+    },
+    {
+        "id": 185,
+        "month": 12,
+        "name": "Berbicaralah dengannya tentang apa yang Anda lakukan. Misalnya, 'Ayah atau Ibu sedang mencuci tangan dengan waslap.'"
+    },
+    {
+        "id": 186,
+        "month": 12,
+        "name": "Membacalah bersamanya setiap hari. Mintalah ia untuk membalik halaman. Bergantian memberi label pada gambar dengannya."
+    },
+    {
+        "id": 187,
+        "month": 12,
+        "name": "Kembangkan dari apa yang ia katakan atau coba katakan, atau apa yang dia tunjuk. Jika dia menunjuk ke sebuah truk dan berkata 't' atau 'truk', katakan, 'Ya, itu truk besar berwarna biru.'"
+    },{
+        "id": 188,
+        "month": 12,
+        "name": "Berilah ia krayon dan kertas, dan biarkan dia menggambar dengan bebas. Tunjukkan padanya cara menggambar garis ke atas dan ke bawah dan melintasi halaman. Pujilah ketika dia mencoba untuk menirunya."
+    },
+    {
+        "id": 189,
+        "month": 12,
+        "name": "Bermainlah dengan balok, penyortir bentuk dan mainan lain yang memancingnya (stimulasinya) untuk menggunakan tangannya."
+    },
+    {
+        "id": 190,
+        "month": 12,
+        "name": "Sembunyikan mainan-mainan yang kecil atau benda-benda lain dan minta ia untuk menemukannya."
+    },
+    {
+        "id": 191,
+        "month": 12,
+        "name": "Perintahkan dia untuk memberi label pada bagian tubuh atau benda yang Anda lihat saat mengemudi mobil."
+    },
+    {
+        "id": 192,
+        "month": 12,
+        "name": "Nyanyikanlah lagu yang ada gerakan-gerakannya, seperti 'he Itsy Bitsy Spider' dan 'Wheels on the Bus'. Ajaklah ia melakukannya bersama."
+    },
+    {
+        "id": 193,
+        "month": 12,
+        "name": "Berikan ia panci dan wajan atau alat musik kecil seperti drum atau simbal. Pancing (stimulasi) ia untuk membuat keributan."
+    },
+    {
+        "id": 194,
+        "month": 12,
+        "name": "Sediakan tempat-tempat yang aman untuk dijelajahinya. (Buatlah rumah Anda aman untuk balita. Jauhkan dari alat-alat pembersih, tempat menyuci baju, alat-alat yang digunakan untuk halaman, dan peralatan mobil. Gunakan gerbang pengaman dan kunci pintu ke luar dan ruang bawah tanah.)"
+    },
+    {
+        "id": 195,
+        "month": 12,
+        "name": "Berikan ia mainan dorong seperti gerobak atau mobil mainan yang dapat di dorong-dorong."
+    }
+]

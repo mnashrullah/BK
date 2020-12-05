@@ -1,0 +1,668 @@
+[
+    {
+                "id": 5001,
+                "month": 2,
+                "name": "Mulai tersenyum ke orang lain",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5002,
+                "month": 2,
+                "name": "Mampu menenangkan dirinya sendiri",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5003,
+                "month": 2,
+                "name": "Membuat gerakan dengan tangan dan kakinya",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5004,
+                "month": 2,
+                "name": "Bereaksi terhadap suara yang ia dengar dengan menggerakkan kepalanya",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5005,
+                "month": 2,
+                "name": "Mulai mengikuti pergerakan benda dengan matanya",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5006,
+                "month": 2,
+                "name": "Dapat menegakkan kepala dan badannya ketika berbaring telungkup",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 12,
+        "month": 4,
+        "monthName": "2-4 Bulan",
+        "tips":[
+            {
+                "id": 104,
+                "month": 4,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 105,
+                "month": 4,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 106,
+                "month": 4,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5007,
+                "month": 4,
+                "name": "Tersenyum ke orang lain",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5008,
+                "month": 4,
+                "name": "Menirukan gerakan dan mimik wajah",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5009,
+                "month": 4,
+                "name": "Menirukan suara yang ia dengar",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5010,
+                "month": 4,
+                "name": "Meraih mainan dengan satu tangan",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5011,
+                "month": 4,
+                "name": "Mampu menegakkan kepalanya tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5012,
+                "month": 4,
+                "name": "Memasukkan tangan ke mulut",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 13,
+        "month": 6,
+        "monthName": "4-6 Bulan",
+        "tips":[
+            {
+                "id": 107,
+                "month": 6,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 108,
+                "month": 6,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 109,
+                "month": 6,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5013,
+                "month": 6,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5014,
+                "month": 6,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5015,
+                "month": 6,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5016,
+                "month": 6,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5017,
+                "month": 6,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5018,
+                "month": 6,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 14,
+        "month": 9,
+        "monthName": "6-9 Bulan",
+        "tips":[
+            {
+                "id": 110,
+                "month": 9,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 111,
+                "month": 9,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 112,
+                "month": 9,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5019,
+                "month": 9,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5020,
+                "month": 9,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5021,
+                "month": 9,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5022,
+                "month": 9,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5023,
+                "month": 9,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5024,
+                "month": 9,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 15,
+        "month": 12,
+        "monthName": "9-12 Bulan",
+        "tips":[
+            {
+                "id": 113,
+                "month": 12,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 114,
+                "month": 12,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 115,
+                "month": 12,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5025,
+                "month": 12,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5026,
+                "month": 12,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5027,
+                "month": 12,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5028,
+                "month": 12,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5029,
+                "month": 12,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5030,
+                "month": 12,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 16,
+        "month": 18,
+        "monthName": "12-18 Bulan",
+        "tips":[
+            {
+                "id": 116,
+                "month": 18,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 117,
+                "month": 18,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 118,
+                "month": 18,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5031,
+                "month": 18,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5032,
+                "month": 18,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5033,
+                "month": 18,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5034,
+                "month": 18,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5035,
+                "month": 18,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5036,
+                "month": 18,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 17,
+        "month": 24,
+        "monthName": "18-24 Bulan",
+        "tips":[
+            {
+                "id": 119,
+                "month": 24,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 120,
+                "month": 24,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 121,
+                "month": 24,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5037,
+                "month": 24,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5038,
+                "month": 24,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5039,
+                "month": 24,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5040,
+                "month": 24,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5041,
+                "month": 24,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5042,
+                "month": 24,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 18,
+        "month": 36,
+        "monthName": "24-36 Bulan",
+        "tips":[
+            {
+                "id": 122,
+                "month": 36,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 123,
+                "month": 36,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 124,
+                "month": 36,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5043,
+                "month": 36,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5044,
+                "month": 36,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5045,
+                "month": 36,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5046,
+                "month": 36,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5047,
+                "month": 36,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5048,
+                "month": 36,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    {
+        "id": 19,
+        "month": 48,
+        "monthName": "36-48 Bulan",
+        "tips":[
+            {
+                "id": 125,
+                "month": 48,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 126,
+                "month": 48,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 127,
+                "month": 48,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5049,
+                "month": 48,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5050,
+                "month": 48,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5051,
+                "month": 48,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5052,
+                "month": 48,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5053,
+                "month": 48,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5054,
+                "month": 48,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+    
+    {
+        "id": 20,
+        "month": 60,
+        "monthName": "48-60 Bulan",
+        "tips":[
+            {
+                "id": 128,
+                "month": 60,
+                "category": "Motorik",
+                "name": "Menirukan suara anak anda"
+            },
+            {
+                "id": 129,
+                "month": 60,
+                "category": "Motorik",
+                "name": "Membuat jadwal rutin untuk tidur dan menyusui"
+            },
+            {
+                "id": 130,
+                "month": 60,
+                "category": "Motorik",
+                "name": "Bermain ciluk-ba"
+            }
+        ],
+        "milestone": [
+            {
+                "id": 5055,
+                "month": 60,
+                "name": "Senang melihat dirinya sendiri di Cermin",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5056,
+                "month": 60,
+                "name": "Mulai mengenali wajah yang familiar dan langsung tau jika ada orang asing",
+                "category": "Sosial",
+                "isComplete": false
+            },
+            {
+                "id": 5057,
+                "month": 60,
+                "name": "Merespon suara dengan mengeluarkan suara",
+                "category": "Bahasa",
+                "isComplete": false
+            },
+            {
+                "id": 5058,
+                "month": 60,
+                "name": "Memasukkan barang ke mulut",
+                "category": "Kognitif",
+                "isComplete": false
+            },
+            {
+                "id": 5059,
+                "month": 60,
+                "name": "Mampu duduk tanpa bantuan apapun",
+                "category": "Motorik",
+                "isComplete": false
+            },
+            {
+                "id": 5060,
+                "month": 60,
+                "name": "Berguling ke kedua arah, ke depan dan belakang",
+                "category": "Motorik",
+                "isComplete": false
+            }
+        ],
+    },
+]
