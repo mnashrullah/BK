@@ -43,7 +43,7 @@ struct ContentView: View {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "Color3light")
         UISegmentedControl.appearance().backgroundColor = UIColor(named: "Color3")
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "text") ?? UIColor.black], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "Color3light") ?? UIColor.black], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "text") ?? UIColor.black], for: .normal)
 //        UISegmentedControl.appearance().backgroundColor = UIColor
         //background color Form
         UITableView.appearance().backgroundColor = .clear
