@@ -201,6 +201,22 @@ struct SummaryView: View {
                         }
                         .padding(.bottom,10)
                     }
+                    
+                    HStack{
+                        HStack{
+                            RoundedRectangle(cornerRadius: 5)
+                                .fill(Color("Color3"))
+                                .frame(width: 45, height: 45)
+                            Text("Total Milestone").foregroundColor(Color("text"))
+                        }
+                        HStack{
+                            RoundedRectangle(cornerRadius: 5)
+                                .fill(Color("text"))
+                                .frame(width: 45, height: 45)
+                            Text("Milestone terpenuhi").foregroundColor(Color("text"))
+                        }
+                        
+                    }
                 }
             }
         }
