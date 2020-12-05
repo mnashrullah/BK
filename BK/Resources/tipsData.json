@@ -342,5 +342,168 @@
         "id": 195,
         "month": 12,
         "name": "Berikan ia mainan dorong seperti gerobak atau mobil mainan yang dapat di dorong-dorong."
-    }
+    },
+    {
+        "id": 201,
+        "month": 18,
+        "name": "Sediakan lingkungan yang aman dan penuh kasih. Penting untuk konsisten dan dapat diprediksi."
+    },
+    {
+        "id": 202,
+        "month": 18,
+        "name": "Pujilah perilakunya yang baik lebih banyak daripada menghukum perilaku buruknya."
+    },
+    {
+        "id": 203,
+        "month": 18,
+        "name": "Jelaskan emosinya. Misalnya, katakan, 'Kamu senang saat kita membaca buku ini.'"
+    },
+    {
+        "id": 204,
+        "month": 18,
+        "name": "Dukung ia ketika bermain permainan berpura-pura."
+    },
+    {
+        "id": 205,
+        "month": 18,
+        "name": "Dukung empatinya. Misalnya saat melihat anak yang sedang sedih, dorong dia untuk memeluk atau menepuk anak lainnya."
+    },
+    {
+        "id": 206,
+        "month": 18,
+        "name": "Bacalah buku dan bicarakan gambar-gambar itu dengan kata-kata sederhana."
+    },
+    {
+        "id": 207,
+        "month": 18,
+        "name": "Tirulah kata-kata yang ia ucapkan."
+    },{
+        "id": 208,
+        "month": 18,
+        "name": "Gunakan kata-kata yang menggambarkan perasaan dan emosi"
+    },
+    {
+        "id": 209,
+        "month": 18,
+        "name": "Gunakan ungkapan yang sederhana dan jelas."
+    },
+    {
+        "id": 210,
+        "month": 18,
+        "name": "Ajukan pertanyaan sederhana."
+    },
+    {
+        "id": 211,
+        "month": 18,
+        "name": "Sembunyikan barang-barang di bawah selimut dan bantal dan dorong dia untuk menemukannya."
+    },
+    {
+        "id": 212,
+        "month": 18,
+        "name": "Bermain dengan balok, bola, teka-teki, buku, dan mainan yang mengajarkan sebab dan akibat serta pemecahan masalah."
+    },
+    {
+        "id": 213,
+        "month": 18,
+        "name": "Sebutkan gambar di buku dan bagian tubuh."
+    },
+    {
+        "id": 214,
+        "month": 18,
+        "name": "Sediakan mainan yang mendorong permainan pura-pura; Misalnya boneka, telepon mainan."
+    },
+    {
+        "id": 215,
+        "month": 18,
+        "name": "Sediakan tempat yang aman bagi anak Anda untuk berjalan dan bergerak."
+    },
+    {
+        "id": 216,
+        "month": 18,
+        "name": "Sediakan mainan yang bisa dia dorong atau tarik dengan aman."
+    },
+    {
+        "id": 217,
+        "month": 18,
+        "name": "Berikan bola untuknya menendang, berguling, dan melempar."
+    },
+    {
+        "id": 218,
+        "month": 18,
+        "name": "Dorong Anak untuk minum dari cangkirnya dan menggunakan sendok, tidak peduli seberapa berantakannya."
+    },
+    {
+        "id": 219,
+        "month": 18,
+        "name": "Tiup gelembung dan biarkan anak Anda meletuskannya."
+    },
+    {
+        "id": 221,
+        "month": 24,
+        "name": "Dorong anak Anda untuk membantu tugas-tugas sederhana di rumah, seperti menyapu dan membuat makan malam. Puji anak Anda karena telah menjadi penolong yang baik."
+    },
+    {
+        "id": 222,
+        "month": 24,
+        "name": "Pada usia ini, anak-anak masih bermain bersebelahan (tidak dengan) satu sama lain dan tidak berbagi dengan baik. Untuk play dates, beri anak banyak mainan untuk dimainkan. Perhatikan anak-anak dengan saksama dan turun tangan jika mereka berkelahi atau berdebat."
+    },
+    {
+        "id": 223,
+        "month": 24,
+        "name": "Berikan perhatian dan pujian kepada anak Anda saat dia mengikuti instruksi. Batasi perhatian untuk perilaku menantang. Habiskan lebih banyak waktu untuk memuji perilaku yang baik daripada menghukum perilaku buruk."
+    },
+    {
+        "id": 224,
+        "month": 24,
+        "name": "Ajari anak Anda untuk mengidentifikasi dan mengatakan bagian tubuh, binatang, dan hal umum lainnya."
+    },
+    {
+        "id": 225,
+        "month": 24,
+        "name": "Jangan mengoreksi anak Anda ketika dia mengucapkan kata-kata yang salah. Sebaliknya, katakan dengan benar. Misalnya, “Itu adalah bola”."
+    },
+    {
+        "id": 226,
+        "month": 24,
+        "name": "Dorong anak Anda untuk mengucapkan sepatah kata alih-alih menunjuk. Jika anak Anda tidak bisa mengucapkan seluruh kata ('susu'), beri dia suara pertama ('s') untuk membantunya. Seiring waktu, Anda dapat mendorong anak Anda untuk mengucapkan seluruh kalimat - 'Saya ingin susu'."
+    },
+    {
+        "id": 227,
+        "month": 24,
+        "name": "Sembunyikan mainan anak Anda di sekitar ruangan dan biarkan dia menemukannya."
+    },{
+        "id": 228,
+        "month": 24,
+        "name": "Bantu anak Anda mengerjakan teka-teki dengan bentuk, warna, atau hewan ternak. Beri nama setiap bagian saat anak Anda meletakkan puzzle di tempatnya."
+    },
+    {
+        "id": 229,
+        "month": 24,
+        "name": "Dorong anak Anda untuk bermain dengan balok. Bergiliran membangun menara dan merobohkannya."
+    },
+    {
+        "id": 230,
+        "month": 24,
+        "name": "Lakukan proyek seni dengan anak Anda menggunakan krayon, cat, dan kertas. Jelaskan apa yang dibuat anak Anda dan gantung di dinding atau lemari es."
+    },
+    {
+        "id": 231,
+        "month": 24,
+        "name": "Minta anak Anda untuk membantu Anda membuka pintu dan laci serta membalik halaman di buku atau majalah."
+    },
+    {
+        "id": 232,
+        "month": 24,
+        "name": "Setelah anak Anda berjalan dengan baik, minta dia membawa barang-barang kecil untuk Anda."
+    },
+    {
+        "id": 233,
+        "month": 24,
+        "name": "Tendang bola bolak-balik dengan anak Anda. Jika anak Anda mahir dalam hal itu, dorong dia untuk berlari dan menendang."
+    },
+    {
+        "id": 234,
+        "month": 24,
+        "name": "Ajak anak Anda ke taman untuk berlari dan memanjat permainan atau berjalan di jalur alam. Perhatikan anak Anda dengan cermat."
+    },
 ]
