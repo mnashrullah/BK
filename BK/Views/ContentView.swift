@@ -54,22 +54,25 @@ struct ContentView: View {
     //    @ObservedObject var observedData = obsevable()
     @ObservedObject var observableContent = ObservableContent()
     @ObservedObject var observableTips = ObservableTips()
+    @ObservedObject var observableChildMilestone = ObservableChildMilestone()
     @State var user = ""
     @EnvironmentObject var userData: UserData
+    private var version = 3
+    private var versionString = "version"
     var body: some View {
         HomeView()
             
             .navigationBarColor(UIColor(named: "bg"))
             .onAppear(){
-                loadContent()
-
-//            if (!UserDefaults.standard.bool(forKey: "isFirstTime")){
-//                print("isFirstTime load data")
 //                loadContent()
-//                UserDefaults.standard.set(true, forKey: "isFirstTime")
-//            }else{
-//                print("isFirstTime not load data")
-//            }
+
+            if (UserDefaults.standard.integer(forKey: versionString) != version){
+                print("isFirstTime load data")
+                loadContent()
+                UserDefaults.standard.setValue(version, forKey: versionString)
+            }else{
+                print("isFirstTime not load data")
+            }
         }
 //        NavigationView{
 //            VStack{
@@ -103,7 +106,9 @@ struct ContentView: View {
         print("loadcontent")
         deleteAllTips()
         loadAllTips()
-        
+        deleteAllMilestone()
+        loadAllMilestone()
+        observableChildMilestone.deleteAllData()
 //        deleteAllContent()
 //        for i in userData.miles{
 //            for j in i.milestone {
@@ -126,17 +131,12 @@ struct ContentView: View {
 //        }
 //        print(self.observableContent.data)
     }
-    func addMilestone(){
-//        for i in userData.miles{
-//            for j in i.milestone {
-//                self.observableContent.addData(
-//                    idMilestone: j.id,
-//                    month: j.month,
-//                    name: j.name,
-//                    category: j.category.rawValue,
-//                    isComplete: j.isComplete
-//                )
-//            }
+    func loadAllMilestone(){
+        print(userData.dataMilestone)
+        for i in userData.dataMilestone{
+            self.observableContent.addData(idMilestone: i.id, month: i.month, name: i.name, category: i.category.rawValue, isComplete: i.isComplete)
+            
+        }
     }
     func loadAllTips(){
         print(userData.dataTips)
@@ -149,9 +149,9 @@ struct ContentView: View {
         }
     }
 
-//    func deleteMilestone(){
-//        self.observableContent.deleteAllData()
-//    }
+    func deleteAllMilestone(){
+        self.observableContent.deleteAllData()
+    }
     func deleteAllTips(){
         self.observableTips.deleteAllData()
     }
@@ -682,22 +682,22 @@ class ObservableChildMilestone : ObservableObject{
 //            print("error")
 //        }
 //    }
-//
-//    func deleteAllData(){
-//        //        MARK: Coredata add data milestone done
-//        let app = UIApplication.shared.delegate as! AppDelegate
-//        let context = app.persistentContainer.viewContext
-//        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "TbMilestone")
-//        let deleteRequest = NSBatchDeleteRequest(fetchRequest: req)
-//        do{
-//            try context.execute(deleteRequest)
-//            try context.save()
-//            self.data = []
-//        }
-//        catch{
-//            print("error")
-//        }
-//    }
+
+    func deleteAllData(){
+        //        MARK: Coredata add data milestone done
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: TbChildMilestone)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: req)
+        do{
+            try context.execute(deleteRequest)
+            try context.save()
+            self.data = []
+        }
+        catch{
+            print("error")
+        }
+    }
 //
 //
     
