@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A1F8B852551905500E8D774 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F8B842551905500E8D774 /* ResultView.swift */; };
 		0A1F8B872551B18D00E8D774 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F8B862551B18D00E8D774 /* BarView.swift */; };
+		0A2ED9DC257E0BD4001817D8 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2ED9DB257E0BD4001817D8 /* Badges.swift */; };
 		0A6D62692556F8DF00AAF170 /* PageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62682556F8DF00AAF170 /* PageHomeView.swift */; };
 		0A841B63254D1EBA005940B0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B62254D1EBA005940B0 /* SettingView.swift */; };
 		0A841B65254E8E99005940B0 /* MilestoneTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A841B64254E8E99005940B0 /* MilestoneTrack.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		0A1F8B842551905500E8D774 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		0A1F8B862551B18D00E8D774 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		0A2ED9DB257E0BD4001817D8 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 		0A6D62682556F8DF00AAF170 /* PageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHomeView.swift; sourceTree = "<group>"; };
 		0A841B62254D1EBA005940B0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		0A841B64254E8E99005940B0 /* MilestoneTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrack.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				D7818DD62562449A00EBC5E3 /* Mile.swift */,
 				D7818DE725624B3A00EBC5E3 /* UserData.swift */,
 				D787CF9B2562961F0043E27F /* Student.swift */,
+				0A2ED9DB257E0BD4001817D8 /* Badges.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				D7B151F8253CC5EF00FF926C /* Page.swift in Sources */,
 				D7165B8B25441E13002CB21D /* ProfileAddView.swift in Sources */,
 				D787CFCA256508DF0043E27F /* QuizView.swift in Sources */,
+				0A2ED9DC257E0BD4001817D8 /* Badges.swift in Sources */,
 				D792E9492558F0AD00CE0C92 /* HelpView.swift in Sources */,
 				D7165BDF254B861E002CB21D /* TipsDetailView.swift in Sources */,
 				D7165B8F254456EA002CB21D /* ScreeningView.swift in Sources */,
@@ -530,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
-				DEVELOPMENT_TEAM = TTWVZH63FB;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -553,7 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"BK/Preview Content\"";
-				DEVELOPMENT_TEAM = TTWVZH63FB;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;

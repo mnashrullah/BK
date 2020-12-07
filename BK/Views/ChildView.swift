@@ -80,6 +80,7 @@ struct ChildView: View {
                                     Circle()
                                         .frame(width: 80, height: 80)
                                         .foregroundColor(Color("gray"))
+                                        .padding(.leading, -20)
                                     Image(child.gender == "Laki-laki" ? "boy" : "girl")
                                         .resizable()
                                         .scaledToFill()
@@ -87,12 +88,14 @@ struct ChildView: View {
                                         .cornerRadius(25)
                                         .shadow(radius: 4)
                                         .padding(.top, 20)
+                                        .padding(.leading, -20)
                                 }
                                 .padding(.horizontal)
                                 
                                 VStack(alignment: .leading){
                                     Text(child.name)
                                         .foregroundColor(Color("text"))
+                                        .bold()
                                     Text("Umur \(child.age)")
                                         .font(.caption)
                                         .foregroundColor(Color("text"))

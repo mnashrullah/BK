@@ -18,79 +18,92 @@ struct PageHomeView: View {
             ScrollView{
                 
                 VStack(){
-                    
-                    VStack{
-                        ZStack{
-                                Circle()
-                                    .frame(width: 80, height: 80)
-                                    .foregroundColor(Color("gray"))
-                                Image(child.gender == "Laki-laki" ? "boy" : "girl")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 60, height: 60)
-                                    .cornerRadius(25)
-                                    .shadow(radius: 4)
-                                    .padding(.top, 20)
-                        }.padding(.top)
-                        Text(child.name)
-                            .foregroundColor(Color("text"))
-                            .fontWeight(.bold)
-                            .font(.title)
-                            .padding(.top, 10)
-                    }
-                    
-                    VStack{
-                        HStack(){
-                            VStack(spacing: 10){
-                                
-                                Text("\(observableChildMilestone.progressValueString)%")
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color("text"))
-                                
-                                Text("Milestone")
-                                    .font(.footnote)
-                                    
-                                    .foregroundColor(Color("text"))
-                            }
-                            .frame(minWidth: 0,
-                                   maxWidth: .infinity)
-                            Divider()
-                            VStack(spacing: 10){
-                                
-                                Text("\(String(calcAgeMonth(birthday: child.birthDate))) Bulan")
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                    
-                                    .foregroundColor(Color("text"))
-                                    .multilineTextAlignment(.center)
-                                Text("Umur")
-                                    .font(.footnote)
-                                    .foregroundColor(Color("text"))
-                            }
-                            .frame(minWidth: 0,
-                                   maxWidth: .infinity)
-                            
-                            Divider()
-                            VStack(spacing: 10){
-                               
-                                Text("\(observableChildMilestone.progressStatus)")
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color("text"))
-                                Text("Perkembangan")
-                                    .font(.footnote)
-                                    .foregroundColor(Color("text"))
-                            }
-                            .frame(minWidth: 0,
-                                   maxWidth: .infinity)
+                        VStack{
+                            ZStack{
+                                    Circle()
+                                        .frame(width: 80, height: 80)
+                                        .foregroundColor(Color("gray"))
+                                    Image(child.gender == "Laki-laki" ? "boy" : "girl")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 60, height: 60)
+                                        .cornerRadius(25)
+                                        .shadow(radius: 4)
+                                        .padding(.top, 20)
+                            }.padding(.top)
+                            Text(child.name)
+                                .foregroundColor(Color("text"))
+                                .fontWeight(.bold)
+                                .font(.title)
+                                .padding(.top, 10)
                         }
-                        .padding()
-                        .background(Color("Color3"))
-                        .cornerRadius(10)
+                        .zIndex(1.0)
+                        
+                        VStack{
+                            HStack(){
+                                VStack(spacing: 10){
+                                    
+                                    Text("\(observableChildMilestone.progressValueString)%")
+                                        .font(.subheadline)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(Color("text"))
+                                    
+                                    Text("Milestone")
+                                        .font(.footnote)
+                                        
+                                        .foregroundColor(Color("text"))
+                                }
+                                .frame(minWidth: 0,
+                                       maxWidth: .infinity)
+                                Divider()
+                                VStack(spacing: 10){
+                                    
+                                    Text("\(String(calcAgeMonth(birthday: child.birthDate))) Bulan")
+                                        .font(.subheadline)
+                                        .fontWeight(.semibold)
+                                        
+                                        .foregroundColor(Color("text"))
+                                        .multilineTextAlignment(.center)
+                                    Text("Umur")
+                                        .font(.footnote)
+                                        .foregroundColor(Color("text"))
+                                }
+                                .frame(minWidth: 0,
+                                       maxWidth: .infinity)
+                                
+                                Divider()
+                                VStack(spacing: 10){
+                                   
+                                    Text("\(observableChildMilestone.progressStatus)")
+                                        .font(.subheadline)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(Color("text"))
+                                    Text("Perkembangan")
+                                        .font(.footnote)
+                                        .foregroundColor(Color("text"))
+                                }
+                                .frame(minWidth: 0,
+                                       maxWidth: .infinity)
+                            }
+                            .padding()
+                            .background(Color("bg"))
+                            .cornerRadius(10)
 
-                    }
-                    .padding()
+                        }
+                        .shadow(color: Color("shadow"), radius: 3, x: 3, y: 3)
+                        .padding()
+                        .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                        
+                        Rectangle()
+                            .fill(Color("Color3"))
+                            .frame(minWidth: 0,
+                                            maxWidth: .infinity,
+                                            minHeight: 0,
+                                            maxHeight: .infinity,
+                                            alignment: .topLeading)
+                            .padding(.top, -400)
+                    
+                    
 //                    HStack{
 //                        VStack{
 //                            Text("90%")
