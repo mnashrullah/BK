@@ -15,6 +15,12 @@ struct ChildView: View {
     @State var showingSheet = false
     @State var isNavigationBarHidden: Bool = true
     @State private var showingAlert = false
+    
+    func simpleSuccess() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
+    
     var btnAdd : some View {
         Button(action: {
             showingSheet    .toggle()
@@ -94,6 +100,7 @@ struct ChildView: View {
                                 Spacer()
                                 
                             }
+                            .onTapGesture(perform: simpleSuccess)
                             
                         }
                     }
@@ -101,6 +108,7 @@ struct ChildView: View {
                         self.observableChild.deleteData(indexset: indexset, id: self.observableChild.data[indexset.first!].id)
                     }
                     .listRowBackground(Color("bg"))
+                    .onTapGesture(perform: simpleSuccess)
                 }
             }
             .background(Color("bg"))

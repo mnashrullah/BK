@@ -22,6 +22,10 @@ struct MilestoneView: View {
     var mWidth: Int = Int(UIScreen.main.bounds.width)
     @EnvironmentObject var mUserData: UserData
     @State var selectionsMilestone: [Int] = []
+    func simpleSuccess() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
     var body: some View {
         ZStack{
             ScrollView(showsIndicators: false){
@@ -336,6 +340,7 @@ struct MilestoneView: View {
                                             self.showingAlert = true
                                         }) {
                                             Text("Batalkan")
+                                                .onTapGesture(perform: simpleSuccess)
                                         }
                                         .alert(isPresented:$showingAlert) {
                                             Alert(title: Text(""), message: Text("Apakah anda yakin akan menghapus ceklist perkembangan anak?"), primaryButton: .destructive(Text("Batalkan")) {
@@ -343,6 +348,7 @@ struct MilestoneView: View {
                                                 selectionsMilestone.removeAll()
                                             }, secondaryButton: .cancel(Text("Kembali")))
                                         }
+                                        
                                     }
                                     
                                 }, trailing:
@@ -352,6 +358,7 @@ struct MilestoneView: View {
                                                 self.showingAlertSave = true
                                             }) {
                                                 Text("Simpan")
+                                                    .onTapGesture(perform: simpleSuccess)
                                             }
                                             .alert(isPresented:$showingAlertSave) {
                                                 Alert(title: Text(""), message: Text("Apakah anda yakin akan menyimpan milestone perkembangan anak?"),
